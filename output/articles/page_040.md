@@ -3,9 +3,11 @@
 - 網站：自由時報電子報
 - 原始網址：http://news.ltn.com.tw/news/life/breakingnews/2599138
 - 狀態：success
+- 作者：自由時報電子報
+- 發表日期：2018-11-01T23:17:59+08:00
 - 主題：自然景觀與生態、地方產業與農漁業、觀光景點與活動
 - 關鍵字：桃園市、藻礁、地方旅遊
-- 擷取時間：2026-10-29T09:00:12.999231+00:00
+- 擷取時間：2026-10-29T13:54:50.759036+00:00
 
 ## 清理後正文
 
@@ -70,7 +72,12 @@ TAIPEI TIMES
 地產
 專區
 服務
+自由電子報 APP
+自由電子報粉絲團
+自由電子報 Line
+自由電子報 X
 熱門新訊
+限制級
 您即將進入之新聞內容
 需滿18歲
 方可瀏覽。
@@ -81,8 +88,6 @@ TAIPEI TIMES
 我已年滿18歲
 進入
 根據「電腦網路內容分級處理辦法」修正條文第六條第三款規定，已於網站首頁或各該限制級網頁，依台灣網站分級推廣基金會規定作標示。 台灣網站分級推廣基金會（TICRF）網站：http://www.ticrf.org.tw
->
-生活
 海大觀音校區揭牌 帶動地方發展
 2018/11/01 23:17
 加入Google首選
@@ -115,7 +120,7 @@ TAIPEI TIMES
 新北割頸案促少事法修法 重大犯罪服刑1/2才能假釋
 
 ## 圖片
-- ![載入中](images/page_040_image_01.svg) — [原始圖片來源](https://cache.ltn.com.tw/images/loading.svg) 
+- ![載入中](../images/page_040_image_01.svg) — [原始圖片來源](https://cache.ltn.com.tw/images/loading.svg) 
 
 ## 頁面連結
 - [請至Edge官網下載](https://www.microsoftedgeinsider.com/zh-tw/download)
@@ -218,3 +223,5 @@ TAIPEI TIMES
 - [．瓏山林台北中和飯店](http://www.rslhotel.com/)
 - [．自由廣場會議中心](http://www.lscc.com.tw/)
 - [．yes123求職網](https://www.yes123.com.tw/)
+
+> 備註：進階解析失敗，已使用內建解析器：AttributeError: 'NoneType' object has no attribute 'get'

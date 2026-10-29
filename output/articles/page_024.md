@@ -3,20 +3,14 @@
 - 網站：www.century.com.tw
 - 原始網址：https://www.century.com.tw/tw/about/3/
 - 狀態：success
+- 作者：HomeMesh, Morgan, Roy, Century
 - 主題：地方產業與農漁業
 - 關鍵字：觀音區、桃園市、地方旅遊
-- 擷取時間：2026-10-29T08:59:46.264960+00:00
+- 擷取時間：2026-10-29T13:54:29.746569+00:00
 
 ## 清理後正文
 
 世紀鋼構 | 公司簡介
-基本資料
-公司沿革大事記
-新聞資訊
-桃園廠區
-雲林廠區
-台北港
-緬甸廠
 桃園廠區
 桃園廠區(69,000坪)
 世紀鋼構總部位於桃園觀音，主要從事各項鋼骨結構、焊接型鋼生產業務。最大競爭優勢，在於擁有垂直產業整合能力，而且機動性極強。從鋼料取得、電銲到切割、組成，都有強大的整合能力。
@@ -25,7 +19,9 @@
 平面圖標示
 
 ## 圖片
-本次無成功保存的圖片。
+- ![文章圖片](../images/page_024_image_01.jpg) — [原始圖片來源](http://www.century.com.tw/uploads/images/20200806/1596708667425539.jpg) 
+- ![文章圖片](../images/page_024_image_02.jpg) — [原始圖片來源](http://www.century.com.tw/uploads/images/20200806/1596708667313709.jpg) 
+- ![文章圖片](../images/page_024_image_03.png) — [原始圖片來源](http://www.century.com.tw/uploads/images/20200806/1596708667581689.png) 
 
 ## 頁面連結
 - [系統管理員](https://www.century.com.tw/admincp.php)
@@ -84,3 +80,5 @@
 - [緬甸廠](https://www.century.com.tw/tw/about/6/)
 - [網站地圖](https://www.century.com.tw/tw/sitemap)
 - [328 桃園市觀音區金湖村中山路一段1119號](https://www.google.com/maps/place/25%C2%B001'40.2%22N+121%C2%B006'31.9%22E/@25.02784,121.1066803,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.02784!4d121.108869)
+
+> 備註：進階解析失敗，已使用內建解析器：AttributeError: 'NoneType' object has no attribute 'get'

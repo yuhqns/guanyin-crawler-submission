@@ -3,9 +3,11 @@
 - 網站：自由時報電子報
 - 原始網址：http://news.ltn.com.tw/news/local/paper/1068876
 - 狀態：success
+- 作者：自由時報電子報
+- 發表日期：2017-01-06T06:00:00+08:00
 - 主題：自然景觀與生態、歷史文化與信仰、地方產業與農漁業
 - 關鍵字：觀音區、桃園市、白沙岬燈塔、甘泉寺、蓮花園休閒農業區
-- 擷取時間：2026-10-29T09:00:13.352486+00:00
+- 擷取時間：2026-10-29T13:54:51.263569+00:00
 
 ## 清理後正文
 
@@ -70,7 +72,12 @@ TAIPEI TIMES
 地產
 專區
 服務
+自由電子報 APP
+自由電子報粉絲團
+自由電子報 Line
+自由電子報 X
 熱門新訊
+限制級
 您即將進入之新聞內容
 需滿18歲
 方可瀏覽。
@@ -81,8 +88,6 @@ TAIPEI TIMES
 我已年滿18歲
 進入
 根據「電腦網路內容分級處理辦法」修正條文第六條第三款規定，已於網站首頁或各該限制級網頁，依台灣網站分級推廣基金會規定作標示。 台灣網站分級推廣基金會（TICRF）網站：http://www.ticrf.org.tw
->
-地方
 （桃園）591頃觀音蓮花園 劃定休閒農業區
 2017/01/06 06:00
 記者
@@ -116,7 +121,7 @@ TAIPEI TIMES
 新北割頸案促少事法修法 重大犯罪服刑1/2才能假釋
 
 ## 圖片
-- ![載入中](images/page_040_image_01.svg) — [原始圖片來源](https://cache.ltn.com.tw/images/loading.svg) 
+- ![載入中](../images/page_040_image_01.svg) — [原始圖片來源](https://cache.ltn.com.tw/images/loading.svg) 
 
 ## 頁面連結
 - [請至Edge官網下載](https://www.microsoftedgeinsider.com/zh-tw/download)
@@ -219,3 +224,5 @@ TAIPEI TIMES
 - [．聯邦銀行](https://www.ubot.com.tw/)
 - [．瓏山林台北中和飯店](http://www.rslhotel.com/)
 - [．自由廣場會議中心](http://www.lscc.com.tw/)
+
+> 備註：進階解析失敗，已使用內建解析器：AttributeError: 'NoneType' object has no attribute 'get'

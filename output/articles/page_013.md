@@ -5,19 +5,18 @@
 - 狀態：success
 - 主題：自然景觀與生態、歷史文化與信仰、地方產業與農漁業
 - 關鍵字：觀音區、桃園市、藻礁、白沙岬燈塔、甘泉寺
-- 擷取時間：2026-10-29T08:59:39.503937+00:00
+- 擷取時間：2026-10-29T13:54:16.861240+00:00
 
 ## 清理後正文
 
 :::
-休閒農業區
 蓮花園休閒農業區
 4.1
 更新日期
 :
 2026-02-26
 人氣
-114436
+114491
 蓮花園休閒農業區
 洛神訪觀音–食農體驗遊活動_洛神花DIY
 洛神訪觀音–食農體驗遊活動_浪漫洛神花季
@@ -149,9 +148,9 @@ Vicky
 分享到 line
 
 ## 圖片
-- ![文章圖片](images/page_013_image_01.jpg) — [原始圖片來源](https://ezgo.ardswc.gov.tw/videos/hot-topic/poster.jpg) 
-- ![文章圖片](images/page_013_image_02.jpg) — [原始圖片來源](https://ezgo.ardswc.gov.tw/images/menu/menu-03-1.jpg) 
-- ![文章圖片](images/page_013_image_03.jpg) — [原始圖片來源](https://ezgo.ardswc.gov.tw/videos/menu-1-5/poster.jpg) 
+- ![文章圖片](../images/page_013_image_01.jpg) — [原始圖片來源](https://ezgo.ardswc.gov.tw/videos/hot-topic/poster.jpg) 
+- ![文章圖片](../images/page_013_image_02.jpg) — [原始圖片來源](https://ezgo.ardswc.gov.tw/images/menu/menu-03-1.jpg) 
+- ![文章圖片](../images/page_013_image_03.jpg) — [原始圖片來源](https://ezgo.ardswc.gov.tw/videos/menu-1-5/poster.jpg) 
 
 ## 頁面連結
 - [休閒農場](https://ezgo.ardswc.gov.tw/zh-tw/farms/)
@@ -247,3 +246,5 @@ Vicky
 - [網站資料開放宣告](https://ezgo.ardswc.gov.tw/zh-tw/gwoia/)
 - [土石流及大規模崩塌防災資訊網](https://246.ardswc.gov.tw/)
 - [無障礙AA](https://accessibility.moda.gov.tw/Applications/Detail?category=20250217150150)
+
+> 備註：進階解析失敗，已使用內建解析器：AttributeError: 'NoneType' object has no attribute 'get'

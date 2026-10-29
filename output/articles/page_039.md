@@ -3,80 +3,68 @@
 - 網站：www.setn.com
 - 原始網址：http://www.setn.com/E/News.aspx?NewsID=115874
 - 狀態：success
+- 作者：三立新聞網
 - 主題：歷史文化與信仰
 - 關鍵字：桃園市、地方旅遊、觀光資訊
-- 擷取時間：2026-10-29T09:00:11.742558+00:00
+- 擷取時間：2026-10-29T13:54:50.162152+00:00
 
 ## 清理後正文
 
-它遭瘋砍近13萬張吞跌停　9038張賣單高掛
-16:49
-華航2航班接連延誤　旅客機上苦等3小時
-16:49
-河口湖女嫌恐關20年 律師曝關鍵:回台再罰
-16:46
-沈伯洋得像蔡英文　才能複製過半勝選結果
-16:45
-柯文哲嗆趙少康：民進黨派來的奸細？
-16:42
-缺料缺電又缺人！台達電曝AI擴建瓶頸
-16:41
-華航787夢幻客機搶先曝　月曆揭新機細節
-16:40
-家家爆貪杯離開老東家！好友曝她真實酒量
-16:39
-嚴立婷一刀掰「8公分長髮」　新造型太仙
-16:39
-佀廣洋遭搜索！「王妃」：新聞上看到你了
-16:39
-尹錫悅再遭求處死刑！特檢：無理由猶豫
-16:38
-選舉倒數！綠北市黨部成立律師團打擊抹黑
-16:36
-跨界美學！這台咖啡機竟鑲施華洛世奇水晶
-16:36
-外資投信砍這檔近15萬張　104萬人臉綠了
-16:31
-OPPO Find X10正式登台　售價 優惠一次看
-16:29
-女團解散8年宣布重組！睽違11年重返舞台
-16:27
-備戰亞冠賽！　台灣隊2場熱身賽票價出爐
-16:26
-《東方不敗》登中國重映　林青霞經典再現
-16:25
-撥補爭議！許舒博：能源調漲並非好事
-16:24
-莊競程最新競選歌曲曝光　金曲製作人操刀
-16:24
+很多人籲別碰政治！蔡康永：我碰了也沒死
+21:46
+新/美股失血!那指挫343點 台指期夜盤綠了
+21:38
+水逆來襲！「3星座」慎防感情、金錢糾紛
+21:38
+新北驚傳校園霸凌！男學生被逼下跪磕頭
+21:37
+00830明起分割投票！受益人會議時間曝
+21:35
+佔用立院記者席還罵髒話？外交部澄清了
+21:30
+蘇巧慧合體沈伯洋：雙北合作智慧醫療廊帶
+21:29
+佀廣洋疑涉賄選原因曝光！
+21:11
+微軟財報全線亮眼　激勵盤後股價飆6%
+21:10
+全電商搶1折券！momo購物網下單抽新車
+21:09
+和小S要合體開新節目了？蔡康永笑回5字
+21:05
+蔡康永現身沈造勢　同志酒吧成關鍵原因
+21:05
+高雄5大租屋熱區　三民、楠梓蟬聯冠亞軍
+21:05
+蔣陣營遭抓包！疑偷運動驛站政策改時間序
+20:54
+LINE通話可錄音了！最長1小時 官方教操作
+20:51
+快訊／威力彩頭獎2億！10／29開獎號碼
+20:50
+涉挪公款招待里長遊澎湖！林明義16萬交保
+20:47
+新／想不開爬上頂樓！台中男欲跨出女兒牆
+20:46
+蘇巧慧讚沈伯洋「這件事」棒的不得了
+20:44
+新店公辦都更招商成功　將蓋2住宅、1法院
+20:35
 台灣彩券開獎直播中
 20:31
 LIVE三立+24小時直播
 15:27
 三立iNEWS新聞台線上直播
 18:00
+文策院推動文化ESG接軌國際！
+20:00
 流感「中風心梗風險增近10倍」醫籲做1事
 12:17
 日本人氣IP「LOVEEZ」主題超商超療癒
 12:00
-台東跨年 蔡健雅等四大卡司Full band登場
-22:00
-記憶體大廠美光調薪 產線年上看200萬
-20:00
-和泰汽車發表最新CROWN家族 在台上市
-11:00
-突發頭暈、頭痛竟是「這癌」轉移至腦部？
-10:00
-台灣美光大調薪！輪班津貼、勞退全面升級
-17:30
-針線緣／護理師用「鉻100」照顧糖尿病患
-15:00
-蘇巧慧力挺吳昇翰　承諾市府資源照顧三峽
-10:00
 倒數
 30
 天
-政治
 加入Google首選
 請點選打勾將「三立新聞網」為首選來源，在 Google 上查看更多我們的精彩報導
 看新聞換好禮
@@ -110,47 +98,54 @@ https://www.facebook.com/setnews
 公立
 延伸閱讀
 名導、廣告女王開轟「萬安除三害」海報！
+抄沈伯洋？葛如鈞向作者致歉：會更小心
 王偉忠當面指「高官孩子」蔣萬安表情秒變
 蔣萬安說謊？接受王偉忠訪問「這題」穿幫
 王偉忠氣炸！爆蔣萬安下雨竟脫口「4字」
-抄沈伯洋？葛如鈞向作者致歉：會更小心
-網站遭境外IP猛攻！沈伯洋金句回應萬人讚
+蔣萬安31日辯論恐失聲？石舫亘親曝病況
+現正直播
 <iframe title = "CH54三立新聞台直播" src="https://player.svc.litv.tv/v3/ppnif.html?s=c2V0bmNoX3dlYg==&c=setnewsrtmp&t=CH54三立新聞台直播" frameborder="0" scrolling="no" mozallowfullscreen webkitallowfullscreen allowfullscreen style="width: 100%; aspect-ratio: 16 / 9;"></iframe>
 CH54三立新聞台直播
-【#直播中LIVE】中國台辦要蔡康永以做中國人為榮！陸委會最新回應
+現正直播
+更多
+【#直播中LIVE】新台派上線 20261029
+熱門新聞
+更多
+吳子嘉爆綠民調「五都領先」　民進黨打臉
+網站遭境外IP猛攻！沈伯洋金句回應萬人讚
 蔣萬安稱花1年啟用大巨蛋！王偉忠吐槽了
 王偉忠幽默「請你都不來」　蔣萬安這樣回
-蔣萬安31日辯論恐失聲？石舫亘親曝病況
 沈伯洋高EQ擊退下流惡意！老師感動發聲了
-吳子嘉爆綠民調「五都領先」　民進黨打臉
 沈伯洋最新形象片　神祕大咖現身感動萬人
 蔣萬安生病了！太太石舫亘代夫掃街反應曝
-蔣萬安掃街！現場大吼：市長講話吵什麼
 柯文哲問中華文化怎麼分！沈伯洋親解答
-他曝：蔣萬安民調崩盤的甲級戰犯就是這人
+李彥秀掛彩！綁馬尾被誤認「蔣萬安太太」
+蔣萬安掃街！現場大吼：市長講話吵什麼
+熱搜新聞
+更多
 相關新聞
-曝蔣萬安轉變！林俊憲再預言藍營用同情票
-1分鐘前
-沈伯洋得像蔡英文　才能複製過半勝選結果
-7分鐘前
-柯文哲嗆趙少康：民進黨派來的奸細？
-10分鐘前
-佀廣洋遭搜索！「王妃」：新聞上看到你了
-13分鐘前
-選舉倒數！綠北市黨部成立律師團打擊抹黑
-16分鐘前
-莊競程最新競選歌曲曝光　金曲製作人操刀
-28分鐘前
-8連霸議員賄選 退國民黨再戰假處分又遭駁
-33分鐘前
-藍嗆「萬安除三害」自導自演　沈伯洋反擊
-38分鐘前
+秦慧珠辦松機公聽會　北市府沒首長要參加
+2分鐘前
+蔡康永現身洋流因同志酒吧！王偉忠超震驚
+2分鐘前
+很多人籲別碰政治！蔡康永：我碰了也沒死
+8分鐘前
+佔用立院記者席還罵髒話？外交部澄清了
+24分鐘前
+蘇巧慧合體沈伯洋：雙北合作智慧醫療廊帶
+25分鐘前
+中共買凶斷手腳!黃逸豪曝細節:好險沒上車
+32分鐘前
+佀廣洋疑涉賄選原因曝光！
+43分鐘前
+蔡康永現身沈造勢　同志酒吧成關鍵原因
+49分鐘前
 其他人也在看
 
 ## 圖片
-- ![新屋國中改制高中　學生就學方便｜三立新聞台](images/page_039_image_01.jpg) — [原始圖片來源](https://attach.setn.com/newsimages/2015/12/28/416840-XXL.jpg) 
-- ![新屋國中改制高中　學生就學方便｜三立新聞台](images/page_039_image_02.jpg) — [原始圖片來源](https://attach.setn.com/newsimages/2015/12/28/416839-XXL.jpg) 
-- ![新屋國中改制高中　學生就學方便｜三立新聞台](images/page_039_image_03.jpg) — [原始圖片來源](https://attach.setn.com/newsimages/2015/12/28/416838-XXL.jpg) 
+- ![新屋國中改制高中　學生就學方便｜三立新聞台](../images/page_039_image_01.jpg) — [原始圖片來源](https://attach.setn.com/newsimages/2015/12/28/416840-XXL.jpg) 
+- ![新屋國中改制高中　學生就學方便｜三立新聞台](../images/page_039_image_02.jpg) — [原始圖片來源](https://attach.setn.com/newsimages/2015/12/28/416839-XXL.jpg) 
+- ![新屋國中改制高中　學生就學方便｜三立新聞台](../images/page_039_image_03.jpg) — [原始圖片來源](https://attach.setn.com/newsimages/2015/12/28/416838-XXL.jpg) 
 
 ## 頁面連結
 - [娛樂星聞](https://star.setn.com?utm_source=setn.com&utm_medium=subweb&utm_campaign=webstar)
@@ -183,36 +178,31 @@ CH54三立新聞台直播
 - [民調](https://www.setn.com/votelist)
 - [活動](https://www.setn.com/activity)
 - [ESG永續](https://esg.settv.com.tw/)
-- [它遭瘋砍近13萬張吞跌停　9038張賣單高掛](https://www.setn.com/news/1930407)
-- [華航2航班接連延誤　旅客機上苦等3小時](https://www.setn.com/news/1930410)
-- [河口湖女嫌恐關20年 律師曝關鍵:回台再罰](https://www.setn.com/news/1930379)
-- [缺料缺電又缺人！台達電曝AI擴建瓶頸](https://www.setn.com/news/1930390)
-- [華航787夢幻客機搶先曝　月曆揭新機細節](https://www.setn.com/news/1930401)
-- [家家爆貪杯離開老東家！好友曝她真實酒量](https://www.setn.com/news/1930381)
-- [嚴立婷一刀掰「8公分長髮」　新造型太仙](https://www.setn.com/news/1930394)
-- [尹錫悅再遭求處死刑！特檢：無理由猶豫](https://www.setn.com/news/1930369)
-- [跨界美學！這台咖啡機竟鑲施華洛世奇水晶](https://www.setn.com/news/1930362)
-- [外資投信砍這檔近15萬張　104萬人臉綠了](https://www.setn.com/news/1930396)
-- [OPPO Find X10正式登台　售價 優惠一次看](https://www.setn.com/news/1930392)
-- [女團解散8年宣布重組！睽違11年重返舞台](https://www.setn.com/news/1930364)
-- [備戰亞冠賽！　台灣隊2場熱身賽票價出爐](https://www.setn.com/news/1930391)
-- [《東方不敗》登中國重映　林青霞經典再現](https://www.setn.com/news/1930386)
-- [撥補爭議！許舒博：能源調漲並非好事](https://www.setn.com/news/1930393)
+- [新/美股失血!那指挫343點 台指期夜盤綠了](https://www.setn.com/news/1930525)
+- [水逆來襲！「3星座」慎防感情、金錢糾紛](https://www.setn.com/news/1930534)
+- [新北驚傳校園霸凌！男學生被逼下跪磕頭](https://www.setn.com/news/1930536)
+- [00830明起分割投票！受益人會議時間曝](https://www.setn.com/news/1930540)
+- [微軟財報全線亮眼　激勵盤後股價飆6%](https://www.setn.com/news/1930241)
+- [全電商搶1折券！momo購物網下單抽新車](https://www.setn.com/news/1930530)
+- [和小S要合體開新節目了？蔡康永笑回5字](https://www.setn.com/news/1930527)
+- [高雄5大租屋熱區　三民、楠梓蟬聯冠亞軍](https://www.setn.com/news/1930529)
+- [蔣陣營遭抓包！疑偷運動驛站政策改時間序](https://www.setn.com/news/1930524)
+- [LINE通話可錄音了！最長1小時 官方教操作](https://www.setn.com/news/1930512)
+- [快訊／威力彩頭獎2億！10／29開獎號碼](https://www.setn.com/news/1930165)
+- [涉挪公款招待里長遊澎湖！林明義16萬交保](https://www.setn.com/news/1930521)
+- [新／想不開爬上頂樓！台中男欲跨出女兒牆](https://www.setn.com/news/1930522)
+- [蘇巧慧讚沈伯洋「這件事」棒的不得了](https://www.setn.com/news/1930523)
+- [新店公辦都更招商成功　將蓋2住宅、1法院](https://www.setn.com/news/1930514)
 - [彩券](https://acts.setn.com/event/ilottery/)
 - [LIVE三立+24小時直播](https://live.setn.com/Live/358)
 - [三立iNEWS新聞台線上直播](https://live.setn.com/Live/691)
+- [文策院推動文化ESG接軌國際！](https://www.setn.com/news/1930504)
 - [流感「中風心梗風險增近10倍」醫籲做1事](https://www.setn.com/news/1930245)
 - [日本人氣IP「LOVEEZ」主題超商超療癒](https://www.setn.com/news/1930192)
-- [和泰汽車發表最新CROWN家族 在台上市](https://www.setn.com/news/1929602)
-- [突發頭暈、頭痛竟是「這癌」轉移至腦部？](https://www.setn.com/news/1929631)
-- [台灣美光大調薪！輪班津貼、勞退全面升級](https://www.setn.com/news/1929388)
-- [針線緣／護理師用「鉻100」照顧糖尿病患](https://www.setn.com/news/1929252)
-- [蘇巧慧力挺吳昇翰　承諾市府資源照顧三峽](https://www.setn.com/news/1928625)
 - [https://setnsocial.pse.is/9jrve3](https://setnsocial.pse.is/9jrve3)
 - [https://www.setn.com/](https://www.setn.com/)
 - [政治](https://www.setn.com/catalog/politics)
-- [0 /50 
-
+- [0 /50 
  此篇Get2枚](https://member.setn.com/)
 - [加入Google首選](https://www.google.com/preferences/source?q=三立新聞網)
 - [https://www.facebook.com/sharer/sharer.php?u=https://www.setn.com/news/115874](https://www.facebook.com/sharer/sharer.php?u=https://www.setn.com/news/115874)
@@ -227,37 +217,40 @@ CH54三立新聞台直播
 - [國中](https://www.setn.com/klist/4067)
 - [公立](https://www.setn.com/klist/26903)
 - [名導、廣告女王開轟「萬安除三害」海報！](https://www.setn.com/news/1930050)
+- [抄沈伯洋？葛如鈞向作者致歉：會更小心](https://www.setn.com/news/1930305)
 - [王偉忠當面指「高官孩子」蔣萬安表情秒變](https://www.setn.com/news/1930065)
 - [蔣萬安說謊？接受王偉忠訪問「這題」穿幫](https://www.setn.com/news/1930053)
 - [王偉忠氣炸！爆蔣萬安下雨竟脫口「4字」](https://www.setn.com/news/1929997)
-- [抄沈伯洋？葛如鈞向作者致歉：會更小心](https://www.setn.com/news/1930305)
-- [網站遭境外IP猛攻！沈伯洋金句回應萬人讚](https://www.setn.com/news/1930049)
+- [蔣萬安31日辯論恐失聲？石舫亘親曝病況](https://www.setn.com/news/1930257)
 - [熱搜](https://www.setn.com/topic)
-- [曝蔣萬安轉變！林俊憲再預言藍營用同情票 
-
- 1分鐘前](https://www.setn.com/news/1930413)
-- [沈伯洋得像蔡英文　才能複製過半勝選結果](https://www.setn.com/news/1930406)
-- [柯文哲嗆趙少康：民進黨派來的奸細？](https://www.setn.com/news/1930405)
-- [佀廣洋遭搜索！「王妃」：新聞上看到你了](https://www.setn.com/news/1930395)
-- [選舉倒數！綠北市黨部成立律師團打擊抹黑](https://www.setn.com/news/1930389)
-- [莊競程最新競選歌曲曝光　金曲製作人操刀](https://www.setn.com/news/1930354)
-- [8連霸議員賄選 退國民黨再戰假處分又遭駁 
-
- 33分鐘前](https://www.setn.com/news/1930368)
-- [藍嗆「萬安除三害」自導自演　沈伯洋反擊 
-
- 38分鐘前](https://www.setn.com/news/1930331)
-- [更多](https://live.setn.com/Live/3456)
+- [秦慧珠辦松機公聽會　北市府沒首長要參加 
+ 2分鐘前](https://www.setn.com/news/1930543)
+- [蔡康永現身洋流因同志酒吧！王偉忠超震驚 
+ 2分鐘前](https://www.setn.com/news/1930532)
+- [很多人籲別碰政治！蔡康永：我碰了也沒死](https://www.setn.com/news/1930541)
+- [佔用立院記者席還罵髒話？外交部澄清了](https://www.setn.com/news/1930539)
+- [蘇巧慧合體沈伯洋：雙北合作智慧醫療廊帶](https://www.setn.com/news/1930537)
+- [中共買凶斷手腳!黃逸豪曝細節:好險沒上車 
+ 32分鐘前](https://www.setn.com/news/1930528)
+- [佀廣洋疑涉賄選原因曝光！](https://www.setn.com/news/1930531)
+- [蔡康永現身沈造勢　同志酒吧成關鍵原因](https://www.setn.com/news/1930520)
+- [更多](https://live.setn.com/Live/4316)
 - [熱門](https://www.setn.com/viewall/0)
+- [吳子嘉爆綠民調「五都領先」　民進黨打臉](https://www.setn.com/news/1930273)
+- [網站遭境外IP猛攻！沈伯洋金句回應萬人讚](https://www.setn.com/news/1930049)
 - [蔣萬安稱花1年啟用大巨蛋！王偉忠吐槽了](https://www.setn.com/news/1930008)
 - [王偉忠幽默「請你都不來」　蔣萬安這樣回](https://www.setn.com/news/1929939)
-- [蔣萬安31日辯論恐失聲？石舫亘親曝病況](https://www.setn.com/news/1930257)
 - [沈伯洋高EQ擊退下流惡意！老師感動發聲了](https://www.setn.com/news/1929477)
-- [吳子嘉爆綠民調「五都領先」　民進黨打臉](https://www.setn.com/news/1930273)
 - [沈伯洋最新形象片　神祕大咖現身感動萬人](https://www.setn.com/news/1929379)
 - [蔣萬安生病了！太太石舫亘代夫掃街反應曝](https://www.setn.com/news/1930163)
-- [蔣萬安掃街！現場大吼：市長講話吵什麼](https://www.setn.com/news/1930013)
 - [柯文哲問中華文化怎麼分！沈伯洋親解答](https://www.setn.com/news/1929726)
-- [他曝：蔣萬安民調崩盤的甲級戰犯就是這人](https://www.setn.com/news/1929609)
+- [李彥秀掛彩！綁馬尾被誤認「蔣萬安太太」](https://www.setn.com/news/1930314)
+- [蔣萬安掃街！現場大吼：市長講話吵什麼](https://www.setn.com/news/1930013)
 - [更多](https://www.setn.com/viewall/focus)
 - [授信精準分流，助優良建商規模化](https://www.setn.com/news/1929966)
+- [台東跨年 蔡健雅等四大卡司Full band登場](https://www.setn.com/news/1930019)
+- [記憶體大廠美光調薪 產線年上看200萬](https://www.setn.com/news/1929985)
+- [河口湖命案](https://www.setn.com/klist/0/10843)
+- [決勝九合一](https://elect.setn.com/2026/)
+
+> 備註：進階解析失敗，已使用內建解析器：AttributeError: 'NoneType' object has no attribute 'get'

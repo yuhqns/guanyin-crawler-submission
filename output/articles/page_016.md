@@ -5,7 +5,7 @@
 - 狀態：success
 - 主題：地方知識
 - 關鍵字：觀音區、桃園市、大堀溪
-- 擷取時間：2026-10-29T08:59:41.708927+00:00
+- 擷取時間：2026-10-29T13:54:19.834653+00:00
 
 ## 清理後正文
 
@@ -113,154 +113,6 @@
 新屋區頭洲里參與式預算提案工作坊
 ^
 《桃園縣中壢市行政區域圖》，內政部，2007年6月
-閱
-論
-編
-臺灣主要河流
-北臺灣
-中央管河川
-淡水河
-大漢溪
-新店溪
-基隆河
-磺溪
-鳳山溪
-頭前溪
-蘭陽溪
-縣市管河川
-新北市
-林口溪
-寶斗溪
-紅水仙溪
-林子溪
-興仁溪
-後洲溪
-大屯溪
-八連溪
-埔坪溪
-八甲溪
-楓林溪
-老梅溪
-石門溪
-乾華溪
-小坑溪
-員潭溪
-瑪鋉溪
-尖山腳溪
-雙溪
-桃園市
-南崁溪
-老街溪
-富林溪
-大堀溪
-觀音溪
-新屋溪
-社子溪
-牛欄河
-新竹縣
-新豐溪
-宜蘭縣
-大溪川
-得子口溪
-新城溪
-蘇澳溪
-東澳溪
-南澳溪
-中臺灣
-中央管河川
-中港溪
-後龍溪
-大安溪
-大甲溪
-烏溪
-濁水溪
-北港溪
-縣市管河川
-苗栗縣
-西湖溪
-通霄溪
-苑裡溪
-房裡溪
-臺中市
-溫寮溪
-雲林縣
-新虎尾溪
-南臺灣
-中央管河川
-朴子溪
-八掌溪
-急水溪
-曾文溪
-鹽水溪
-二仁溪
-阿公店溪
-高屏溪
-東港溪
-四重溪
-縣市管河川
-屏東縣
-林邊溪
-率芒溪
-七里溪
-枋山溪
-楓港溪
-石盤溪
-里仁溪
-旭海溪
-保力溪
-港口溪
-九棚溪
-港子溪
-東臺灣
-中央管河川
-和平溪
-花蓮溪
-秀姑巒溪
-卑南溪
-縣市管河川
-花蓮縣
-良里溪
-大富溪
-石公溪
-立霧溪
-三棧溪
-美崙溪
-吉安溪
-水連溪
-薯寮溪
-加蘭溪
-豐濱溪
-三富溪
-臺東縣
-水母溪
-山間溪
-真柄溪
-城埔溪
-長濱溪
-大德溪
-竹湖溪
-寧埔溪
-沙灣溪
-都威溪
-富家溪
-新港溪
-馬武窟溪
-八里溪
-都蘭溪
-太平溪
-利嘉溪
-知本溪
-文里溪
-太麻里溪
-金崙溪
-大竹溪
-津林溪
-烏萬溪
-大武溪
-朝庸溪
-安朔溪
-達仁溪
-塔瓦溪
 取自「
 https://zh.wikipedia.org/w/index.php?title=大堀溪&oldid=85607001
 」
@@ -272,11 +124,10 @@ https://zh.wikipedia.org/w/index.php?title=大堀溪&oldid=85607001
 有地圖的頁面
 
 ## 圖片
-- ![維基百科](images/page_001_image_01.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-zh.svg) 
-- ![自由的百科全書](images/page_001_image_02.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-zh.svg) 
-- ![地圖](images/page_016_image_01.png) — [原始圖片來源](https://maps.wikimedia.org/img/osm-intl,a,a,a,250x200.png?lang=zh&domain=zh.wikipedia.org&title=%E5%A4%A7%E5%A0%80%E6%BA%AA&revid=85607001&groups=_b39eee3035ef976a286cd55055d35a4bc0fc90a0&parser=legacy) 
-- ![Wikimedia Foundation](images/page_016_image_02.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/footer/wikimedia.svg) 
-- ![Powered by MediaWiki](images/page_016_image_03.svg) — [原始圖片來源](https://zh.wikipedia.org/w/resources/assets/mediawiki_compact.svg) 
+- ![維基百科](../images/page_001_image_01.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-zh.svg) 
+- ![自由的百科全書](../images/page_001_image_02.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-zh.svg) 
+- ![Wikimedia Foundation](../images/page_015_image_03.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/footer/wikimedia.svg) 
+- ![Powered by MediaWiki](../images/page_016_image_01.svg) — [原始圖片來源](https://zh.wikipedia.org/w/resources/assets/mediawiki_compact.svg) 
 
 ## 頁面連結
 - [分類索引](https://zh.wikipedia.org/wiki/Wikipedia:%E5%88%86%E7%B1%BB%E7%B4%A2%E5%BC%95)
@@ -379,3 +230,5 @@ https://zh.wikipedia.org/w/index.php?title=大堀溪&oldid=85607001
 - [牛欄河](https://zh.wikipedia.org/wiki/%E7%89%9B%E6%AC%84%E6%B2%B3_(%E6%B2%B3%E5%B7%9D))
 - [新竹縣](https://zh.wikipedia.org/wiki/%E6%96%B0%E7%AB%B9%E7%B8%A3)
 - [新豐溪](https://zh.wikipedia.org/wiki/%E6%96%B0%E8%B1%90%E6%BA%AA)
+
+> 備註：進階解析失敗，已使用內建解析器：AttributeError: 'NoneType' object has no attribute 'get'

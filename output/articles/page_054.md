@@ -1,41 +1,116 @@
-# 首頁 | 蓮花園休閒農業區
+# 保生大帝（大道公、神農大帝、感天大帝）｜悠遊時光
 
-- 網站：蓮花園休閒農業區
-- 原始網址：https://www.lotuspark.com.tw/?fbclid=IwZXh0bgNhZW0CMTAAAR0_nKS6CquWKRZQrSRm5CZF2GvFK4y601bIcGqphxgU6QbVogZWyokb1W8_aem_UlUxM8cji3Ib-H4X5ibAIg
+- 網站：vocus.cc
+- 原始網址：https://vocus.cc/salon/688b0b79fd897800010bfb2f/room/690c7460cebbddbc5cbbef6f
 - 狀態：success
-- 主題：地方產業與農漁業
-- 關鍵字：蓮花園休閒農業區、地方旅遊、觀光資訊
-- 擷取時間：2026-10-29T09:00:32.700477+00:00
+- 主題：歷史文化與信仰、地方產業與農漁業、觀光景點與活動
+- 關鍵字：桃園市、地方旅遊、觀光資訊
+- 擷取時間：2026-10-29T13:55:06.760265+00:00
 
 ## 清理後正文
 
-首頁 | 蓮花園休閒農業區
+32免費公開
+大道公不只是神醫，更是百姓心中的靠山。
+祂醫病，也醫心，守護著漁村、巷弄與廟埕間的生活故事。
+這個房間，收藏著我走訪各地大道公廟的腳步與感動。
+從香煙繚繞的神案，到信徒口中的奇蹟，每一篇文章，
+都是信仰延續的篇章。
+位於高雄市美濃區竹仔門的代天水德宮，是全臺極具特色、少數以**水德星君（水德聖君、水官大帝）**為主祀神明的重要廟宇，也是美濃地區水利文化的重要信仰中心。
+廟宇緊鄰竹仔門發電廠及獅子頭大圳，見證超過百年的水利建設歷史，從日治時期的「水神宮」，到今日融合道教與民間信仰的「代天巡狩水德宮」，不僅守護地
+說到臺南的王爺信仰與陣頭文化，就不能不提「台南白龍庵五福大帝」。白龍庵不僅是臺灣五福大帝信仰的重要發源地，更被譽為全臺八家將文化的祖庭。數百年來，五福大帝護佑府城百姓，也孕育出獨具特色的家將文化，成為臺南最具代表性的民俗信仰之一。
+如果您想深入了解臺灣傳統宗教文化、八家將歷史與府城信仰，本篇將帶您
+位於嘉義市西區西門街的震安宮，當地人習慣稱為「菜園仔震安宮」，是一座擁有百年以上歷史的保生大帝信仰中心，也是嘉義市極具代表性的大道公廟之一。震安宮不僅承襲保生大帝濟世救人的精神，更融合醫神信仰、文昌信仰、月老姻緣、財神招財等多元宗教文化，長年守護地方居民，也吸引許多外地信眾前來參香祈福。
+除了莊嚴
+蘇澳存仁定安宮位於宜蘭縣蘇澳鎮，是台灣北部極具代表性的五顯靈官大帝信仰中心，也是全台少數主祀**五顯靈官大帝（華光大帝）**的古廟之一。創建於清道光年間，至今已有180餘年歷史，不僅見證蘇澳地方的開墾發展，更保存珍貴的民間宗教文化。近年完成新廟重建，結合傳統信仰與現代建築，每逢農曆九月二十八日更舉辦
+一、家族祖厝轉變而成的地方信仰中心
+大汕頭神農宮原址為當地蔡氏家族三合院祖厝。早年旗津居民多以漁業、鹽業及農耕維生，為祈求平安與健康，蔡氏族人迎奉神農大帝神尊供奉於祖厝之中。
+隨著地方人口增加與信徒日益眾多，原有祖厝空間逐漸不足，遂進行整建工程。整修後保留家族祭祖功能，同時增設神殿供信眾參拜
+位於台南市白河區的三官寶殿，是南臺灣極具代表性的三官大帝信仰中心之一。廟宇主祀天官、地官、水官三位神明，合稱「三官大帝」，民間俗稱「三界公」，掌管賜福、赦罪與解厄，因此深受信眾敬仰。
+三官寶殿不僅擁有超過三百六十年的歷史香火，更保存著明鄭時期隨鄭成功來臺的珍貴古文物「三界公爐」，見證臺灣早期開墾史
+來到臺南旅遊，除了古蹟、美食與媽祖廟之外，位於中西區的「全臺西來庵」更是一處兼具宗教信仰與歷史意義的重要景點。這裡不僅供奉地方信仰神祇「五福大帝」，更因為1915年震撼全臺的「西來庵事件」而名留青史，成為臺灣近代抗日運動的重要象徵。
+走訪全臺西來庵，不只是一次廟宇巡禮，更是一趟深入了解臺灣歷史、宗
+位於桃園市龍潭區的 龍潭龍元宮，是龍潭地區最具代表性的信仰中心之一，地方人習慣稱它為「龍潭大廟」。廟宇主祀神農大帝，也就是民間俗稱的「五穀爺」，不僅守護農業豐收，更兼具醫藥之神的身份，因此長年深受地方居民敬仰。
+龍元宮除了擁有超過兩百年的歷史，更保留濃厚的客庄信仰文化。每逢元宵節的「迎古董、接財神
+位於桃園新屋的 新屋長祥宮，又稱「五穀先帝廟」，是當地極具代表性的民間信仰中心。廟宇主祀五穀神農大帝，以罕見「黑面神農」神尊聞名，更因廟旁矗立一尊高達二十公尺的「全台最大神農大帝青銅像」而成為新屋地區的重要地標。
+這裡不僅是一座信仰廟宇，更融合客庄文化、農業歷史、中元祭典與地方聚落情感。每逢慶典時
+一、歷史沿革與由來典故
+嘉義仁武宮主祀保生大帝（大道公），為臺灣重要的醫神信仰之一。
+創建於清康熙40年（1701年）
+由當時知縣「毛鳳綸」主持興建
+因當時官兵隨行供奉保生大帝作為守護神，並以軍隊名稱「仁武」命名
+^ 歷史特色重點：
+神像可追溯至明朝永曆年間
+屬於早期軍民融合信仰
+見
+位於高雄永安舊聚落「烏樹林」的烏樹林保寧宮，是一座融合醫神信仰、祖師文化與地方血緣連結的百年廟宇。這裡不只是村落的精神中心，更因與鴨寮保安宮、大社東安宮之間的「祖佛輪祀」制度，形成極具特色的宗教文化圈。安排一趟永安一日遊，走進漁村、拜神祈福、品嚐海味，感受最純粹的台灣信仰文化。
+一、歷史沿革與由來
+位於桃園大園的大園仁壽宮，主祀感天大帝許遜，是台灣少見供奉許真君的重要廟宇之一。廟宇創建至今已有約184年歷史，不僅香火鼎盛，更以「求藥籤」聞名，許多信眾慕名而來祈求健康與消災解厄。仁壽宮長年推動公益活動，如醫療義診與獎學金發放，展現宗教與地方社會互助的精神。若規劃桃園宗教文化之旅，大園仁壽宮是一處
+位於高雄內門金瓜寮山區的竹峰宮（又稱竹峰寺），是一座以醫神信仰聞名的地方信仰中心，主祀保生大帝（大道公）。廟宇座落於山林聚落之間，環境清幽，承載著百年以上的地方信仰文化。早期居民因瘟疫肆虐，奉請保生大帝設立四方符腳鎮庄，逐漸形成庄頭守護神信仰。如今重建後的竹峰宮，不僅是居民祈福求平安的重要場所，也是
+位於嘉義市的大天宮五穀王廟，是台灣少見同時供奉「三皇聖帝（伏羲、神農、軒轅）」與金雞神的特色廟宇。創建於清康熙年間，歷經重建與擴建，融合農業信仰、醫藥文化與儒道精神，不僅是地方信仰中心，更承載著嘉義地區的歷史記憶與生活文化。
+一、歷史沿革與由來典故
+創建年代：西元1707年（清康熙46年）
+主
+在大溪老城區的一隅，有一座靜靜守護地方近三百年的庄廟──**大溪永昌宮**。這裡主祀五穀仙帝，不求暴富、不談奇蹟，而是陪伴世代居民走過農耕、勞作與生活起伏。廟中那座百年樹瘤香爐，更像是大地留下的印記，凝聚香火與信仰。本篇，帶你走進這座低調卻厚實的老廟，感受最貼近民生的守護力量。
+一、歷史沿革｜近三
+位於台北士林的 士林神農宮（芝蘭廟），是北台灣極具代表性的神農信仰廟宇之一，不僅承載三百年以上的農業與醫藥文化，更被指定為「臺北市定古蹟」。
+本篇以一日遊條文式完整整理，從歷史沿革、參拜流程、保佑事項，到交通、美食與周邊景點，協助你一次深度走讀芝蘭古庄。
+一、歷史沿革・由來與典故（重點整理）
+位於彰化縣大村鄉埤腳聚落的埤腳五通宮，主祀五顯大帝，是一間在地人熟悉、卻少見於觀光書寫中的地方信仰廟宇。沒有華麗的觀光包裝，卻長年香火不墜，是不少信眾祈求事業、財運、化解疑難時的重要寄託。
+若你對台灣少見但靈驗的民間信仰有興趣，這一站，非常值得列入一日遊行程。
+一、埤腳五通宮的歷史沿革與由來
+位於新竹縣新埔鎮的 新竹新埔龍天宮，主祀神農大帝，是北台灣少見以神農信仰為核心的傳統廟宇。創建於清同治十二年（西元1873年），歷經百餘年香火不輟，長年守護地方農業、醫藥與百姓健康。結合參拜、文化與美食的「新埔龍天宮一日遊」，非常適合想深度走讀客庄文化的旅人。
+一、歷史沿革、由來與典故
+龍天宮創
+位於新北市瑞芳山城間的 青雲殿，主祀五穀神農大帝，是北台灣少見以農醫之神為信仰核心的廟宇。廟宇依山而建、視野遼闊，融合宗教信仰、自然景觀與地方文化，無論是祈福、踏青或規劃瑞芳一日遊，都相當適合納入行程。
+一、瑞芳青雲殿歷史沿革、由來與典故
+主祀神明：五穀神農大帝｜落成時間：西元 1964 年
 
 ## 圖片
-- ![文章圖片](images/page_054_image_01.svg) — [原始圖片來源](https://www.lotuspark.com.tw/assets/image/fb-i.svg) 
-- ![文章圖片](images/page_054_image_02.svg) — [原始圖片來源](https://www.lotuspark.com.tw/assets/image/line-i.svg) 
-- ![文章圖片](images/page_054_image_03.svg) — [原始圖片來源](https://www.lotuspark.com.tw/assets/image/menu-toggle-i.svg) 
+- ![Thumbnail](../images/page_054_image_01.webp) — [原始圖片來源](https://img.vocus.cc/bmfG0LQaMh7aTMTWDXajSUrjq66NP3pvwWDS2YsaAK8/w:400/f:webp/plain/https://images.vocus.cc/4b7d7538-3f81-4eee-be14-a103e7a0f943.jpg) 
+- ![Thumbnail](../images/page_054_image_02.webp) — [原始圖片來源](https://img.vocus.cc/V0Bdg3X2Id8MkJe1T4T1FY5DtXQ4py5cMjtzTMGIAUo/w:400/f:webp/plain/https://images.vocus.cc/39b30a52-6498-468b-ad3b-d3f7c77063c1.jpg) 
+- ![Thumbnail](../images/page_054_image_03.webp) — [原始圖片來源](https://img.vocus.cc/shObq3ZTjdRoz1Kuupktjdopqb4B4dignBE4T2QvUhg/w:400/f:webp/plain/https://images.vocus.cc/655a00f9-d1b9-4d9b-8fde-add3a8e2f4ef.jpg) 
 
 ## 頁面連結
-- [跳到主要內容](https://www.lotuspark.com.tw/?fbclid=IwZXh0bgNhZW0CMTAAAR0_nKS6CquWKRZQrSRm5CZF2GvFK4y601bIcGqphxgU6QbVogZWyokb1W8_aem_UlUxM8cji3Ib-H4X5ibAIg)
-- [https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.lotuspark.com.tw%2Fhome](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.lotuspark.com.tw%2Fhome)
-- [https://www.lotuspark.com.tw/r/pass?id=2](https://www.lotuspark.com.tw/r/pass?id=2)
-- [https://www.lotuspark.com.tw/tw/p/1202/2024%E6%A1%83%E5%9C%92%E8%93%AE%E8%8A%B1%E5%AD%A3-%E8%93%AE%E6%84%9Bdiy%E7%B3%BB%E5%88%97%E9%AB%94%E9%A9%97](https://www.lotuspark.com.tw/tw/p/1202/2024%E6%A1%83%E5%9C%92%E8%93%AE%E8%8A%B1%E5%AD%A3-%E8%93%AE%E6%84%9Bdiy%E7%B3%BB%E5%88%97%E9%AB%94%E9%A9%97)
-- [https://www.lotuspark.com.tw/tw/p/1136/%E6%84%9B%E8%93%AE-%E6%84%9B%E9%84%89%E5%9C%9F---%E6%9D%8E%E5%BB%BA%E6%98%9F-%E6%B0%B4%E5%BD%A9%E5%80%8B%E5%B1%95](https://www.lotuspark.com.tw/tw/p/1136/%E6%84%9B%E8%93%AE-%E6%84%9B%E9%84%89%E5%9C%9F---%E6%9D%8E%E5%BB%BA%E6%98%9F-%E6%B0%B4%E5%BD%A9%E5%80%8B%E5%B1%95)
-- [https://www.lotuspark.com.tw/tw/p/623/2024-%E8%93%AE%E6%84%9B-%E9%96%8B%E5%B9%95%E6%BC%94%E5%94%B1%E6%9C%83](https://www.lotuspark.com.tw/tw/p/623/2024-%E8%93%AE%E6%84%9B-%E9%96%8B%E5%B9%95%E6%BC%94%E5%94%B1%E6%9C%83)
-- [看更多文章](https://www.lotuspark.com.tw/tag/news)
-- [https://www.lotuspark.com.tw/r/pass?id=5](https://www.lotuspark.com.tw/r/pass?id=5)
-- [看更多活動](https://www.lotuspark.com.tw/tag/event)
-- [https://www.lotuspark.com.tw/tw/p/175/%E6%B0%B4%E4%BE%86%E9%9D%92%E8%88%8D](https://www.lotuspark.com.tw/tw/p/175/%E6%B0%B4%E4%BE%86%E9%9D%92%E8%88%8D)
-- [https://www.lotuspark.com.tw/tw/p/132/%E4%B8%89%E5%A5%87%E8%9C%9C%E8%9C%82%E7%94%9F%E6%85%8B%E8%BE%B2%E5%9C%92](https://www.lotuspark.com.tw/tw/p/132/%E4%B8%89%E5%A5%87%E8%9C%9C%E8%9C%82%E7%94%9F%E6%85%8B%E8%BE%B2%E5%9C%92)
-- [https://www.lotuspark.com.tw/tw/p/128/%E8%8D%B7%E9%A6%A8%E8%93%AE%E8%8A%B1%E5%9C%92](https://www.lotuspark.com.tw/tw/p/128/%E8%8D%B7%E9%A6%A8%E8%93%AE%E8%8A%B1%E5%9C%92)
-- [看更多特色業者](https://www.lotuspark.com.tw/tag/partner)
-- [https://www.lotuspark.com.tw/r/pass?id=1](https://www.lotuspark.com.tw/r/pass?id=1)
-- [https://www.lotuspark.com.tw/r/pass?id=7](https://www.lotuspark.com.tw/r/pass?id=7)
-- [https://www.lotuspark.com.tw/r/pass?id=6](https://www.lotuspark.com.tw/r/pass?id=6)
-- [蓮花園休閒農業區 LotusPark Leisure Agriculture Area](https://www.lotuspark.com.tw/home)
-- [前往 Facebook 官方粉絲專頁](https://www.facebook.com/lotus.guanyin)
-- [加入 LINE 官方帳號](https://line.me/R/ti/p/@381qkjil)
-- [隱私權政策](https://taoyuanleisureagriculturefanpage.tycg.gov.tw/chagrrec/app/artwebsite?module=artwebsite&id=71&serno=null)
-- [網站安全政策](https://taoyuanleisureagriculturefanpage.tycg.gov.tw/chagrrec/app/artwebsite?module=artwebsite&id=70&serno=null)
-- [隱私權政策](https://www.tycg.gov.tw/cp.aspx?n=5845&s=1312&ccms_cs=1&state=1C5D152DDF4F3ED0)
+- [悠遊時光](https://vocus.cc/salon/688b0b79fd897800010bfb2f)
+- [全部](https://vocus.cc/salon/688b0b79fd897800010bfb2f/room/690c7460cebbddbc5cbbef6f)
+- [美濃竹仔門代天水德宮一日遊｜探訪百年水神信仰，走進美濃水利文化的重要地標](https://vocus.cc/article/6a51d6c2fd8978000197f952)
+- [台南白龍庵五福大帝一日遊｜全臺五福大帝開基祖廟、八家將發源地巡禮](https://vocus.cc/article/6a1f978ffd89780001e7faa9)
+- [嘉義西門街震安宮（菜園仔震安宮）｜保生大帝醫神信仰巡禮，參拜流程、歷史沿革、一日遊完整攻略](https://vocus.cc/article/6a4cafd2fd897800016f1d53)
+- [蘇澳存仁定安宮一日遊｜全台少見五顯靈官大帝祖廟，走訪百年古廟、體驗「過水火」祈福文化](https://vocus.cc/article/6a61ac44fd89780001fbf49e)
+- [高雄旗津大汕頭神農宮歷史沿革、由來與典故](https://vocus.cc/article/6a2cd566fd89780001d1986e)
+- [台南白河三官寶殿一日遊｜360年三界公古爐傳奇，全台少見北方式宮殿建築巡禮](https://vocus.cc/article/6a30ee28fd897800012142ac)
+- [臺南全臺西來庵一日遊｜走訪臺灣抗日聖地，探尋西來庵事件與五福大帝信仰文化](https://vocus.cc/article/6a1e8c94fd89780001936dda)
+- [桃園龍潭龍元宮一日遊｜走訪200年「龍潭大廟」！五穀爺信仰、藥籤文化、迎古董慶典全攻略](https://vocus.cc/article/6a098ff2fd89780001a37757)
+- [桃園新屋長祥宮（五穀先帝廟）一日遊｜全台最大神農大帝青銅像、黑面神農傳奇與七大庄中元文化](https://vocus.cc/article/6a06c14cfd89780001b99c8a)
+- [嘉義仁武宮一日遊｜保生大帝醫神信仰、百年古廟巡禮與在地美食攻略](https://vocus.cc/article/69ccc46ffd897800016effd2)
+- [高雄永安｜烏樹林保寧宮一日遊攻略
+
+在地三廟輪祀文化 × 保生大帝信仰 × 漁村秘境旅行](https://vocus.cc/article/69eace26fd8978000129cd93)
+- [桃園大園仁壽宮一日遊攻略｜感天大帝許遜祖庭、百年求藥籤與地方信仰文化](https://vocus.cc/article/69b8c632fd897800016a87c3)
+- [高雄內門金瓜寮竹峰宮（竹峰寺）一日遊攻略
+
+主祀：保生大帝（大道公）｜百年信仰古庄廟｜祈福平安、健康守護](https://vocus.cc/article/69ab83e4fd89780001bd9daf)
+- [嘉義市大天宮五穀王廟一日遊全攻略
+
+（神農聖帝信仰 × 三皇共祀 × 在地文化深度旅行）](https://vocus.cc/article/69c375d4fd89780001297601)
+- [大溪老城區的百年祕密｜五穀仙帝坐鎮，樹瘤香爐流傳近三百年](https://vocus.cc/article/6958bffefd89780001f5382b)
+- [# 連假](https://vocus.cc/tags/%E9%80%A3%E5%81%87)
+- [【士林神農宮（芝蘭廟）一日遊】台北市定古蹟｜五穀先帝信仰中心｜參拜流程、歷史典故、在地美食全攻略](https://vocus.cc/article/6968dc73fd89780001d60ce7)
+- [彰化大村埤腳五通宮一日遊｜五顯大帝是誰？在地人低調參拜卻超靈驗的地方信仰](https://vocus.cc/article/697430fafd89780001cb6119)
+- [# 參拜](https://vocus.cc/tags/%E5%8F%83%E6%8B%9C)
+- [# 方格新手](https://vocus.cc/tags/%E6%96%B9%E6%A0%BC%E6%96%B0%E6%89%8B)
+- [新竹新埔龍天宮一日遊
+
+神農大帝信仰 × 客庄老廟 × 祈福療癒系旅程](https://vocus.cc/article/695105a8fd89780001726cbb)
+- [# 信仰](https://vocus.cc/tags/%E4%BF%A1%E4%BB%B0)
+- [瑞芳青雲殿一日遊攻略
+
+五穀神農大帝信仰 × 山城廟宇 × 瑞芳在地美食與景點一次收錄](https://vocus.cc/article/6940ad67fd89780001d45cb3)
+- [# 美食](https://vocus.cc/tags/%E7%BE%8E%E9%A3%9F)
+- [# 廟宇](https://vocus.cc/tags/%E5%BB%9F%E5%AE%87)
+- [# 景點](https://vocus.cc/tags/%E6%99%AF%E9%BB%9E)
+- [https://vocus.cc/user/688b0b01fd897800010bdd48](https://vocus.cc/user/688b0b01fd897800010bdd48)
+- [台南北寮北安宮一日遊：神農大帝庇祐、百年古廟文化全攻略（交通、美食、景點）](https://vocus.cc/article/6923a43dfd897800016e65ad)
+- [# 一日遊](https://vocus.cc/tags/%E4%B8%80%E6%97%A5%E9%81%8A)
+- [# 特色](https://vocus.cc/tags/%E7%89%B9%E8%89%B2)
+- [# 文化巡禮](https://vocus.cc/tags/%E6%96%87%E5%8C%96%E5%B7%A1%E7%A6%AE)

@@ -1,11 +1,12 @@
 # page_062
 
 - 網站：未知
-- 原始網址：https://www.taipower.com.tw/tc/news_noclassify_info.aspx?id=2874&chk=3b993c9c-49b1-444f-afeb-7c4df52b3647&mid=334&param=pn%3d1%26mid%3d334%26key%3d
-- 狀態：failed
+- 原始網址：https://www.tycg.gov.tw/budget/home.jsp?id=10&parentpath=0,5&mcustomize=multimessages_view.jsp&dataserno=201905270001&aplistdn=ou=data,ou=budgettopic,ou=service,ou=ap_root,o=tycg,c=tw&toolsflag=Y
+- 狀態：inaccessible
+- 原因：無法存取：HTTPError: 403 Client Error: Forbidden for url: https://www.tycg.gov.tw/budget/home.jsp?id=10&parentpath=0,5&mcustomize=multimessages_view.jsp&dataserno=201905270001&aplistdn=ou=data,ou=budgettopic,ou=service,ou=ap_root,o=tycg,c=tw&toolsflag=Y
 - 主題：地方知識
 - 關鍵字：地方旅遊、觀光資訊、在地資訊
-- 擷取時間：
+- 擷取時間：2026-10-29T13:55:15.973417+00:00
 
 ## 清理後正文
 

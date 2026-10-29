@@ -5,7 +5,7 @@
 - 狀態：success
 - 主題：歷史文化與信仰、地方產業與農漁業、觀光景點與活動
 - 關鍵字：觀音區、桃園市、地方旅遊
-- 擷取時間：2026-10-29T09:00:05.375140+00:00
+- 擷取時間：2026-10-29T13:54:41.816207+00:00
 
 ## 清理後正文
 
@@ -313,8 +313,6 @@
 於2024-06-25）
 （中文（臺灣））
 .
-桃園主題
-道教主題
 取自「
 https://zh.wikipedia.org/w/index.php?title=草漯保障宮&oldid=91065304
 」
@@ -332,13 +330,12 @@ Infobox religious building使用未知宗教參數的頁面
 有地圖的頁面
 
 ## 圖片
-- ![維基百科](images/page_001_image_01.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-zh.svg) 
-- ![自由的百科全書](images/page_001_image_02.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-zh.svg) 
-- ![文章圖片](images/page_032_image_01.jpg) — [原始圖片來源](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/%E8%8D%89%E6%BC%AF%E4%BF%9D%E9%9A%9C%E5%AE%AE%E6%AD%A3%E9%9D%A2%E7%85%A7.jpg/250px-%E8%8D%89%E6%BC%AF%E4%BF%9D%E9%9A%9C%E5%AE%AE%E6%AD%A3%E9%9D%A2%E7%85%A7.jpg?utm_source=zh.wikipedia.org&utm_campaign=parser&utm_content=thumbnail) 
-- ![地圖](images/page_032_image_02.png) — [原始圖片來源](https://maps.wikimedia.org/img/osm-intl,13,a,a,270x200.png?lang=zh&domain=zh.wikipedia.org&title=%E8%8D%89%E6%BC%AF%E4%BF%9D%E9%9A%9C%E5%AE%AE&revid=91065304&groups=_5d3a74b1cf9493357789f3d94448535fb1262d61&parser=legacy) 
-- ![文章圖片](images/page_032_image_03.jpg) — [原始圖片來源](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/%E8%8D%89%E6%BC%AF%E4%BF%9D%E9%9A%9C%E5%AE%AE%E5%85%A7%E9%83%A8.jpg/250px-%E8%8D%89%E6%BC%AF%E4%BF%9D%E9%9A%9C%E5%AE%AE%E5%85%A7%E9%83%A8.jpg?utm_source=zh.wikipedia.org&utm_campaign=parser&utm_content=thumbnail) 
-- ![Wikimedia Foundation](images/page_016_image_02.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/footer/wikimedia.svg) 
-- ![Powered by MediaWiki](images/page_016_image_03.svg) — [原始圖片來源](https://zh.wikipedia.org/w/resources/assets/mediawiki_compact.svg) 
+- ![維基百科](../images/page_001_image_01.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-zh.svg) 
+- ![自由的百科全書](../images/page_001_image_02.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-zh.svg) 
+- ![文章圖片](../images/page_032_image_01.jpg) — [原始圖片來源](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/%E8%8D%89%E6%BC%AF%E4%BF%9D%E9%9A%9C%E5%AE%AE%E6%AD%A3%E9%9D%A2%E7%85%A7.jpg/250px-%E8%8D%89%E6%BC%AF%E4%BF%9D%E9%9A%9C%E5%AE%AE%E6%AD%A3%E9%9D%A2%E7%85%A7.jpg?utm_source=zh.wikipedia.org&utm_campaign=parser&utm_content=thumbnail) 
+- ![文章圖片](../images/page_032_image_02.jpg) — [原始圖片來源](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/%E8%8D%89%E6%BC%AF%E4%BF%9D%E9%9A%9C%E5%AE%AE%E5%85%A7%E9%83%A8.jpg/250px-%E8%8D%89%E6%BC%AF%E4%BF%9D%E9%9A%9C%E5%AE%AE%E5%85%A7%E9%83%A8.jpg?utm_source=zh.wikipedia.org&utm_campaign=parser&utm_content=thumbnail) 
+- ![Wikimedia Foundation](../images/page_015_image_03.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/footer/wikimedia.svg) 
+- ![Powered by MediaWiki](../images/page_016_image_01.svg) — [原始圖片來源](https://zh.wikipedia.org/w/resources/assets/mediawiki_compact.svg) 
 
 ## 頁面連結
 - [分類索引](https://zh.wikipedia.org/wiki/Wikipedia:%E5%88%86%E7%B1%BB%E7%B4%A2%E5%BC%95)
@@ -441,3 +438,5 @@ Infobox religious building使用未知宗教參數的頁面
 - [有地圖的頁面](https://zh.wikipedia.org/wiki/Category:%E6%9C%89%E5%9C%B0%E5%9B%BE%E7%9A%84%E9%A1%B5%E9%9D%A2)
 - [創用CC 署名-相同方式分享 4.0協議](https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_4.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC)
 - [使用條款](https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use)
+
+> 備註：進階解析失敗，已使用內建解析器：AttributeError: 'NoneType' object has no attribute 'get'

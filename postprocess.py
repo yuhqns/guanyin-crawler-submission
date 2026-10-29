@@ -99,8 +99,13 @@ def save_images(rows, limit):
     for r in rows:
         kept=[]; selected=0
         for im in r.pop('_candidates',[]):
-            url=im.get('url',''); host=urlparse(url).hostname or ''
-            if not url or urlparse(url).scheme not in ('http','https') or BAD.search(url+' '+im.get('alt','')+' '+im.get('caption','')): continue
+            # Older/raw records may contain JSON null for optional image
+            # fields.  Normalize those values before string operations.
+            url = str(im.get('url') or '').strip()
+            alt = str(im.get('alt') or '')
+            caption = str(im.get('caption') or '')
+            host=urlparse(url).hostname or ''
+            if not url or urlparse(url).scheme not in ('http','https') or BAD.search(url+' '+alt+' '+caption): continue
             if url in url_cache:
                 kept.append(dict(url_cache[url])); continue
             if selected>=limit: continue

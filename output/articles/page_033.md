@@ -5,7 +5,7 @@
 - 狀態：success
 - 主題：歷史文化與信仰、地方產業與農漁業、觀光景點與活動
 - 關鍵字：觀音區、桃園市、地方旅遊
-- 擷取時間：2026-10-29T09:00:06.560975+00:00
+- 擷取時間：2026-10-29T13:54:43.104008+00:00
 
 ## 清理後正文
 
@@ -180,8 +180,6 @@
 於2019-11-09）
 （中文（臺灣））
 .
-桃園主題
-道教主題
 維基共享資源
 上的相關多媒體資源：
 觀音復興宮
@@ -203,13 +201,12 @@ Infobox religious building使用未知宗教參數的頁面
 有地圖的頁面
 
 ## 圖片
-- ![維基百科](images/page_001_image_01.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-zh.svg) 
-- ![自由的百科全書](images/page_001_image_02.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-zh.svg) 
-- ![文章圖片](images/page_033_image_01.jpg) — [原始圖片來源](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/%E8%A7%80%E9%9F%B3%E5%BE%A9%E8%88%88%E5%AE%AE.jpg/250px-%E8%A7%80%E9%9F%B3%E5%BE%A9%E8%88%88%E5%AE%AE.jpg?utm_source=zh.wikipedia.org&utm_campaign=parser&utm_content=thumbnail) 
-- ![地圖](images/page_033_image_02.png) — [原始圖片來源](https://maps.wikimedia.org/img/osm-intl,13,a,a,270x200.png?lang=zh&domain=zh.wikipedia.org&title=%E8%A7%80%E9%9F%B3%E5%BE%A9%E8%88%88%E5%AE%AE&revid=93611298&groups=_88013ef3e553dca3ca124d507c4d1e5bbf23afb1&parser=legacy) 
-- ![文章圖片](images/page_033_image_03.jpg) — [原始圖片來源](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/%E8%A7%80%E9%9F%B3%E5%BE%A9%E8%88%88%E5%AE%AE%E6%B2%BF%E9%9D%A9.jpg/250px-%E8%A7%80%E9%9F%B3%E5%BE%A9%E8%88%88%E5%AE%AE%E6%B2%BF%E9%9D%A9.jpg?utm_source=zh.wikipedia.org&utm_campaign=parser&utm_content=thumbnail) 
-- ![Wikimedia Foundation](images/page_016_image_02.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/footer/wikimedia.svg) 
-- ![Powered by MediaWiki](images/page_016_image_03.svg) — [原始圖片來源](https://zh.wikipedia.org/w/resources/assets/mediawiki_compact.svg) 
+- ![維基百科](../images/page_001_image_01.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-zh.svg) 
+- ![自由的百科全書](../images/page_001_image_02.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-zh.svg) 
+- ![文章圖片](../images/page_033_image_01.jpg) — [原始圖片來源](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/%E8%A7%80%E9%9F%B3%E5%BE%A9%E8%88%88%E5%AE%AE.jpg/250px-%E8%A7%80%E9%9F%B3%E5%BE%A9%E8%88%88%E5%AE%AE.jpg?utm_source=zh.wikipedia.org&utm_campaign=parser&utm_content=thumbnail) 
+- ![文章圖片](../images/page_033_image_02.jpg) — [原始圖片來源](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/%E8%A7%80%E9%9F%B3%E5%BE%A9%E8%88%88%E5%AE%AE%E6%B2%BF%E9%9D%A9.jpg/250px-%E8%A7%80%E9%9F%B3%E5%BE%A9%E8%88%88%E5%AE%AE%E6%B2%BF%E9%9D%A9.jpg?utm_source=zh.wikipedia.org&utm_campaign=parser&utm_content=thumbnail) 
+- ![Wikimedia Foundation](../images/page_015_image_03.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/footer/wikimedia.svg) 
+- ![Powered by MediaWiki](../images/page_016_image_01.svg) — [原始圖片來源](https://zh.wikipedia.org/w/resources/assets/mediawiki_compact.svg) 
 
 ## 頁面連結
 - [分類索引](https://zh.wikipedia.org/wiki/Wikipedia:%E5%88%86%E7%B1%BB%E7%B4%A2%E5%BC%95)
@@ -312,3 +309,5 @@ Infobox religious building使用未知宗教參數的頁面
 - [開發人員](https://developer.wikimedia.org)
 - [統計](https://stats.wikimedia.org/)
 - [Cookie聲明](https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement)
+
+> 備註：進階解析失敗，已使用內建解析器：AttributeError: 'NoneType' object has no attribute 'get'

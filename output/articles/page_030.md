@@ -5,7 +5,7 @@
 - 狀態：success
 - 主題：自然景觀與生態、歷史文化與信仰、觀光景點與活動
 - 關鍵字：觀音區、桃園市、白沙岬燈塔、甘泉寺、石觀音
-- 擷取時間：2026-10-29T09:00:02.205739+00:00
+- 擷取時間：2026-10-29T13:54:38.543057+00:00
 
 ## 清理後正文
 
@@ -476,8 +476,6 @@ a
 「旗正飄飄」工作人員 甘泉寺追悼抗戰亡魂. 《民生報》. 1987-05-20
 （中文（臺灣））
 .
-桃園主題
-佛教主題
 維基共享資源
 上的相關多媒體資源：
 甘泉寺
@@ -499,15 +497,14 @@ https://zh.wikipedia.org/w/index.php?title=甘泉寺_(桃園市)&oldid=88894640
 有地圖的頁面
 
 ## 圖片
-- ![維基百科](images/page_001_image_01.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-zh.svg) 
-- ![自由的百科全書](images/page_001_image_02.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-zh.svg) 
-- ![文章圖片](images/page_029_image_01.jpg) — [原始圖片來源](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/%E8%A7%80%E9%9F%B3%E7%94%98%E6%B3%89%E5%AF%BA.jpg/250px-%E8%A7%80%E9%9F%B3%E7%94%98%E6%B3%89%E5%AF%BA.jpg?utm_source=zh.wikipedia.org&utm_campaign=parser&utm_content=thumbnail) 
-- ![地圖](images/page_029_image_02.png) — [原始圖片來源](https://maps.wikimedia.org/img/osm-intl,13,a,a,270x200.png?lang=zh&domain=zh.wikipedia.org&title=%E7%94%98%E6%B3%89%E5%AF%BA_%28%E6%A1%83%E5%9C%92%E5%B8%82%29&revid=88894640&groups=_d653a4567c9cba2333f2c7b87534a00bb2efb859&parser=legacy) 
-- ![文章圖片](images/page_029_image_03.jpg) — [原始圖片來源](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/%E7%94%98%E6%B3%89%E5%AF%BA%E7%9F%B3%E8%A7%80%E9%9F%B3.jpg/250px-%E7%94%98%E6%B3%89%E5%AF%BA%E7%9F%B3%E8%A7%80%E9%9F%B3.jpg?utm_source=zh.wikipedia.org&utm_campaign=parser&utm_content=thumbnail) 
-- ![文章圖片](images/page_030_image_01.jpg) — [原始圖片來源](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/%E8%A7%80%E9%9F%B3%E7%94%98%E6%B3%89%E5%AF%BA%E7%94%98%E6%B3%89%E4%BA%AD.jpg/250px-%E8%A7%80%E9%9F%B3%E7%94%98%E6%B3%89%E5%AF%BA%E7%94%98%E6%B3%89%E4%BA%AD.jpg?utm_source=zh.wikipedia.org&utm_campaign=parser&utm_content=thumbnail) 
-- ![文章圖片](images/page_030_image_02.jpg) — [原始圖片來源](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/%E7%94%98%E6%B3%89%E5%AF%BA%E7%94%98%E6%B3%89%E4%BA%95.jpg/250px-%E7%94%98%E6%B3%89%E5%AF%BA%E7%94%98%E6%B3%89%E4%BA%95.jpg?utm_source=zh.wikipedia.org&utm_campaign=parser&utm_content=thumbnail) 
-- ![Wikimedia Foundation](images/page_016_image_02.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/footer/wikimedia.svg) 
-- ![Powered by MediaWiki](images/page_016_image_03.svg) — [原始圖片來源](https://zh.wikipedia.org/w/resources/assets/mediawiki_compact.svg) 
+- ![維基百科](../images/page_001_image_01.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-zh.svg) 
+- ![自由的百科全書](../images/page_001_image_02.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-zh.svg) 
+- ![文章圖片](../images/page_029_image_01.jpg) — [原始圖片來源](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/%E8%A7%80%E9%9F%B3%E7%94%98%E6%B3%89%E5%AF%BA.jpg/250px-%E8%A7%80%E9%9F%B3%E7%94%98%E6%B3%89%E5%AF%BA.jpg?utm_source=zh.wikipedia.org&utm_campaign=parser&utm_content=thumbnail) 
+- ![文章圖片](../images/page_029_image_02.jpg) — [原始圖片來源](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/%E7%94%98%E6%B3%89%E5%AF%BA%E7%9F%B3%E8%A7%80%E9%9F%B3.jpg/250px-%E7%94%98%E6%B3%89%E5%AF%BA%E7%9F%B3%E8%A7%80%E9%9F%B3.jpg?utm_source=zh.wikipedia.org&utm_campaign=parser&utm_content=thumbnail) 
+- ![文章圖片](../images/page_029_image_03.jpg) — [原始圖片來源](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/%E8%A7%80%E9%9F%B3%E7%94%98%E6%B3%89%E5%AF%BA%E7%94%98%E6%B3%89%E4%BA%AD.jpg/250px-%E8%A7%80%E9%9F%B3%E7%94%98%E6%B3%89%E5%AF%BA%E7%94%98%E6%B3%89%E4%BA%AD.jpg?utm_source=zh.wikipedia.org&utm_campaign=parser&utm_content=thumbnail) 
+- ![文章圖片](../images/page_030_image_01.jpg) — [原始圖片來源](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/%E7%94%98%E6%B3%89%E5%AF%BA%E7%94%98%E6%B3%89%E4%BA%95.jpg/250px-%E7%94%98%E6%B3%89%E5%AF%BA%E7%94%98%E6%B3%89%E4%BA%95.jpg?utm_source=zh.wikipedia.org&utm_campaign=parser&utm_content=thumbnail) 
+- ![Wikimedia Foundation](../images/page_015_image_03.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/footer/wikimedia.svg) 
+- ![Powered by MediaWiki](../images/page_016_image_01.svg) — [原始圖片來源](https://zh.wikipedia.org/w/resources/assets/mediawiki_compact.svg) 
 
 ## 頁面連結
 - [分類索引](https://zh.wikipedia.org/wiki/Wikipedia:%E5%88%86%E7%B1%BB%E7%B4%A2%E5%BC%95)
@@ -610,3 +607,5 @@ https://zh.wikipedia.org/w/index.php?title=甘泉寺_(桃園市)&oldid=88894640
 - [廣東](https://zh.wikipedia.org/wiki/%E5%BB%A3%E6%9D%B1)
 - [惠州](https://zh.wikipedia.org/wiki/%E6%83%A0%E5%B7%9E)
 - [陸豐](https://zh.wikipedia.org/wiki/%E9%99%B8%E8%B1%90)
+
+> 備註：進階解析失敗，已使用內建解析器：AttributeError: 'NoneType' object has no attribute 'get'
