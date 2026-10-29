@@ -1,0 +1,72 @@
+﻿url,final_url,source_type,depth,status,http_status,title,reason
+https://zh.wikipedia.org/zh-tw/%E8%A7%80%E9%9F%B3%E5%8D%80,https://zh.wikipedia.org/zh-tw/%E8%A7%80%E9%9F%B3%E5%8D%80,seed,0,success,200,觀音區 - 維基百科，自由的百科全書,
+https://travel.tycg.gov.tw/zh-tw/travel/district/50,,seed,0,failed,404,,找不到資源：RuntimeError: HTTP 404: Not Found
+https://smiletaiwan.cw.com.tw/article/6889,,seed,0,inaccessible,403,,無法存取：RuntimeError: HTTP 403: Forbidden
+https://romantichakka.com/hakkatours/TourExpert?a=1202&fromlist=1&id=1624,,seed,0,inaccessible,,,無法存取：URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Missing Subject Key Identifier (_ssl.c:1028)>
+https://natsuphil.com/taoyuan/baisha-cape/,https://natsuphil.com/taoyuan/baisha-cape/,seed,0,success,200,"  桃園觀音景點〡白沙岬燈塔〡百年日治時代燈塔, 希臘鐘塔熱門打卡景點, 超Q台灣縮小版燈塔",
+https://www.bip.gov.tw/iphw/kuangin/index.do?id=10,,seed,0,inaccessible,,,無法存取：URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Missing Subject Key Identifier (_ssl.c:1028)>
+https://www.guanyin-hro.tycg.gov.tw/cp.aspx?n=13772,,seed,0,inaccessible,,,無法存取：URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Missing Subject Key Identifier (_ssl.c:1028)>
+https://www.ganquan-temple.org.tw/,https://www.ganquan-temple.org.tw/,seed,0,success,200,甘泉寺,
+https://vocus.cc/article/695b08a8fd897800017a25c9,https://vocus.cc/article/695b08a8fd897800017a25c9,seed,0,success,200,【桃園石觀音甘泉寺一日遊】清乾隆古剎 × 甘泉傳奇 × 三教合一的石觀音聖地｜悠遊時光,
+https://zh.wikipedia.org/wiki/%E7%94%98%E6%B3%89%E5%AF%BA_(%E6%A1%83%E5%9C%92%E5%B8%82,,seed,0,failed,404,,找不到資源：RuntimeError: HTTP 404: Not Found
+https://travel.tycg.gov.tw/ja/travel/attraction/1045,https://travel.tycg.gov.tw/ja/travel/attraction/1045,seed,0,success,200,白沙岬灯塔(灯台)(白沙岬燈塔),
+https://travel.tycg.gov.tw/zh-tw/event/calendardetail/5205,https://travel.tycg.gov.tw/zh-tw/event/calendardetail/5205,seed,0,success,200,2025桃園蓮花季,
+https://ezgo.ardswc.gov.tw/zh-tw/leisure-area/1529/,https://ezgo.ardswc.gov.tw/zh-tw/leisure-area/1529/,seed,0,success,200,蓮花園休閒農業區－農業易遊網,
+https://duringmyjourney.com/treegarden/,https://duringmyjourney.com/treegarden/,seed,0,success,200,《桃園觀音》樹園子 遠離塵囂的日式禪風景觀餐廳、以無菜單料理感受四季饗宴 – 我的旅圖中 during my journey,
+https://zh.wikipedia.org/wiki/%E8%A7%80%E9%9F%B3%E5%9D%91%E6%BA%AA,https://zh.wikipedia.org/wiki/%E8%A7%80%E9%9F%B3%E5%9D%91%E6%BA%AA,seed,0,success,200,觀音坑溪 - 維基百科，自由的百科全書,
+https://zh.wikipedia.org/wiki/%E5%A4%A7%E5%A0%80%E6%BA%AA,https://zh.wikipedia.org/wiki/%E5%A4%A7%E5%A0%80%E6%BA%AA,seed,0,success,200,大堀溪 - 維基百科，自由的百科全書,
+https://romantichakka.com/explore/HaFood?a=1955&id=3209,,seed,0,inaccessible,,,無法存取：URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Missing Subject Key Identifier (_ssl.c:1028)>
+https://travel.tycg.gov.tw/zh-tw/travel/attraction/1442,https://travel.tycg.gov.tw/zh-tw/travel/attraction/1442,seed,0,success,200,草漯沙丘地質公園,
+https://travel.tycg.gov.tw/zh-tw/travel/attraction/1454,https://travel.tycg.gov.tw/zh-tw/travel/attraction/1454,seed,0,success,200,觀新藻礁生態系野生動物保護區,
+https://zh.wikipedia.org/wiki/%E5%A4%A7%E6%BD%AD%E7%99%BC%E9%9B%BB%E5%BB%A0,https://zh.wikipedia.org/wiki/%E5%A4%A7%E6%BD%AD%E7%99%BC%E9%9B%BB%E5%BB%A0,seed,0,success,200,大潭發電廠 - 維基百科，自由的百科全書,
+https://supertaste.tvbs.com.tw/travel/348994,https://supertaste.tvbs.com.tw/travel/348994,seed,0,success,200,超過２萬朵「純白百合花海」50元拍爆！順遊日系樹林隧道、超低調麵包工廠 | 食尚玩家,
+https://wonderfood.pixnet.net/blog/posts/8229181678,https://wonderfood.pixnet.net/blog/posts/8229181678,seed,0,success,200,【桃園觀音白千層綠韻大道】IG熱門打卡文青風秘境 ★ 筆直的綠蔭大道 | 美食人生 | 美食情報分享 | 痞客邦 | PIXNET,
+https://tw.news.yahoo.com/%E5%B7%A8%E5%A4%A7%E9%A3%9B%E6%A9%9F%E7%95%B6%E8%83%8C%E6%99%AF-%E5%BB%A2%E5%A2%9F%E8%AE%8A%E8%BA%AB%E7%86%B1%E9%96%80%E6%89%93%E5%8D%A1%E9%BB%9E-083000098.html?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAMue1ozVAbpfw6hSS2pCbhjuzTu6me6bcpMl0s-LHtA2GRA3aRWmhljRIGs7l4-uM64T6h_nSE6aMW7_PKYyXpGeJGmvAgVTj2YBaEVL9EHUdHeBk4EA-goYi6KfIkr7LtpgkElmfQasy8weFUaMOL5LXX1ef3DVxE-pHWTtv9b_,https://tw.news.yahoo.com/%E5%B7%A8%E5%A4%A7%E9%A3%9B%E6%A9%9F%E7%95%B6%E8%83%8C%E6%99%AF-%E5%BB%A2%E5%A2%9F%E8%AE%8A%E8%BA%AB%E7%86%B1%E9%96%80%E6%89%93%E5%8D%A1%E9%BB%9E-083000098.html?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAMue1ozVAbpfw6hSS2pCbhjuzTu6me6bcpMl0s-LHtA2GRA3aRWmhljRIGs7l4-uM64T6h_nSE6aMW7_PKYyXpGeJGmvAgVTj2YBaEVL9EHUdHeBk4EA-goYi6KfIkr7LtpgkElmfQasy8weFUaMOL5LXX1ef3DVxE-pHWTtv9b_,seed,0,success,200,巨大飛機當背景！廢墟變身熱門打卡點,
+https://www.century.com.tw/tw/about/3/,https://www.century.com.tw/tw/about/3/,seed,0,success,200,世紀鋼構,
+https://www.waytogo.cc/topic/4157,https://www.waytogo.cc/topic/4157,seed,0,success,200,中華民國領海基點 - 旅聯網,
+https://youtu.be/2hbu5n9VLZY?si=JC29M3MbFRsFELoU,https://youtu.be/2hbu5n9VLZY?si=JC29M3MbFRsFELoU,seed,0,success,200,桃園觀音區探訪｜台版撒哈拉沙漠和百年燈塔藏在西海岸｜草漯沙丘・白沙岬燈塔・觀音飛機場【IROIRO】,
+https://youtube.com/shorts/uRHrog9kbvA?si=HV51h_uice8StG-i,https://youtube.com/shorts/uRHrog9kbvA?si=HV51h_uice8StG-i,seed,0,success,200,桃園觀音一日遊｜百合花海＋綠色隧道＋百年燈塔 #旅行 #景點 #賞花,
+https://tcmb.culture.tw/zh-tw/detail?indexCode=Culture_Route&id=593957,,seed,0,inaccessible,,,無法存取：URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Missing Subject Key Identifier (_ssl.c:1028)>
+https://vocus.cc/article/6692021dfd89780001850bb9,https://vocus.cc/article/6692021dfd89780001850bb9,seed,0,success,200,後人飲水，莫忘前人犧牲－1958年石門水庫大移民(本文曾刊登於聚傳媒樂風專欄)｜樂風的民藝筆記的沙龍,
+https://youtu.be/AWP_v5I0zYA?si=0RkOhrRUMGU9zJfu,https://youtu.be/AWP_v5I0zYA?si=0RkOhrRUMGU9zJfu,seed,0,success,200,歷史那一刻 石門水庫遷村故事｜華視新聞雜誌｜精選,頁面未提供可讀字幕
+https://ihc.cip.gov.tw/EJournal/EJournalCat/737,https://ihc.cip.gov.tw/EJournal/EJournalCat/737,seed,0,success,200,原住民族文獻,
+https://zh.wikipedia.org/wiki/%E7%94%98%E6%B3%89%E5%AF%BA_(%E6%A1%83%E5%9C%92%E5%B8%82),https://zh.wikipedia.org/wiki/%E7%94%98%E6%B3%89%E5%AF%BA_(%E6%A1%83%E5%9C%92%E5%B8%82),seed,0,success,200,甘泉寺 (桃園市) - 維基百科，自由的百科全書,
+https://zh.wikipedia.org/wiki/%E8%A7%80%E9%9F%B3%E7%94%98%E6%B3%89%E5%AF%BA,https://zh.wikipedia.org/wiki/%E8%A7%80%E9%9F%B3%E7%94%98%E6%B3%89%E5%AF%BA,extension,1,success,200,甘泉寺 (桃園市) - 維基百科，自由的百科全書,
+https://zh.wikipedia.org/wiki/%E8%A7%80%E4%B8%96%E9%9F%B3%E8%8F%A9%E8%96%A9,https://zh.wikipedia.org/wiki/%E8%A7%80%E4%B8%96%E9%9F%B3%E8%8F%A9%E8%96%A9,extension,1,success,200,觀世音菩薩 - 維基百科，自由的百科全書,
+https://zh.wikipedia.org/wiki/%E8%8D%89%E6%BC%AF%E4%BF%9D%E9%9A%9C%E5%AE%AE,https://zh.wikipedia.org/wiki/%E8%8D%89%E6%BC%AF%E4%BF%9D%E9%9A%9C%E5%AE%AE,extension,1,success,200,草漯保障宮 - 維基百科，自由的百科全書,
+https://zh.wikipedia.org/wiki/%E8%A7%80%E9%9F%B3%E5%BE%A9%E8%88%88%E5%AE%AE,https://zh.wikipedia.org/wiki/%E8%A7%80%E9%9F%B3%E5%BE%A9%E8%88%88%E5%AE%AE,extension,1,success,200,觀音復興宮 - 維基百科，自由的百科全書,
+https://zh.wikipedia.org/wiki/%E4%BF%9D%E7%94%9F%E5%A4%A7%E5%B8%9D,https://zh.wikipedia.org/wiki/%E4%BF%9D%E7%94%9F%E5%A4%A7%E5%B8%9D,extension,1,success,200,保生大帝 - 維基百科，自由的百科全書,
+"https://www.guanyin.tycg.gov.tw/home.jsp?id=68&parentpath=0,11",,extension,1,inaccessible,,,無法存取：URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Missing Subject Key Identifier (_ssl.c:1028)>
+"https://web.archive.org/web/20220709075846/https://www.guanyin.tycg.gov.tw/home.jsp?id=66&parentpath=0,11,62",,extension,1,inaccessible,,,無法存取：URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)>
+https://web.archive.org/web/20220629052317/https://www2.tycc.gov.tw/content/intro/intro_main.aspx?wtp=1&wnd=204&town=%e7%ac%ac%e5%8d%81%e4%ba%8c%e9%81%b8%e5%8d%80,,extension,1,inaccessible,,,無法存取：URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)>
+http://news.housefun.com.tw/news/article/38572389717.html,http://news.housefun.com.tw/news/article/38572389717.html,extension,1,partial,202,,
+http://www.setn.com/E/News.aspx?NewsID=115874,https://www.setn.com/news/115874,extension,1,success,200,一區一高中！新屋國中改制高中　學生就學方便 | 政治 | 三立新聞網  SETN.COM,
+http://news.ltn.com.tw/news/life/breakingnews/2599138,https://news.ltn.com.tw/news/life/breakingnews/2599138,extension,1,success,200,海大觀音校區揭牌 帶動地方發展 - 生活 - 自由時報電子報,
+http://news.ltn.com.tw/news/local/paper/1068876,https://news.ltn.com.tw/news/local/paper/1068876,extension,1,success,200,（桃園）591頃觀音蓮花園 劃定休閒農業區 - 地方 - 自由時報電子報,
+http://www.guanyin.tycg.gov.tw//,,extension,1,inaccessible,,,無法存取：URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Missing Subject Key Identifier (_ssl.c:1028)>
+https://natsuphil.com/fun-taiwan/guanyin/,https://natsuphil.com/fun-taiwan/guanyin/,extension,1,success,200,"  桃園觀音玩樂懶人包〡觀音賞風車抓螃蟹, 蓮花季坐大王蓮, 希臘風格白沙岬燈塔, 觀音旅遊地圖",
+https://natsuphil.com/taoyuan/guanyin-sea/,https://natsuphil.com/taoyuan/guanyin-sea/,extension,1,success,200,"  桃園觀音景點〡觀音濱海遊憩區〡風車搭配唯美夕陽, 平坦沙灘輕鬆抓蟹, 遠眺白沙岬燈塔, 楊柳淨瓶廣場, 觀龍步道賞石觀音",
+https://natsuphil.com/taoyuan/yongan-harbor/,https://natsuphil.com/taoyuan/yongan-harbor/,extension,1,success,200,"  桃園新屋景點〡永安漁港〡永安觀海橋360度視角, 觀海亭木棧步道賞海景, 鄰近海螺文化館, 生鮮熟食乾貨通通有, 美食街也能代客料理",
+https://natsuphil.com/tag/%e8%a6%aa%e5%ad%90%e6%bf%b1%e6%b5%b7%e6%99%af%e9%bb%9e/,https://natsuphil.com/tag/%e8%a6%aa%e5%ad%90%e6%bf%b1%e6%b5%b7%e6%99%af%e9%bb%9e/,extension,1,success,200,  親子濱海景點,
+https://www.ganquan-temple.org.tw/aboutus,https://www.ganquan-temple.org.tw/aboutus,extension,1,success,200,觀音甘泉寺,
+https://vocus.cc/salon/688b0b79fd897800010bfb2f/room/690c7460cebbddbc5cbbef6f,https://vocus.cc/salon/688b0b79fd897800010bfb2f/room/690c7460cebbddbc5cbbef6f,extension,1,success,200,保生大帝（大道公、神農大帝、感天大帝）｜悠遊時光,
+https://vocus.cc/tags/%E8%A7%80%E9%9F%B3,https://vocus.cc/tags/%E8%A7%80%E9%9F%B3,extension,1,success,200,#觀音 - 推薦內容｜方格子 vocus,
+https://vocus.cc/article/69382030fd89780001707e86,https://vocus.cc/article/69382030fd89780001707e86,extension,1,success,200,通霄鎮慈雲寺一日遊｜媽祖海線必訪觀音古剎｜歷史沿革、參拜流程、交通美食全攻略｜悠遊時光,
+https://vocus.cc/article/6912ea84fd89780001be35a3,https://vocus.cc/article/6912ea84fd89780001be35a3,extension,1,success,200,員林慈天宮一日遊：觀音佛祖庇佑的心靈之旅，探索員林信仰文化與美食景點｜悠遊時光,
+https://vocus.cc/salon/688b0b79fd897800010bfb2f/room/690c75b2cebbddbc5cbbf1b0,https://vocus.cc/salon/688b0b79fd897800010bfb2f/room/690c75b2cebbddbc5cbbf1b0,extension,1,success,200,觀音佛祖（觀音菩薩）/如來佛祖｜悠遊時光,
+"https://www.google.com/maps/place/24.998368913756245,121.12199306488037","https://www.google.com/maps/place/24.998368913756245,121.12199306488037",extension,1,success,200,Google Maps,
+https://www.lotuspark.com.tw/?fbclid=IwZXh0bgNhZW0CMTAAAR0_nKS6CquWKRZQrSRm5CZF2GvFK4y601bIcGqphxgU6QbVogZWyokb1W8_aem_UlUxM8cji3Ib-H4X5ibAIg,https://www.lotuspark.com.tw/?fbclid=IwZXh0bgNhZW0CMTAAAR0_nKS6CquWKRZQrSRm5CZF2GvFK4y601bIcGqphxgU6QbVogZWyokb1W8_aem_UlUxM8cji3Ib-H4X5ibAIg,extension,1,success,200,首頁 | 蓮花園休閒農業區,
+https://duringmyjourney.com/tag/%e8%a7%80%e9%9f%b3%e9%ab%98%e7%b4%9a%e9%a4%90%e5%bb%b3/,,extension,1,inaccessible,403,,無法存取：RuntimeError: HTTP 403: Forbidden
+"https://www.tycg.gov.tw/budget/home.jsp?id=10&parentpath=0,5&mcustomize=multimessages_view.jsp&dataserno=201905270001&aplistdn=ou=data,ou=budgettopic,ou=service,ou=ap_root,o=tycg,c=tw&toolsflag=Y",,extension,1,inaccessible,,,無法存取：URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Missing Subject Key Identifier (_ssl.c:1028)>
+https://www.taipower.com.tw/2289/2558/2387/10647/,,extension,1,inaccessible,,,無法存取：URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Missing Subject Key Identifier (_ssl.c:1028)>
+http://dept.taipower.com.tw/detail4-1-4.htm,,extension,1,inaccessible,,,無法存取：URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+https://web.archive.org/web/20170923002036/http://www.mhi.co.jp/power/news/sec1/2007_jan_07.html,,extension,1,inaccessible,,,無法存取：URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)>
+https://www.ettoday.net/news/20211216/2148064.htm,,extension,1,inaccessible,,,無法存取：URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Missing Subject Key Identifier (_ssl.c:1028)>
+https://www.cna.com.tw/news/firstnews/202112160401.aspx,https://www.cna.com.tw/news/firstnews/202112160401.aspx,extension,1,success,200,大潭電廠大門倒塌壓死工程師 檢警釐清事故原因 | 社會 | 中央社 CNA,
+https://www.taipower.com.tw/tc/news_noclassify_info.aspx?id=2874&chk=3b993c9c-49b1-444f-afeb-7c4df52b3647&mid=334&param=pn%3d1%26mid%3d334%26key%3d,,extension,1,inaccessible,,,無法存取：URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Missing Subject Key Identifier (_ssl.c:1028)>
+"https://www.tyht.nat.gov.tw/home.jsp?id=40&parentpath=0,1,10",,extension,1,inaccessible,,,無法存取：URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Missing Subject Key Identifier (_ssl.c:1028)>
+https://wonderfood.pixnet.net/blog/post/228444359-%e3%80%90%e7%99%bd%e6%b2%99%e5%b2%ac%e7%87%88%e5%a1%94-%26-%e8%a7%80%e9%9f%b3%e6%bf%b1%e6%b5%b7%e9%81%8a%e6%86%a9%e5%8d%80%e3%80%91%e6%a1%83%e5%9c%92%e5%8d%8a%e6%97%a5%e9%81%8a,https://wonderfood.pixnet.net/blog/posts/8228444359-%e3%80%90%e7%99%bd%e6%b2%99%e5%b2%ac%e7%87%88%e5%a1%94-%26-%e8%a7%80%e9%9f%b3%e6%bf%b1%e6%b5%b7%e9%81%8a%e6%86%a9%e5%8d%80%e3%80%91%e6%a1%83%e5%9c%92%e5%8d%8a%e6%97%a5%e9%81%8a,extension,1,success,200,【白沙岬燈塔 & 觀音濱海遊憩區】桃園半日遊 ★ 觀燈塔、踩海浪、吹海風 | 美食人生 | 美食情報分享 | 痞客邦 | PIXNET,
+https://wonderfood.pixnet.net/blog/post/201847942,https://wonderfood.pixnet.net/blog/posts/8201847942,extension,1,success,200,【桃園半日遊】軒獸微旅行之要吃也要動 ★ 野上麵包坊---第三航廈---祕密景點觀機---白沙岬燈塔---晚餐 | 美食人生 | 美食情報分享 | 痞客邦 | PIXNET,
+https://wonderfood.pixnet.net/blog/post/201804730,https://wonderfood.pixnet.net/blog/posts/8201804730,extension,1,success,200,【桃園白沙岬燈塔】觀音夕照 ★ 日落觀浪 | 美食人生 | 美食情報分享 | 痞客邦 | PIXNET,
+"https://www.google.com/maps/place/25%C2%B001'40.2%22N+121%C2%B006'31.9%22E/@25.02784,121.1066803,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.02784!4d121.108869","https://www.google.com/maps/place/25%C2%B001'40.2%22N+121%C2%B006'31.9%22E/@25.02784,121.1066803,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.02784!4d121.108869",extension,1,success,200,Google Maps,
+https://www.waytogo.cc/topic/topic/2783,,extension,1,inaccessible,403,,無法存取：RuntimeError: HTTP 403: Forbidden

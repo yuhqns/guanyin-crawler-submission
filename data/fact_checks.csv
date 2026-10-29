@@ -1,0 +1,4 @@
+﻿check_id,claim,assessment,sources,status
+FC-001,甘泉寺位於桃園市觀音區觀音里甘泉街一號，與觀音地名及石觀音傳說相關。,兩個來源均支持位置與傳說；傳說性內容保留「相傳」措辭。,https://www.ganquan-temple.org.tw/ | https://zh.wikipedia.org/wiki/%E7%94%98%E6%B3%89%E5%AF%BA_(%E6%A1%83%E5%9C%92%E5%B8%82),supported_by_two_sources
+FC-002,蓮花園休閒農業區位於桃園市觀音區，主要農產包含蓮花、蓮藕、瓜果、稻米、花卉與蔬菜。,農業易遊網官方頁面列出地點、農業資源與遊覽資訊；本項以該官方頁作為主要查核來源。,https://ezgo.ardswc.gov.tw/zh-tw/leisure-area/1529/,supported_by_official_source
+FC-003,白沙岬燈塔是觀音區的觀光景點，桃園觀光導覽網提供其景點頁面。,桃園觀光導覽網日文景點頁成功取得標題與頁面資料；另以觀音區維基資料作為交叉參照，未把旅遊文章的形容詞當成事實。,https://travel.tycg.gov.tw/ja/travel/attraction/1045 | https://zh.wikipedia.org/zh-tw/%E8%A7%80%E9%9F%B3%E5%8D%80,supported_by_official_plus_reference
