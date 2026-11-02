@@ -39,6 +39,14 @@ tmp/
 *.temp
 *.log
 
+# Local video/audio transcription intermediates and downloads
+output/audio_work/
+*.wav
+*.webm
+*.m4a
+*.mp3
+*.mp4
+
 # Build/package output
 build/
 dist/

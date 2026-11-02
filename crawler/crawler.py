@@ -301,7 +301,111 @@ def parse_html_bs4(url: str, html: str) -> dict:
             "links": links, "images": images}
 
 
-def youtube_record(url: str, timeout: int) -> dict:
+def _find_local_media(media_dir: Path | None, video_id: str) -> Path | None:
+    """Find a user-provided media file whose name starts with the YouTube ID."""
+    if not media_dir or not media_dir.is_dir() or not video_id:
+        return None
+    ignored = {".wav", ".json", ".txt", ".vtt"}
+    for path in sorted(media_dir.rglob("*")):
+        if path.is_file() and path.suffix.lower() not in ignored and path.stem.startswith(video_id):
+            return path
+    return None
+
+
+def _download_audio(url: str, video_id: str, target_dir: Path, timeout: int) -> Path:
+    """Download best audio only when the caller explicitly opted in."""
+    try:
+        import yt_dlp
+    except ImportError as exc:
+        raise RuntimeError("缺少 yt-dlp，無法下載音訊") from exc
+    target_dir.mkdir(parents=True, exist_ok=True)
+    opts = {
+        "quiet": True,
+        "no_warnings": True,
+        "noplaylist": True,
+        "format": "bestaudio/best",
+        "outtmpl": str(target_dir / "%(id)s.%(ext)s"),
+        "socket_timeout": timeout,
+        "overwrites": False,
+    }
+    with yt_dlp.YoutubeDL(opts) as ydl:
+        ydl.download([url])
+    candidates = [
+        path for path in sorted(target_dir.glob(f"{video_id}.*"))
+        if path.is_file() and path.suffix.lower() not in {".part", ".ytdl"}
+    ]
+    if not candidates:
+        raise RuntimeError(f"yt-dlp 未產生音訊檔：{video_id}")
+    return candidates[0]
+
+
+def _transcription_fallback(
+    url: str,
+    info: dict,
+    media_dir: Path | None,
+    work_dir: Path,
+    model_name: str,
+    download_audio: bool,
+    timeout: int,
+) -> dict:
+    """Return Whisper fields, without turning an optional fallback into a crawl failure."""
+    downloaded = False
+    try:
+        try:
+            from crawler.transcribe import transcribe_local_media
+        except ImportError:
+            import importlib.util
+            transcribe_path = Path(__file__).resolve().parent / "transcribe.py"
+            spec = importlib.util.spec_from_file_location("_guanyin_transcribe", transcribe_path)
+            if not spec or not spec.loader:
+                raise RuntimeError(f"找不到轉錄模組：{transcribe_path}")
+            transcribe_module = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(transcribe_module)
+            transcribe_local_media = transcribe_module.transcribe_local_media
+
+        video_id = str(info.get("id") or "")
+        media_path = _find_local_media(media_dir, video_id)
+        source = "local_media"
+        if media_path is None and download_audio:
+            media_path = _download_audio(url, video_id, work_dir / "downloads", timeout)
+            source = "downloaded_audio"
+            downloaded = True
+        if media_path is None:
+            return {}
+        segments, language = transcribe_local_media(media_path, work_dir / "audio", model_name)
+        text = "\n".join(segment["text"] for segment in segments)
+        if not text:
+            return {
+                "transcription_available": False,
+                "transcription_note": f"{source} 未產生可用逐字稿",
+                "downloaded_audio": downloaded,
+            }
+        return {
+            "content": text,
+            "transcription": text,
+            "transcription_segments": segments,
+            "transcription_available": True,
+            "transcription_language": language,
+            "transcription_source": source,
+            "downloaded_audio": downloaded,
+            "transcription_note": "",
+        }
+    except Exception as exc:
+        return {
+            "transcription_available": False,
+            "transcription_note": f"語音辨識失敗：{type(exc).__name__}: {exc}",
+            "downloaded_audio": downloaded,
+        }
+
+
+def youtube_record(
+    url: str,
+    timeout: int,
+    media_dir: Path | None = None,
+    work_dir: Path | None = None,
+    model_name: str = "large-v3",
+    download_audio: bool = False,
+) -> dict:
     # yt-dlp provides metadata and caption tracks without downloading the video.
     try:
         import yt_dlp
@@ -327,17 +431,26 @@ def youtube_record(url: str, timeout: int) -> dict:
                         transcript = "\n".join(item["text"] for item in transcript_segments)
                         if transcript:
                             break
-        return {"title": info.get("title", ""), "site_name": "YouTube", "content": transcript,
-                "links": [], "images": ([{"url": info["thumbnail"], "alt": "影片縮圖", "caption": ""}] if info.get("thumbnail") else []),
-                "video_id": info.get("id"), "channel": info.get("channel") or info.get("uploader"),
-                "duration_seconds": info.get("duration"), "caption_available": bool(transcript),
-                "transcript_segments": transcript_segments if tracks else [],
-                "caption_note": "" if transcript else "頁面未提供可讀字幕"}
+        result = {"title": info.get("title", ""), "site_name": "YouTube", "content": transcript,
+                  "links": [], "images": ([{"url": info["thumbnail"], "alt": "影片縮圖", "caption": ""}] if info.get("thumbnail") else []),
+                  "video_id": info.get("id"), "channel": info.get("channel") or info.get("uploader"),
+                  "duration_seconds": info.get("duration"), "caption_available": bool(transcript),
+                  "transcript_segments": transcript_segments if transcript else [],
+                  "caption_note": "" if transcript else "頁面未提供可讀字幕；未啟用語音轉錄",
+                  "transcription_available": False, "transcription_segments": [], "transcription_note": "",
+                  "downloaded_audio": False}
+        if not transcript:
+            fallback = _transcription_fallback(
+                url, info, media_dir, work_dir or Path.cwd() / "audio_work", model_name, download_audio, timeout
+            )
+            result.update(fallback)
+            if result.get("transcription_available"):
+                result["caption_note"] = "頁面未提供可讀字幕；已使用 Whisper 語音辨識"
+        return result
     except ImportError:
         return youtube_oembed(url, timeout)
     except Exception as exc:
         raise RuntimeError(f"YouTube 擷取失敗：{type(exc).__name__}: {exc}") from exc
-
 
 def youtube_oembed(url: str, timeout: int) -> dict:
     endpoint = "https://www.youtube.com/oembed"
@@ -347,6 +460,8 @@ def youtube_oembed(url: str, timeout: int) -> dict:
     return {"title": data.get("title", ""), "site_name": "YouTube", "content": "",
             "links": [], "images": ([{"url": data["thumbnail_url"], "alt": "影片縮圖", "caption": ""}] if data.get("thumbnail_url") else []),
             "channel": data.get("author_name"), "caption_available": False, "transcript_segments": [],
+            "transcription_available": False, "transcription_segments": [], "transcription_note": "",
+            "downloaded_audio": False,
             "caption_note": "未安裝 yt-dlp，僅取得影片基本資訊；無法讀取字幕"}
 
 
@@ -439,6 +554,9 @@ def main() -> int:
     ap.add_argument("--delay", type=float, default=1.5, help="同一網域請求間隔秒數")
     ap.add_argument("--timeout", type=int, default=20)
     ap.add_argument("--limit", type=int, default=0, help="除錯用來源筆數限制；0 表示全部")
+    ap.add_argument("--media-dir", type=Path, help="含有已合法取得影音檔的資料夾；檔名需以 YouTube video ID 開頭")
+    ap.add_argument("--download-audio", action="store_true", help="明確啟用 yt-dlp 下載最佳音訊後以 Whisper 轉錄；僅處理你有權使用的影片")
+    ap.add_argument("--model", default="large-v3", help="faster-whisper 模型名稱，預設 large-v3")
     ap.add_argument("--no-extend", action="store_true")
     args = ap.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
@@ -482,7 +600,14 @@ def main() -> int:
                 time.sleep(wait)
             last_request[domain] = time.monotonic()
             if "youtube.com" in domain or domain == "youtu.be":
-                extracted = youtube_record(url, args.timeout)
+                extracted = youtube_record(
+                    url,
+                    args.timeout,
+                    media_dir=args.media_dir,
+                    work_dir=args.output / "audio_work",
+                    model_name=args.model,
+                    download_audio=args.download_audio,
+                )
                 final_url, status, content_type = url, 200, "video/youtube"
             else:
                 response = session.get(url, timeout=args.timeout) if session else http_get(url, args.timeout)

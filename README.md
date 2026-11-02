@@ -22,6 +22,27 @@ py crawler.py --no-extend
 py crawler.py --limit 3 --no-extend   # 小規模確認環境
 ```
 
+### 無字幕影片的語音辨識（選用）
+
+一般執行不會下載影片或音訊。若你有權處理影片，可用本機影音檔作為字幕缺漏時的
+fallback；檔名需以 YouTube video ID 開頭，例如 `AWP_v5I0zYA.mp4`：
+
+```powershell
+py -m pip install -r requirements-transcription.txt
+py crawler.py --media-dir path\to\media --no-extend
+```
+
+若確認有權下載該影片的音訊，也可以明確啟用 `yt-dlp` 下載最佳音訊，再交給
+`ffmpeg` 與 `faster-whisper` 轉錄：
+
+```powershell
+py crawler.py --download-audio --model large-v3 --no-extend
+```
+
+`--download-audio` 預設關閉。語音辨識需要本機安裝 `ffmpeg`，輸出會放在被
+`.gitignore` 排除的 `data/audio_work/`；程式會把逐段時間戳、模型語言、轉錄來源與
+失敗原因寫入 `data/records.jsonl` 和 `output/videos/video_*.md`，不會把失敗結果當成字幕。
+
 `--max-depth` 可設 0 至 3；深度 0 只處理來源 CSV。爬蟲遵守網站回應與錯誤狀態，不會嘗試繞過登入、付費牆、驗證碼或存取限制。失敗或受限來源會保留在狀態報表，附上錯誤原因。
 
 ## 輸出

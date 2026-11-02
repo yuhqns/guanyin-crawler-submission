@@ -181,7 +181,14 @@ def main():
           'depth':int(st.get('depth') or 0),'source_type':st.get('source_type','seed'),'final_url':st.get('final_url',''),
           'http_status':st.get('http_status',''),'parser_note':src.get('extraction_note',''),
           'duration_seconds':src.get('duration_seconds'),'caption_available':src.get('caption_available',False),
-          'caption_note':src.get('caption_note','')})
+          'caption_note':src.get('caption_note',''),
+          'transcription':src.get('transcription',''),
+          'transcription_segments':src.get('transcription_segments',[]),
+          'transcription_available':src.get('transcription_available',False),
+          'transcription_language':src.get('transcription_language',''),
+          'transcription_source':src.get('transcription_source',''),
+          'transcription_note':src.get('transcription_note',''),
+          'downloaded_audio':src.get('downloaded_audio',False)})
     groups=duplicate_groups(rows)
     for n,g in enumerate(groups,1):
         for i in g: rows[i]['duplicate_group']=f'dup_{n:03d}'
@@ -212,8 +219,15 @@ def main():
             if r.get('crawl_reason'): lines.append(f"- 原因：{r['crawl_reason']}")
             lines += [f"- 時長（秒）：{r['duration_seconds'] or '未知'}",'','## 字幕逐字稿']
             if r['timestamps']: lines += [f"- **[{s['timestamp']}]** {s['text']}" for s in r['timestamps']]
+            elif r['transcription_segments']:
+                if r['transcription_source']: lines.append(f"- 來源：Whisper 語音辨識（{r['transcription_source']}）")
+                if r['transcription_language']: lines.append(f"- 語言：{r['transcription_language']}")
+                lines += [f"- **[{s['timestamp']}]** {s['text']}" for s in r['transcription_segments']]
+            elif r['transcription']: lines += ['- 來源：Whisper 語音辨識',r['transcription']]
             elif r['content']: lines += [r['content']]
-            else: lines += [r['caption_note'] or '沒有取得可用字幕；未使用語音辨識補寫。']
+            else: lines += [r['transcription_note'] or r['caption_note'] or '沒有取得可用字幕；未使用語音辨識補寫。']
+            if r['transcription_note'] and not r['transcription_available']:
+                lines += ['',f"> 語音辨識備註：{r['transcription_note']}"]
             lines += ['','## 代表畫面','沒有取得可驗證時間碼的影片畫格；請勿將影片縮圖當成代表畫格。']
             for im in r['images']:
                 if im.get('file'): lines.append(f"- [影片縮圖](../{im['file']}) — {im['source_url']}")

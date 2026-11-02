@@ -1,0 +1,3 @@
+# Optional dependencies for videos that do not expose readable captions.
+# Install only when you have permission to process the corresponding media.
+faster-whisper>=1.0,<2
