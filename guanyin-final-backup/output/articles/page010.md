@@ -1,0 +1,21 @@
+# page010
+
+- ID：page010
+- 父頁面 ID：無（原始網址）
+- 深度：0
+- 網站：未知
+- 原始網址：https://zh.wikipedia.org/wiki/%E7%94%98%E6%B3%89%E5%AF%BA_(%E6%A1%83%E5%9C%92%E5%B8%82
+- 狀態：failed
+- 原因：找不到資源：HTTPError: 404 Client Error: Not Found for url: https://zh.wikipedia.org/wiki/%E7%94%98%E6%B3%89%E5%AF%BA_(%E6%A1%83%E5%9C%92%E5%B8%82
+- 主題：地方知識
+- 關鍵字：地方旅遊、觀光資訊、在地資訊
+- 擷取時間：2026-11-03T15:46:56.103143+00:00
+
+## 清理後正文
+
+未取得正文，請查看 crawl_report.csv。
+
+## 圖片
+本次無成功保存的圖片。
+
+## 頁面連結

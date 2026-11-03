@@ -1,0 +1,58 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache and test artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+.aws/
+*.pem
+*.key
+credentials.json
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Temporary browser profiles, downloads, and local scratch files
+*-profile*/
+temp-*/
+tmp/
+*.tmp
+*.temp
+*.log
+
+# Local video/audio transcription intermediates and downloads
+output/audio_work/
+*.wav
+*.webm
+*.m4a
+*.mp3
+*.mp4
+
+# Build/package output
+build/
+dist/
+*.egg-info/
+
+# User-provided local video files (do not commit media)
+local_videos/
+# Cached audio downloads and Whisper working files
+data/audio_work/
