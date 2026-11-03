@@ -51,8 +51,3 @@ output/audio_work/
 build/
 dist/
 *.egg-info/
-
-# User-provided local video files (do not commit media)
-local_videos/
-# Cached audio downloads and Whisper working files
-data/audio_work/

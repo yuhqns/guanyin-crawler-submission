@@ -313,25 +313,12 @@ def _find_local_media(media_dir: Path | None, video_id: str) -> Path | None:
 
 
 def _download_audio(url: str, video_id: str, target_dir: Path, timeout: int) -> Path:
-    """Download and cache audio-only media for a video the user may process."""
-    if not video_id or not re.fullmatch(r"[A-Za-z0-9_-]+", video_id):
-        raise RuntimeError(f"無效的 YouTube video ID：{video_id!r}")
-    target_dir.mkdir(parents=True, exist_ok=True)
-
-    # Reuse a previous successful audio download instead of downloading it again.
-    ignored = {".part", ".ytdl", ".json", ".description", ".jpg", ".webp"}
-    cached = [
-        path for path in sorted(target_dir.glob(f"{video_id}.*"))
-        if path.is_file() and path.suffix.lower() not in ignored and path.stat().st_size > 0
-    ]
-    if cached:
-        return cached[0]
-
+    """Download best audio only when the caller explicitly opted in."""
     try:
         import yt_dlp
     except ImportError as exc:
-        raise RuntimeError("缺少 yt-dlp；請執行 py -m pip install -r requirements.txt") from exc
-
+        raise RuntimeError("缺少 yt-dlp，無法下載音訊") from exc
+    target_dir.mkdir(parents=True, exist_ok=True)
     opts = {
         "quiet": True,
         "no_warnings": True,
@@ -339,24 +326,16 @@ def _download_audio(url: str, video_id: str, target_dir: Path, timeout: int) -> 
         "format": "bestaudio/best",
         "outtmpl": str(target_dir / "%(id)s.%(ext)s"),
         "socket_timeout": timeout,
-        "retries": 2,
-        "fragment_retries": 2,
         "overwrites": False,
-        "continuedl": True,
-        "max_filesize": 2 * 1024 * 1024 * 1024,
     }
-    try:
-        with yt_dlp.YoutubeDL(opts) as ydl:
-            ydl.download([url])
-    except Exception as exc:
-        raise RuntimeError(f"yt-dlp 音訊下載失敗：{type(exc).__name__}: {exc}") from exc
-
+    with yt_dlp.YoutubeDL(opts) as ydl:
+        ydl.download([url])
     candidates = [
         path for path in sorted(target_dir.glob(f"{video_id}.*"))
-        if path.is_file() and path.suffix.lower() not in ignored and path.stat().st_size > 0
+        if path.is_file() and path.suffix.lower() not in {".part", ".ytdl"}
     ]
     if not candidates:
-        raise RuntimeError(f"yt-dlp 未產生可用音訊檔：{video_id}")
+        raise RuntimeError(f"yt-dlp 未產生音訊檔：{video_id}")
     return candidates[0]
 
 
@@ -392,12 +371,7 @@ def _transcription_fallback(
             source = "downloaded_audio"
             downloaded = True
         if media_path is None:
-            return {
-                "transcription_available": False,
-                "transcription_note": "沒有找到本機影片，且未取得可供 Whisper 辨識的音訊",
-                "transcription_source": "",
-                "downloaded_audio": False,
-            }
+            return {}
         segments, language = transcribe_local_media(media_path, work_dir / "audio", model_name)
         text = "\n".join(segment["text"] for segment in segments)
         if not text:
@@ -471,10 +445,7 @@ def youtube_record(
             )
             result.update(fallback)
             if result.get("transcription_available"):
-                source_label = "下載音訊" if result.get("transcription_source") == "downloaded_audio" else "本機影片"
-                result["caption_note"] = f"頁面未提供可讀字幕；已使用 Whisper 辨識（來源：{source_label}）"
-            elif result.get("transcription_note"):
-                result["caption_note"] = "頁面未提供可讀字幕；Whisper 後備處理未成功"
+                result["caption_note"] = "頁面未提供可讀字幕；已使用 Whisper 語音辨識"
         return result
     except ImportError:
         return youtube_oembed(url, timeout)
@@ -584,17 +555,8 @@ def main() -> int:
     ap.add_argument("--timeout", type=int, default=20)
     ap.add_argument("--limit", type=int, default=0, help="除錯用來源筆數限制；0 表示全部")
     ap.add_argument("--media-dir", type=Path, help="含有已合法取得影音檔的資料夾；檔名需以 YouTube video ID 開頭")
-    audio_group = ap.add_mutually_exclusive_group()
-    audio_group.add_argument("--download-audio", dest="download_audio", action="store_true",
-                             help="啟用無字幕影片音訊下載（目前為預設行為）")
-    audio_group.add_argument("--no-download-audio", dest="download_audio", action="store_false",
-                             help="停用音訊下載；仍可使用 --media-dir 中的本機影片")
-    ap.set_defaults(download_audio=True)
+    ap.add_argument("--download-audio", action="store_true", help="明確啟用 yt-dlp 下載最佳音訊後以 Whisper 轉錄；僅處理你有權使用的影片")
     ap.add_argument("--model", default="large-v3", help="faster-whisper 模型名稱，預設 large-v3")
-    ap.add_argument("--frame-count", type=int, choices=(3, 4, 5), default=5,
-                    help="後處理時每部本機影片擷取的代表畫面數量")
-    ap.add_argument("--no-postprocess", action="store_true",
-                    help="只執行爬蟲，不自動啟動後處理")
     ap.add_argument("--no-extend", action="store_true")
     args = ap.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
@@ -618,20 +580,12 @@ def main() -> int:
     session = requests.Session() if requests else None
     if session:
         session.headers.update({"User-Agent": USER_AGENT, "Accept-Language": "zh-TW,zh;q=0.9,en;q=0.7"})
-    seen, queued, domain_count, last_request = set(), set(), {}, {}
-    queue = deque()
-    # 原始 CSV 網址使用 page001、page002……作為第 0 層 ID。
-    for i, url in enumerate(seeds, start=1):
-        page_id = f"page{i:03d}"
-        queue.append((url, 0, "seed", "", page_id, ""))
-        queued.add(url)
-
-    # 記錄每個父頁面已分配的子頁面序號。
-    child_counts = {}
+    seen, domain_count, last_request = set(), {}, {}
+    queue = deque((url, 0, "seed", "") for url in seeds)
     extra_added = 0
     rows = []
     while queue:
-        url, depth, source_type, discovered_from, page_id, parent_id = queue.popleft()
+        url, depth, source_type, discovered_from = queue.popleft()
         if url in seen:
             continue
         seen.add(url)
@@ -665,16 +619,14 @@ def main() -> int:
                     raise ValueError(f"非 HTML 內容：{content_type}")
                 response.encoding = response.apparent_encoding or response.encoding
                 extracted = parse_html(final_url, response.text)
-            row = {"id": page_id, "parent_id": parent_id,
-                   "source_url": url, "final_url": final_url, "source_type": source_type,
+            row = {"source_url": url, "final_url": final_url, "source_type": source_type,
                    "discovered_from": discovered_from,
                    "depth": depth, "fetched_at": started, "http_status": status,
                    "content_type": content_type, "title": extracted.pop("title", ""),
                    "site_name": extracted.pop("site_name", domain), **extracted}
             row["status"] = "success" if row.get("title") or row.get("content") else "partial"
             write_jsonl(records_path, row)
-            rows.append({"id": page_id, "parent_id": parent_id,
-                         "url": url, "final_url": final_url, "source_type": source_type,
+            rows.append({"url": url, "final_url": final_url, "source_type": source_type,
                          "depth": depth, "status": row["status"], "http_status": status, "crawled_at": started,
                          "title": row["title"], "reason": row.get("caption_note", "")})
             print(f"[{row['status']}] depth={depth} {url}")
@@ -684,7 +636,7 @@ def main() -> int:
                 candidate = clean_url(link["url"])
                 c_domain = (urlparse(candidate).hostname or "").lower()
                 path = urlparse(candidate).path.lower()
-                if candidate in seen or candidate in queued or c_domain in ("youtube.com", "www.youtube.com", "m.youtube.com", "youtu.be", "facebook.com", "www.facebook.com", "instagram.com", "www.instagram.com", "twitter.com", "x.com", "line.naver.jp"):
+                if candidate in seen or c_domain in ("youtube.com", "www.youtube.com", "m.youtube.com", "youtu.be", "facebook.com", "www.facebook.com", "instagram.com", "www.instagram.com", "twitter.com", "x.com", "line.naver.jp"):
                     continue
                 if "action=edit" in candidate.lower() or "redlink=1" in candidate.lower() or "/special:" in candidate.lower():
                     continue
@@ -696,10 +648,7 @@ def main() -> int:
                     continue
                 domain_count[c_domain] = domain_count.get(c_domain, 0) + 1
                 extra_added += 1
-                child_counts[page_id] = child_counts.get(page_id, 0) + 1
-                child_id = f"{page_id}_{child_counts[page_id]}"
-                queue.append((candidate, depth + 1, "extension", url, child_id, page_id))
-                queued.add(candidate)
+                queue.append((candidate, depth + 1, "extension", url))
                 if extra_added >= args.max_extra:
                     break
         except Exception as exc:
@@ -714,45 +663,16 @@ def main() -> int:
                     http_status = match.group(1)
             status = failure_status(exc, http_status)
             reason = failure_reason(exc, status, http_status)
-            rows.append({"id": page_id, "parent_id": parent_id,
-                         "url": url, "final_url": "", "source_type": source_type,
+            rows.append({"url": url, "final_url": "", "source_type": source_type,
                          "depth": depth, "status": status, "http_status": http_status, "crawled_at": started,
                          "title": "", "reason": reason})
             print(f"[{status}] depth={depth} {url} — {reason}", file=sys.stderr)
-    fields = ["id", "parent_id", "url", "final_url", "source_type", "depth", "status", "http_status", "title", "reason", "crawled_at"]
+    fields = ["url", "final_url", "source_type", "depth", "status", "http_status", "title", "reason", "crawled_at"]
     with status_path.open("w", encoding="utf-8-sig", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fields)
         writer.writeheader()
         writer.writerows(rows)
-    print(f"完成爬取：來源 {len(seeds)} 筆，處理 {len(rows)} 頁，延伸 {extra_added} 筆；輸出 {args.output}")
-
-    # 預設在爬取完成後接續執行後處理，讓整個專案只需一個入口命令。
-    # --no-postprocess 可保留單獨執行爬蟲的彈性。
-    if not args.no_postprocess:
-        postprocess_script = ROOT / "postprocess.py"
-        if not postprocess_script.is_file():
-            print(f"找不到後處理程式：{postprocess_script}", file=sys.stderr)
-            return 1
-
-        command = [
-            sys.executable,
-            str(postprocess_script),
-            "--frame-count", str(args.frame_count),
-        ]
-        if args.media_dir:
-            command.extend(["--media-dir", str(args.media_dir.resolve())])
-
-        print("\\n開始執行後處理：", " ".join(command))
-        try:
-            result = subprocess.run(command, cwd=ROOT, check=False)
-        except OSError as exc:
-            print(f"無法啟動 postprocess.py：{exc}", file=sys.stderr)
-            return 1
-        if result.returncode != 0:
-            print(f"後處理失敗，結束碼：{result.returncode}", file=sys.stderr)
-            return result.returncode
-        print("完整流程完成：爬取與後處理均已完成。")
-
+    print(f"完成：來源 {len(seeds)} 筆，處理 {len(rows)} 頁，延伸 {extra_added} 筆；輸出 {args.output}")
     return 0
 
 

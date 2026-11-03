@@ -4,7 +4,7 @@ import html, json, pathlib, re, shutil, subprocess, sys, tempfile, textwrap
 from urllib.request import Request, urlopen
 from PIL import Image, ImageDraw, ImageFont
 from bs4 import BeautifulSoup
-from crawler.crawler import parse_html
+import crawler
 
 ROOT=pathlib.Path(__file__).resolve().parent
 OUT=ROOT/'report'/'screenshots'; OUT.mkdir(parents=True,exist_ok=True)
@@ -68,7 +68,7 @@ for label,url,filename,raw_filename in TARGETS:
         with urlopen(req,timeout=20) as resp: raw_html=resp.read(8*1024*1024).decode(resp.headers.get_content_charset() or 'utf-8',errors='replace')
         soup=BeautifulSoup(raw_html,'html.parser')
         raw=soup.body.get_text('\n',strip=True) if soup.body else soup.get_text('\n',strip=True)
-        clean=parse_html(url,raw_html).get('content','')
+        clean=crawler.parse_html(url,raw_html).get('content','')
         if not clean:
             # When a live page is unavailable to the crawler, use the saved
             # crawl record for the text side and keep the screenshot label honest.

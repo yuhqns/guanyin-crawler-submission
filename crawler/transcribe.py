@@ -49,27 +49,16 @@ def transcribe_local_media(
     except ImportError as exc:
         raise RuntimeError("缺少 faster-whisper；請安裝 requirements-transcription.txt") from exc
 
-    model = WhisperModel(model_name, device="cpu", compute_type="int8")
-    # Keep the prompt short and domain-specific. A long prompt can bias the
-    # decoder toward repeatedly emitting prompt-related words.
-    prompt = "桃園市、觀音區、石門水庫、草漯、移民新村。"
+    model = WhisperModel(model_name, device="auto", compute_type="auto")
+    prompt = "桃園市觀音區、白沙岬燈塔、草漯沙丘、觀新藻礁、甘泉寺、大潭發電廠。"
     segments, info = model.transcribe(
         str(wav_path),
         language="zh",
         beam_size=5,
         best_of=5,
-        temperature=[0.0, 0.2, 0.4, 0.6, 0.8],
-        compression_ratio_threshold=2.4,
-        log_prob_threshold=-1.0,
-        no_speech_threshold=0.6,
-        condition_on_previous_text=False,
-        repetition_penalty=1.12,
-        no_repeat_ngram_size=3,
+        temperature=0.0,
         vad_filter=True,
-        vad_parameters={
-            "min_silence_duration_ms": 500,
-            "speech_pad_ms": 200,
-        },
+        condition_on_previous_text=True,
         initial_prompt=prompt,
         word_timestamps=False,
     )
