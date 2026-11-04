@@ -9,7 +9,7 @@
 - 作者：https://www.facebook.com/smiletaiwan319
 - 主題：自然景觀與生態、歷史文化與信仰、地方產業與農漁業
 - 關鍵字：觀音區、桃園市、草漯沙丘、白沙岬燈塔、崙坪文化地景園區
-- 擷取時間：2026-11-03T15:46:49.527716+00:00
+- 擷取時間：2026-11-04T12:33:06.555938+00:00
 
 ## 清理後正文
 
@@ -18,7 +18,7 @@
 我的旅圖中
 2023-12-14
 我的旅圖中
-66717
+66741
 桃園市
 加入Google偏好來源
 在Google搜尋優先看到微笑台灣
@@ -72,8 +72,8 @@ FB：
 ｜
 FB粉絲專頁
 您也可能喜歡這些文章
-到訪龜山旺萊獅果乾工廠，體驗一場果乾製作的見學之旅
-開箱桃園市兒童美術館｜探索城市的美好想像，建築設計特色、展覽與活動亮點
+2023龍岡米干節至5/1，魅力金三角商圈多場磅礡盛宴，感受桃園異域文化
+在原始森林中尋找曾經的文明：桃園大溪順和煤礦遺跡，是探險也是訪古
 贊助
 以文化擾動城市：嘉義市打開人才、產業與地方發展新可能
 人氣焦點
@@ -175,8 +175,8 @@ FB粉絲專頁
 - [我的旅圖中](https://smiletaiwan.cw.com.tw/author/184)
 - [部落格](https://ainycka0815.pixnet.net/blog)
 - [FB粉絲專頁](https://www.facebook.com/duringmyjourney/)
-- [https://smiletaiwan.cw.com.tw/article/3017?from_id=6889&from_index=1](https://smiletaiwan.cw.com.tw/article/3017?from_id=6889&from_index=1)
-- [https://smiletaiwan.cw.com.tw/article/7115?from_id=6889&from_index=2](https://smiletaiwan.cw.com.tw/article/7115?from_id=6889&from_index=2)
+- [https://smiletaiwan.cw.com.tw/article/6286?from_id=6889&from_index=1](https://smiletaiwan.cw.com.tw/article/6286?from_id=6889&from_index=1)
+- [https://smiletaiwan.cw.com.tw/article/3738?from_id=6889&from_index=2](https://smiletaiwan.cw.com.tw/article/3738?from_id=6889&from_index=2)
 - [贊助](https://smiletaiwan.cw.com.tw/article/9469?from_id=6889&from_index=3)
 - [https://line.naver.jp/R/msg/text/?%E6%95%A3%E6%AD%A5%E6%A1%83%E5%9C%92%E8%A7%80%E9%9F%B3%E7%9A%84%E8%87%AA%E7%84%B6%E6%84%9C%E6%84%8F%EF%BC%8C%E5%9C%A8%E5%B4%99%E5%9D%AA%E6%96%87%E5%8C%96%E5%9C%B0%E6%99%AF%E5%9C%92%E5%8D%80%E9%81%87%E8%A6%8B%E5%A4%B1%E8%90%BD%E9%81%BA%E8%B7%A1%E3%80%81%E9%BE%9C%E6%AE%BC%E5%8A%87%E5%A0%B4%E9%82%84%E6%9C%89%E5%AE%A2%E5%AE%B6%E9%A3%9F%E5%A0%82%0Ahttps%3A%2F%2Fsmiletaiwan.cw.com.tw%2Farticle%2F6889](https://line.naver.jp/R/msg/text/?%E6%95%A3%E6%AD%A5%E6%A1%83%E5%9C%92%E8%A7%80%E9%9F%B3%E7%9A%84%E8%87%AA%E7%84%B6%E6%84%9C%E6%84%8F%EF%BC%8C%E5%9C%A8%E5%B4%99%E5%9D%AA%E6%96%87%E5%8C%96%E5%9C%B0%E6%99%AF%E5%9C%92%E5%8D%80%E9%81%87%E8%A6%8B%E5%A4%B1%E8%90%BD%E9%81%BA%E8%B7%A1%E3%80%81%E9%BE%9C%E6%AE%BC%E5%8A%87%E5%A0%B4%E9%82%84%E6%9C%89%E5%AE%A2%E5%AE%B6%E9%A3%9F%E5%A0%82%0Ahttps%3A%2F%2Fsmiletaiwan.cw.com.tw%2Farticle%2F6889)
 - [MAIL給朋友](https://smiletaiwan.cw.com.tw/article/6889)

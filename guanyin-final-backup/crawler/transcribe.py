@@ -1,8 +1,7 @@
-"""Optional local-audio transcription for videos without readable captions.
+"""Local-audio transcription for every YouTube video, alongside platform captions.
 
-The crawler never imports faster-whisper until transcription is explicitly
-requested.  This keeps the normal metadata/caption crawl lightweight and
-avoids downloading a model as part of a regular run.
+The crawler imports faster-whisper when processing YouTube videos. Audio is
+downloaded by yt-dlp when no local media file is available.
 """
 from __future__ import annotations
 
@@ -19,12 +18,12 @@ def _timestamp(seconds: float) -> str:
 def transcribe_local_media(
     media_path: Path,
     work_dir: Path,
-    model_name: str = "large-v3",
+    model_name: str = "small",
 ) -> tuple[list[dict[str, Any]], str]:
     """Convert *media_path* to 16 kHz mono WAV and transcribe it with Whisper.
 
     ``ffmpeg`` and ``faster-whisper`` are intentionally runtime dependencies:
-    callers only need them when they opt into this fallback.  The returned
+    callers need them whenever a YouTube video is processed.  The returned
     segment shape matches the crawler's subtitle segments so downstream output
     can render both sources consistently.
     """

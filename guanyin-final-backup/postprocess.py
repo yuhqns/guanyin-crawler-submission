@@ -10,6 +10,9 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parent
 DATA, OUT, REPORT = ROOT / "data", ROOT / "output", ROOT / "report"
 UA = "GuanyinKnowledgeCrawler/1.0 (public-source research)"
+EXTRA_WHISPER_START = "<!-- EXTRA_WHISPER_TRANSCRIPT_START -->"
+EXTRA_WHISPER_END = "<!-- EXTRA_WHISPER_TRANSCRIPT_END -->"
+PRESERVED_EXTRA_TRANSCRIPTS = {}
 BAD = re.compile(r"(logo|banner|avatar|tracking|pixel|icon|sprite|share|facebook|advert|qrcode|qr-code)", re.I)
 NOISE_LINE = re.compile(
     r"^(?:::|首頁|主選單|選單|跳到主要內容區塊|跳至內容|移至側邊欄|隱藏|登入|註冊|"
@@ -94,33 +97,46 @@ def duplicate_groups(rows):
     return [g for g in found.values() if len(g)>1]
 
 def save_images(rows, limit):
-    folder=OUT/'images'; folder.mkdir(parents=True,exist_ok=True)
-    hash_paths, url_cache, last={}, {}, {}
+    """Save webpage images centrally and keep each video's images with that video."""
+    image_root = OUT / 'images'
+    image_root.mkdir(parents=True, exist_ok=True)
+    hash_paths, url_cache, last = {}, {}, {}
     for r in rows:
-        kept=[]; selected=0
-        for im in r.pop('_candidates',[]):
-            # Older/raw records may contain JSON null for optional image
-            # fields.  Normalize those values before string operations.
+        kept = []
+        selected = 0
+        is_video = r.get('type') == 'video'
+        target_dir = OUT / 'videos' / str(r['id']) if is_video else image_root
+        target_dir.mkdir(parents=True, exist_ok=True)
+        target_prefix = f"videos/{r['id']}" if is_video else 'images'
+        for im in r.pop('_candidates', []):
             url = str(im.get('url') or '').strip()
             alt = str(im.get('alt') or '')
             caption = str(im.get('caption') or '')
-            host=urlparse(url).hostname or ''
-            if not url or urlparse(url).scheme not in ('http','https') or BAD.search(url+' '+alt+' '+caption): continue
-            if url in url_cache:
-                kept.append(dict(url_cache[url])); continue
-            if selected>=limit: continue
-            delay=.2-(time.monotonic()-last.get(host,0))
-            if delay>0: time.sleep(delay)
+            host = urlparse(url).hostname or ''
+            if not url or urlparse(url).scheme not in ('http', 'https') or BAD.search(url + ' ' + alt + ' ' + caption):
+                continue
+            cache_key = (url, target_prefix)
+            if cache_key in url_cache:
+                kept.append(dict(url_cache[cache_key]))
+                continue
+            if selected >= limit:
+                continue
+            delay = .2 - (time.monotonic() - last.get(host, 0))
+            if delay > 0:
+                time.sleep(delay)
             try:
-                req=Request(url,headers={'User-Agent':UA,'Accept':'image/avif,image/webp,image/png,image/jpeg,image/*;q=0.8'})
-                with urlopen(req,timeout=18) as resp:
-                    typ=resp.headers.get_content_type().lower()
-                    if not typ.startswith('image/'): raise ValueError('回應不是圖片：'+typ)
-                    data=resp.read(8*1024*1024+1)
-                last[host]=time.monotonic()
-                if len(data)>8*1024*1024: raise ValueError('圖片超過 8 MB')
-                ext=EXTS.get(typ)
-                if not ext: raise ValueError('不支援的圖片格式：'+typ)
+                req = Request(url, headers={'User-Agent': UA, 'Accept': 'image/avif,image/webp,image/png,image/jpeg,image/*;q=0.8'})
+                with urlopen(req, timeout=18) as resp:
+                    typ = resp.headers.get_content_type().lower()
+                    if not typ.startswith('image/'):
+                        raise ValueError('回應不是圖片：' + typ)
+                    data = resp.read(8 * 1024 * 1024 + 1)
+                last[host] = time.monotonic()
+                if len(data) > 8 * 1024 * 1024:
+                    raise ValueError('圖片超過 8 MB')
+                ext = EXTS.get(typ)
+                if not ext:
+                    raise ValueError('不支援的圖片格式：' + typ)
                 if ext != '.svg':
                     try:
                         from io import BytesIO
@@ -130,17 +146,29 @@ def save_images(rows, limit):
                                 raise ValueError(f'圖片尺寸過小：{image.width}x{image.height}')
                     except ImportError:
                         pass
-                digest=hashlib.sha256(data).hexdigest()
-                duplicate=digest in hash_paths
-                if duplicate: file=hash_paths[digest]
+                digest = hashlib.sha256(data).hexdigest()
+                hash_key = (digest, target_prefix)
+                duplicate = hash_key in hash_paths
+                if duplicate:
+                    file = hash_paths[hash_key]
                 else:
-                    name=f"{r['id']}_image_{selected+1:02d}{ext}"
-                    (folder/name).write_bytes(data); file='images/'+name; hash_paths[digest]=file
-                item={'file':file,'source_url':url,'alt':im.get('alt',''),'caption':im.get('caption',''),'sha256':digest,'download_status':'duplicate' if duplicate else 'saved'}
-                url_cache[url]=item; kept.append(item); selected+=1
+                    if is_video:
+                        name = f"thumbnail_{selected + 1:02d}{ext}" if selected == 0 else f"image_{selected + 1:02d}{ext}"
+                    else:
+                        name = f"{r['id']}_image_{selected + 1:02d}{ext}"
+                    (target_dir / name).write_bytes(data)
+                    file = f"{target_prefix}/{name}"
+                    hash_paths[hash_key] = file
+                item = {'file': file, 'source_url': url, 'alt': alt, 'caption': caption,
+                        'sha256': digest, 'download_status': 'duplicate' if duplicate else 'saved'}
+                url_cache[cache_key] = item
+                kept.append(item)
+                selected += 1
             except Exception as e:
-                last[host]=time.monotonic(); kept.append({'file':'','source_url':url,'alt':im.get('alt',''),'caption':im.get('caption',''),'download_status':'failed','reason':f'{type(e).__name__}: {e}'})
-        r['images']=kept
+                last[host] = time.monotonic()
+                kept.append({'file': '', 'source_url': url, 'alt': alt, 'caption': caption,
+                             'download_status': 'failed', 'reason': f'{type(e).__name__}: {e}'})
+        r['images'] = kept
 
 
 VIDEO_EXTS = {".mp4", ".m4v", ".mov", ".mkv", ".webm", ".avi"}
@@ -194,47 +222,40 @@ def nearest_caption(segments, seconds, max_distance=30):
 
 
 def extract_local_video_frames(row, media_dir, frame_count, ffmpeg_bin, ffprobe_bin):
-    """Extract evenly spaced stills from a user-provided local video only."""
-    folder = OUT / "videos" / f"{row['id']}_frames"
+    """Extract stills from a user-provided local video into that video's folder."""
+    video_dir = OUT / 'videos' / str(row['id'])
+    folder = video_dir / 'frames'
     folder.mkdir(parents=True, exist_ok=True)
-    video_id = str(row.get("video_id") or "")
+    video_id = str(row.get('video_id') or '')
     media_path = find_local_video(media_dir, video_id)
     if not media_path:
-        note = (
+        row['video_frames'] = []
+        row['frame_extraction_status'] = 'missing_local_video'
+        row['frame_extraction_note'] = (
             f"找不到本機影片檔。請將有權處理的影片放入 {media_dir or '指定資料夾'}，"
             f"並以 {video_id or 'YouTube video ID'} 開頭命名。"
         )
-        (folder / "README.md").write_text(note + "\n", encoding="utf-8")
-        row["video_frames"] = []
-        row["frame_extraction_status"] = "missing_local_video"
-        row["frame_extraction_note"] = note
-        row["local_video_file"] = ""
+        row['local_video_file'] = ''
         return
 
     if not shutil.which(ffmpeg_bin):
-        note = f"找不到 FFmpeg 執行檔：{ffmpeg_bin}。請安裝 FFmpeg 並確認 ffmpeg 已加入 PATH。"
-        (folder / "README.md").write_text(note + "\n", encoding="utf-8")
-        row["video_frames"] = []
-        row["frame_extraction_status"] = "ffmpeg_missing"
-        row["frame_extraction_note"] = note
-        row["local_video_file"] = media_path.name
+        row['video_frames'] = []
+        row['frame_extraction_status'] = 'ffmpeg_missing'
+        row['frame_extraction_note'] = f'找不到 FFmpeg 執行檔：{ffmpeg_bin}。請安裝 FFmpeg 並確認 ffmpeg 已加入 PATH。'
+        row['local_video_file'] = media_path.name
         return
     if not shutil.which(ffprobe_bin):
-        note = f"找不到 FFprobe 執行檔：{ffprobe_bin}。請確認 FFmpeg 安裝包含 ffprobe 並已加入 PATH。"
-        (folder / "README.md").write_text(note + "\n", encoding="utf-8")
-        row["video_frames"] = []
-        row["frame_extraction_status"] = "ffprobe_missing"
-        row["frame_extraction_note"] = note
-        row["local_video_file"] = media_path.name
+        row['video_frames'] = []
+        row['frame_extraction_status'] = 'ffprobe_missing'
+        row['frame_extraction_note'] = f'找不到 FFprobe 執行檔：{ffprobe_bin}。請確認 FFmpeg 安裝包含 ffprobe 並已加入 PATH。'
+        row['local_video_file'] = media_path.name
         return
 
     try:
-        # Use the local file's actual duration; a locally trimmed copy may
-        # differ from the duration reported by the online video metadata.
+        for previous_frame in folder.glob('frame_*.jpg'):
+            previous_frame.unlink()
         duration = probe_video_duration(media_path, ffprobe_bin)
-        row["local_video_duration_seconds"] = round(duration, 3)
-        # Avoid the opening and closing title/credit sections. Sample across
-        # the usable duration, with 5 frames by default as required by the task.
+        row['local_video_duration_seconds'] = round(duration, 3)
         fractions = [0.10, 0.30, 0.50, 0.70, 0.90]
         if frame_count != 5:
             fractions = [((i + 1) / (frame_count + 1)) for i in range(frame_count)]
@@ -245,45 +266,131 @@ def extract_local_video_frames(row, media_dir, frame_count, ffmpeg_bin, ffprobe_
             filename = f"frame_{index:02d}_{timestamp.replace(':', '-')}.jpg"
             destination = folder / filename
             command = [
-                ffmpeg_bin, "-hide_banner", "-loglevel", "error", "-y",
-                "-ss", f"{seconds:.3f}", "-i", str(media_path),
-                "-frames:v", "1", "-vf", "scale='min(1280,iw)':-2", "-q:v", "2",
+                ffmpeg_bin, '-hide_banner', '-loglevel', 'error', '-y',
+                '-ss', f'{seconds:.3f}', '-i', str(media_path),
+                '-frames:v', '1', '-vf', "scale='min(1280,iw)':-2", '-q:v', '2',
                 str(destination),
             ]
             subprocess.run(command, check=True, capture_output=True, text=True)
             if not destination.is_file() or destination.stat().st_size == 0:
-                raise RuntimeError(f"FFmpeg 未產生畫格：{timestamp}")
-            caption = nearest_caption(row.get("timestamps") or row.get("transcription_segments"), seconds)
-            description = f"對應字幕：{caption}" if caption else "未找到時間點附近的字幕，請人工確認並補充畫面描述。"
+                raise RuntimeError(f'FFmpeg 未產生畫格：{timestamp}')
+            caption = nearest_caption(row.get('timestamps') or row.get('transcription_segments'), seconds)
+            description = f'對應字幕：{caption}' if caption else '未找到時間點附近的字幕，請人工確認並補充畫面描述。'
             frames.append({
-                "file": f"videos/{row['id']}_frames/{filename}",
-                "timestamp": timestamp,
-                "seconds": round(seconds, 3),
-                "description": description,
-                "caption": caption,
-                "source_video": media_path.name,
+                'file': f"videos/{row['id']}/frames/{filename}",
+                'timestamp': timestamp,
+                'seconds': round(seconds, 3),
+                'description': description,
+                'caption': caption,
+                'source_video': media_path.name,
             })
-        row["video_frames"] = frames
-        row["frame_extraction_status"] = "success" if frames else "no_frames"
-        row["frame_extraction_note"] = ""
-        row["local_video_file"] = media_path.name
-        readme = [f"本機影片：{media_path.name}", f"擷取畫格：{len(frames)} 張", ""]
-        readme += [f"- {item['timestamp']}：{item['description']}（{Path(item['file']).name}）" for item in frames]
-        (folder / "README.md").write_text("\n".join(readme) + "\n", encoding="utf-8")
+        row['video_frames'] = frames
+        row['frame_extraction_status'] = 'success' if frames else 'no_frames'
+        row['frame_extraction_note'] = ''
+        row['local_video_file'] = media_path.name
     except Exception as exc:
-        # Do not leave partial frame files that could be mistaken for a
-        # complete extraction when one of the requested timestamps fails.
-        for partial in folder.glob("frame_*.jpg"):
+        for partial in folder.glob('frame_*.jpg'):
             try:
                 partial.unlink()
             except OSError:
                 pass
-        note = f"代表畫面擷取失敗：{type(exc).__name__}: {exc}"
-        row["video_frames"] = []
-        row["frame_extraction_status"] = "failed"
-        row["frame_extraction_note"] = note
-        row["local_video_file"] = media_path.name
-        (folder / "README.md").write_text(note + "\n", encoding="utf-8")
+        row['video_frames'] = []
+        row['frame_extraction_status'] = 'failed'
+        row['frame_extraction_note'] = f'代表畫面擷取失敗：{type(exc).__name__}: {exc}'
+        row['local_video_file'] = media_path.name
+
+
+def _extract_embedded_extra_whisper(markdown_text):
+    """Return the managed extra-Whisper section embedded in video.md."""
+    if not markdown_text:
+        return ''
+    start = markdown_text.find(EXTRA_WHISPER_START)
+    end = markdown_text.find(EXTRA_WHISPER_END)
+    if start < 0 or end < 0 or end <= start:
+        return ''
+    return markdown_text[start + len(EXTRA_WHISPER_START):end].strip()
+
+
+def _read_extra_whisper_transcript(video_dir, video_id):
+    """Read extra Whisper text from video.md cache or a legacy source file."""
+    record_id = video_dir.name
+    preserved = PRESERVED_EXTRA_TRANSCRIPTS.get(record_id, '')
+    if preserved:
+        return preserved, 'video.md（已整合）'
+
+    candidates = [video_dir / 'transcript_whisper.md', video_dir / 'transcript_whisper.txt']
+    if video_id:
+        candidates.append(OUT / 'videos' / 'transcripts' / f'{video_id}.md')
+    for path in candidates:
+        if path.is_file():
+            text = path.read_text(encoding='utf-8-sig').strip()
+            if not text:
+                continue
+            lines = text.splitlines()
+            while lines and (not lines[0].strip() or lines[0].lstrip().startswith('# ')):
+                lines.pop(0)
+            while lines and lines[0].strip().startswith('- Video ID：'):
+                lines.pop(0)
+            body = '\n'.join(lines).strip()
+            marker = '## 字幕逐字稿'
+            if marker in body:
+                body = body.split(marker, 1)[1].strip()
+            return body, str(path)
+    return '', ''
+
+
+def _preserve_legacy_video_outputs(raw_records):
+    """Move legacy transcripts, thumbnails, and extracted frames into video folders."""
+    legacy_transcripts = OUT / 'videos' / 'transcripts'
+    for record in raw_records:
+        video_id = str(record.get('video_id') or '').strip()
+        record_id = str(record.get('id') or '').strip()
+        if not record_id or not video_id:
+            continue
+        video_dir = OUT / 'videos' / record_id
+        video_dir.mkdir(parents=True, exist_ok=True)
+
+        # Preserve the managed extra-Whisper section before video.md is rebuilt.
+        existing_video_md = video_dir / 'video.md'
+        if existing_video_md.is_file():
+            embedded = _extract_embedded_extra_whisper(existing_video_md.read_text(encoding='utf-8-sig'))
+            if embedded:
+                PRESERVED_EXTRA_TRANSCRIPTS[record_id] = embedded
+
+        # Older thumbnail files lived in output/images/<record_id>_image_XX.*.
+        legacy_images = sorted((OUT / 'images').glob(f'{record_id}_image_*'))
+        for index, source in enumerate(legacy_images, start=1):
+            if not source.is_file():
+                continue
+            target_name = 'thumbnail_01' + source.suffix.lower() if index == 1 else f'image_{index:02d}' + source.suffix.lower()
+            target = video_dir / target_name
+            if not target.exists():
+                shutil.move(str(source), str(target))
+
+        # Older frame output lived beside the Markdown file as <record_id>_frames/.
+        old_frames = OUT / 'videos' / f'{record_id}_frames'
+        new_frames = video_dir / 'frames'
+        if old_frames.is_dir():
+            new_frames.mkdir(parents=True, exist_ok=True)
+            for source in old_frames.iterdir():
+                if source.name == 'README.md':
+                    source.unlink()
+                    continue
+                target = new_frames / source.name
+                if source.is_file() and not target.exists():
+                    shutil.move(str(source), str(target))
+            try:
+                old_frames.rmdir()
+            except OSError:
+                pass
+
+        # Older extra Whisper transcripts are read and embedded during export;
+        # their source files are removed only after video.md is written safely.
+    if legacy_transcripts.is_dir():
+        try:
+            legacy_transcripts.rmdir()
+        except OSError:
+            pass
 
 
 def main():
@@ -296,18 +403,33 @@ def main():
     with (ROOT/'urls.csv').open(encoding='utf-8-sig',newline='') as f: urls=[x['url'].strip() for x in csv.DictReader(f) if x.get('url','').strip()]
     urls += [s['url'] for s in statuses if s['url'] not in set(urls)]
     urls=list(dict.fromkeys(urls)); OUT.mkdir(exist_ok=True); REPORT.mkdir(exist_ok=True)
-    # Rebuild only files owned by this exporter so reruns do not leave stale page IDs.
-    for old in (OUT/'articles').glob('*.md'):
+    # Preserve old Whisper transcript source files before rebuilding video.md.
+    _preserve_legacy_video_outputs(raw)
+
+    # Rebuild exporter-owned outputs. The final video folder keeps only one Markdown file: video.md.
+    for old in (OUT / 'articles').glob('*.md'):
         old.unlink()
-    for old in (OUT/'videos').glob('*.md'):
+    videos_root = OUT / 'videos'
+    videos_root.mkdir(parents=True, exist_ok=True)
+    for old in videos_root.glob('*.md'):
         old.unlink()
-    for old in (OUT/'videos').glob('video_*_frames'):
-        for f in old.glob('*'):
-            if f.is_file(): f.unlink()
-        old.rmdir()
-    for pattern in ('page_*_image_*','video_*_image_*'):
-        for old in (OUT/'images').glob(pattern): old.unlink()
-    for x in ('articles','videos','images'): (OUT/x).mkdir(parents=True,exist_ok=True)
+    for old in videos_root.glob('*_frames'):
+        if old.is_dir():
+            shutil.rmtree(old)
+    for video_dir in videos_root.iterdir():
+        if not video_dir.is_dir() or video_dir.name == 'transcripts':
+            continue
+        for generated in [video_dir / 'video.md']:
+            if generated.is_dir():
+                shutil.rmtree(generated)
+            elif generated.exists():
+                generated.unlink()
+    for pattern in ('page_*_image_*', 'video_*_image_*'):
+        for old in (OUT / 'images').glob(pattern):
+            if old.is_file():
+                old.unlink()
+    for x in ('articles', 'videos', 'images'):
+        (OUT / x).mkdir(parents=True, exist_ok=True)
     page_n=video_n=0; rows=[]
     for url in urls:
         st=status.get(url,{})
@@ -376,33 +498,95 @@ def main():
             if r['parser_note']: lines+=['',f"> 備註：{r['parser_note']}"]
             f.write_text('\n'.join(lines)+'\n',encoding='utf-8')
         else:
-            folder=OUT/'videos'/f"{r['id']}_frames"; folder.mkdir(exist_ok=True)
-            lines=[f"# {r['title'] or r['id']}",'',f"- ID：{r['id']}",f"- 父頁面 ID：{r.get('parent_id') or '無（原始網址）'}",f"- 深度：{r['depth']}",f"- 頻道：{r['source_name'] or '未知'}",f"- 原始網址：{r['source_url']}",f"- 狀態：{r['crawl_status']}"]
-            if r.get('local_video_file'): lines.append(f"- 本機影片檔：{r['local_video_file']}")
-            lines.append(f"- 代表畫面擷取狀態：{r.get('frame_extraction_status','not_run')}")
-            if r.get('frame_extraction_note'): lines.append(f"- 擷取備註：{r['frame_extraction_note']}")
-            if r.get('crawl_reason'): lines.append(f"- 原因：{r['crawl_reason']}")
-            lines += [f"- 時長（秒）：{r['duration_seconds'] or '未知'}",'','## 字幕逐字稿']
-            if r['timestamps']: lines += [f"- **[{s['timestamp']}]** {s['text']}" for s in r['timestamps']]
-            elif r['transcription_segments']:
-                if r['transcription_source']: lines.append(f"- 來源：Whisper 語音辨識（{r['transcription_source']}）")
-                if r['transcription_language']: lines.append(f"- 語言：{r['transcription_language']}")
-                lines += [f"- **[{s['timestamp']}]** {s['text']}" for s in r['transcription_segments']]
-            elif r['transcription']: lines += ['- 來源：Whisper 語音辨識',r['transcription']]
-            elif r['content']: lines += [r['content']]
-            else: lines += [r['transcription_note'] or r['caption_note'] or '沒有取得可用字幕；未使用語音辨識補寫。']
-            if r['transcription_note'] and not r['transcription_available']:
-                lines += ['',f"> 語音辨識備註：{r['transcription_note']}"]
-            lines += ['','## 代表畫面']
+            video_dir = OUT / 'videos' / str(r['id'])
+            video_dir.mkdir(parents=True, exist_ok=True)
+            lines = [
+                f"# {r['title'] or r['id']}", '',
+                f"- 文章／影片 ID：{r['id']}",
+                f"- YouTube Video ID：{r.get('video_id') or '未知'}",
+                f"- 父頁面 ID：{r.get('parent_id') or '無（原始網址）'}",
+                f"- 深度：{r['depth']}",
+                f"- 頻道：{r['source_name'] or '未知'}",
+                f"- 原始網址：{r['source_url']}",
+                f"- 狀態：{r['crawl_status']}",
+                f"- 發布日期：{r.get('published_at') or '未知'}",
+                f"- 時長：{format_seconds(r['duration_seconds']) if r.get('duration_seconds') else '未知'}",
+            ]
+            if r.get('local_video_file'):
+                lines.append(f"- 本機影片檔：{r['local_video_file']}")
+            lines.append(f"- 代表畫面擷取狀態：{r.get('frame_extraction_status', 'not_run')}")
+            if r.get('frame_extraction_note'):
+                lines.append(f"- 擷取備註：{r['frame_extraction_note']}")
+            if r.get('crawl_reason'):
+                lines.append(f"- 爬取備註：{r['crawl_reason']}")
+
+            thumbnails = [im for im in r.get('images', []) if im.get('file')]
+            lines += ['', '## 影片縮圖']
+            if thumbnails:
+                for im in thumbnails:
+                    rel = Path(im['file']).name
+                    lines += [f"![{im.get('alt') or '影片縮圖'}]({rel})", f"- 圖片來源：[原始圖片]({im['source_url']})"]
+                    if im.get('caption'):
+                        lines.append(f"- 說明：{im['caption']}")
+            else:
+                existing_thumbnails = sorted(video_dir.glob('thumbnail_*'))
+                if existing_thumbnails:
+                    for thumbnail in existing_thumbnails:
+                        lines.append(f"![影片縮圖]({thumbnail.name})")
+                else:
+                    online_thumbnails = [im for im in r.get('images', []) if im.get('source_url')]
+                    if online_thumbnails:
+                        lines += [f"- [線上影片縮圖來源]({im['source_url']})（本次未下載圖片）" for im in online_thumbnails]
+                    else:
+                        lines.append('沒有可用的影片縮圖。')
+
+            lines += ['', '## 字幕與逐字稿']
+            if r.get('caption_available') and r.get('timestamps'):
+                lines += ['### YouTube 平台字幕', '- 來源：YouTube']
+                lines += [f"- **[{seg.get('timestamp', '')}]** {seg.get('text', '')}" for seg in r['timestamps']]
+            elif r.get('timestamps'):
+                lines += ['### 擷取到的字幕', *[f"- **[{seg.get('timestamp', '')}]** {seg.get('text', '')}" for seg in r['timestamps']]]
+            if r.get('transcription_segments'):
+                lines += ['', '### 爬蟲流程中的 Whisper 逐字稿',
+                          f"- 來源：{r.get('transcription_source') or 'Whisper'}",
+                          f"- 語言：{r.get('transcription_language') or '未知'}"]
+                lines += [f"- **[{seg.get('timestamp', '')}]** {seg.get('text', '')}" for seg in r['transcription_segments']]
+            elif r.get('transcription'):
+                lines += ['', '### 爬蟲流程中的 Whisper 逐字稿',
+                          f"- 來源：{r.get('transcription_source') or 'Whisper'}",
+                          f"- 語言：{r.get('transcription_language') or '未知'}", '', r['transcription']]
+            if r.get('transcription_note') and not r.get('transcription_available'):
+                lines += ['', f"> 語音辨識備註：{r['transcription_note']}"]
+            if not r.get('timestamps') and not r.get('transcription_segments') and not r.get('transcription'):
+                lines += ['', r.get('transcription_note') or r.get('caption_note') or '沒有取得可用字幕或逐字稿。']
+            if (r.get('content') and not r.get('timestamps') and not r.get('transcription_segments')
+                    and not r.get('transcription')):
+                lines += ['', '### 其他擷取文字', r['content']]
+
+            lines += ['', '## 代表畫面']
             if r.get('video_frames'):
                 for frame in r['video_frames']:
-                    rel = f"{r['id']}_frames/{Path(frame['file']).name}"
+                    rel = f"frames/{Path(frame['file']).name}"
                     lines += [f"### {frame['timestamp']}", f"![{frame['timestamp']}]({rel})", f"- 畫面描述：{frame['description']}"]
             else:
-                lines.append(r.get('frame_extraction_note') or '未取得本機影片檔，因此沒有擷取代表畫面。')
-            for im in r['images']:
-                if im.get('file'): lines.append(f"- [影片縮圖](../{im['file']}) — {im['source_url']}（僅供辨識影片，不列為代表畫面）")
-            (OUT/'videos'/f"{r['id']}.md").write_text('\n'.join(lines)+'\n',encoding='utf-8')
+                existing_frames = sorted((video_dir / 'frames').glob('frame_*.jpg'))
+                if existing_frames:
+                    for frame_path in existing_frames:
+                        timestamp = frame_path.stem.split('_', 2)[-1].replace('-', ':')
+                        lines += [f"### {timestamp or '既有畫面'}", f"![{timestamp or '影片代表畫面'}](frames/{frame_path.name})"]
+                else:
+                    lines.append(r.get('frame_extraction_note') or '未取得本機影片檔，因此沒有擷取代表畫面。')
+
+            video_md_path = video_dir / 'video.md'
+            video_md_path.write_text('\n'.join(lines) + '\n', encoding='utf-8')
+            # video.md is now the sole source of the extra Whisper transcript.
+            for obsolete in (video_dir / 'transcript_whisper.md', video_dir / 'transcript_whisper.txt'):
+                if obsolete.is_file():
+                    obsolete.unlink()
+            if r.get('video_id'):
+                legacy_source = OUT / 'videos' / 'transcripts' / f"{r['video_id']}.md"
+                if legacy_source.is_file():
+                    legacy_source.unlink()
     fields=['id','parent_id','type','url','title','status','http_status','reason','depth','source_type','crawled_at','frame_extraction_status','frame_count','frame_extraction_note']
     with (OUT/'crawl_report.csv').open('w',encoding='utf-8-sig',newline='') as f:
         w=csv.DictWriter(f,fieldnames=fields);w.writeheader()

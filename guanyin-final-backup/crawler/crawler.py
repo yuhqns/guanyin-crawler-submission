@@ -407,7 +407,6 @@ def _transcription_fallback(
                 "downloaded_audio": downloaded,
             }
         return {
-            "content": text,
             "transcription": text,
             "transcription_segments": segments,
             "transcription_available": True,
@@ -429,8 +428,8 @@ def youtube_record(
     timeout: int,
     media_dir: Path | None = None,
     work_dir: Path | None = None,
-    model_name: str = "large-v3",
-    download_audio: bool = False,
+    model_name: str = "small",
+    download_audio: bool = True,
 ) -> dict:
     # yt-dlp provides metadata and caption tracks without downloading the video.
     try:
@@ -462,19 +461,23 @@ def youtube_record(
                   "video_id": info.get("id"), "channel": info.get("channel") or info.get("uploader"),
                   "duration_seconds": info.get("duration"), "caption_available": bool(transcript),
                   "transcript_segments": transcript_segments if transcript else [],
-                  "caption_note": "" if transcript else "頁面未提供可讀字幕；未啟用語音轉錄",
+                  "caption_note": "" if transcript else "頁面未提供可讀字幕",
                   "transcription_available": False, "transcription_segments": [], "transcription_note": "",
                   "downloaded_audio": False}
-        if not transcript:
-            fallback = _transcription_fallback(
-                url, info, media_dir, work_dir or Path.cwd() / "audio_work", model_name, download_audio, timeout
-            )
-            result.update(fallback)
-            if result.get("transcription_available"):
-                source_label = "下載音訊" if result.get("transcription_source") == "downloaded_audio" else "本機影片"
-                result["caption_note"] = f"頁面未提供可讀字幕；已使用 Whisper 辨識（來源：{source_label}）"
-            elif result.get("transcription_note"):
-                result["caption_note"] = "頁面未提供可讀字幕；Whisper 後備處理未成功"
+        # Always run Whisper independently of platform caption availability.
+        # Keep platform captions in content/transcript_segments; Whisper output
+        # is stored only in transcription/transcription_segments.
+        fallback = _transcription_fallback(
+            url, info, media_dir, work_dir or Path.cwd() / "audio_work", model_name, download_audio, timeout
+        )
+        result.update(fallback)
+        if result.get("transcription_available"):
+            source_label = "下載音訊" if result.get("transcription_source") == "downloaded_audio" else "本機影片"
+            result["transcription_note"] = ""
+            result["caption_note"] = result.get("caption_note") or "頁面未提供可讀字幕"
+            result["transcription_source_label"] = source_label
+        elif result.get("transcription_note"):
+            result["transcription_note"] = result["transcription_note"]
         return result
     except ImportError:
         return youtube_oembed(url, timeout)
@@ -586,11 +589,11 @@ def main() -> int:
     ap.add_argument("--media-dir", type=Path, help="含有已合法取得影音檔的資料夾；檔名需以 YouTube video ID 開頭")
     audio_group = ap.add_mutually_exclusive_group()
     audio_group.add_argument("--download-audio", dest="download_audio", action="store_true",
-                             help="啟用無字幕影片音訊下載（目前為預設行為）")
+                             help="啟用影片音訊下載供 Whisper 辨識（目前為預設行為）")
     audio_group.add_argument("--no-download-audio", dest="download_audio", action="store_false",
                              help="停用音訊下載；仍可使用 --media-dir 中的本機影片")
     ap.set_defaults(download_audio=True)
-    ap.add_argument("--model", default="large-v3", help="faster-whisper 模型名稱，預設 large-v3")
+    ap.add_argument("--model", default="small", help="faster-whisper 模型名稱，預設 small")
     ap.add_argument("--frame-count", type=int, choices=(3, 4, 5), default=5,
                     help="後處理時每部本機影片擷取的代表畫面數量")
     ap.add_argument("--no-postprocess", action="store_true",

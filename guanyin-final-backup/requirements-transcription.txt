@@ -1,4 +1,4 @@
-# Optional dependencies for videos that do not expose readable captions.
+# Dependencies for Whisper transcription of every crawled YouTube video.
 # Install only when you have permission to process the corresponding media.
 faster-whisper>=1.0,<2
 av==18.1.0
