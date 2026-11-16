@@ -8,7 +8,7 @@
 - 狀態：success
 - 主題：地方知識
 - 關鍵字：觀音區、桃園市、大堀溪
-- 擷取時間：2026-11-04T12:33:23.261187+00:00
+- 擷取時間：2026-11-16T15:47:11.325385+00:00
 
 ## 清理後正文
 
@@ -127,10 +127,7 @@ https://zh.wikipedia.org/w/index.php?title=大堀溪&oldid=85607001
 有地圖的頁面
 
 ## 圖片
-- ![維基百科](../images/page001_image_01.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-zh.svg) 
-- ![自由的百科全書](../images/page001_image_02.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-zh.svg) 
-- ![Wikimedia Foundation](../images/page015_image_03.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/footer/wikimedia.svg) 
-- ![Powered by MediaWiki](../images/page016_image_01.svg) — [原始圖片來源](https://zh.wikipedia.org/w/resources/assets/mediawiki_compact.svg) 
+本次無成功保存的圖片。
 
 ## 頁面連結
 - [分類索引](https://zh.wikipedia.org/wiki/Wikipedia:%E5%88%86%E7%B1%BB%E7%B4%A2%E5%BC%95)
@@ -233,5 +230,3 @@ https://zh.wikipedia.org/w/index.php?title=大堀溪&oldid=85607001
 - [牛欄河](https://zh.wikipedia.org/wiki/%E7%89%9B%E6%AC%84%E6%B2%B3_(%E6%B2%B3%E5%B7%9D))
 - [新竹縣](https://zh.wikipedia.org/wiki/%E6%96%B0%E7%AB%B9%E7%B8%A3)
 - [新豐溪](https://zh.wikipedia.org/wiki/%E6%96%B0%E8%B1%90%E6%BA%AA)
-
-> 備註：進階解析失敗，已使用內建解析器：AttributeError: 'NoneType' object has no attribute 'get'

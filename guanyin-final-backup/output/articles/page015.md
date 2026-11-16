@@ -8,7 +8,7 @@
 - 狀態：success
 - 主題：自然景觀與生態
 - 關鍵字：觀音坑溪、地方旅遊、觀光資訊
-- 擷取時間：2026-11-04T12:33:23.109566+00:00
+- 擷取時間：2026-11-16T15:47:10.959564+00:00
 
 ## 清理後正文
 
@@ -109,11 +109,7 @@ https://zh.wikipedia.org/w/index.php?title=觀音坑溪&oldid=85606836
 有地圖的頁面
 
 ## 圖片
-- ![維基百科](../images/page001_image_01.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-zh.svg) 
-- ![自由的百科全書](../images/page001_image_02.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-zh.svg) 
-- ![文章圖片](../images/page015_image_01.jpg) — [原始圖片來源](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/%E8%A7%80%E9%9F%B3%E5%9D%91%E6%BA%AA%E5%85%A5%E6%B7%A1%E6%B0%B4%E6%B2%B3.JPG/250px-%E8%A7%80%E9%9F%B3%E5%9D%91%E6%BA%AA%E5%85%A5%E6%B7%A1%E6%B0%B4%E6%B2%B3.JPG?utm_source=zh.wikipedia.org&utm_campaign=parser&utm_content=thumbnail) 
-- ![文章圖片](../images/page015_image_02.jpg) — [原始圖片來源](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/%E8%A7%80%E9%9F%B3%E5%9D%91%E6%BA%AA.JPG/250px-%E8%A7%80%E9%9F%B3%E5%9D%91%E6%BA%AA.JPG?utm_source=zh.wikipedia.org&utm_campaign=parser&utm_content=thumbnail) 
-- ![Wikimedia Foundation](../images/page015_image_03.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/footer/wikimedia.svg) 
+本次無成功保存的圖片。
 
 ## 頁面連結
 - [分類索引](https://zh.wikipedia.org/wiki/Wikipedia:%E5%88%86%E7%B1%BB%E7%B4%A2%E5%BC%95)
@@ -216,5 +212,3 @@ https://zh.wikipedia.org/w/index.php?title=觀音坑溪&oldid=85606836
 - [鄉長溪](https://zh.wikipedia.org/wiki/%E9%84%89%E9%95%B7%E6%BA%AA)
 - [保長坑溪](https://zh.wikipedia.org/wiki/%E4%BF%9D%E9%95%B7%E5%9D%91%E6%BA%AA)
 - [鹿寮溪](https://zh.wikipedia.org/w/index.php?title=%E9%B9%BF%E5%AF%AE%E6%BA%AA_(%E5%9F%BA%E9%9A%86%E5%B8%82)&action=edit&redlink=1)
-
-> 備註：進階解析失敗，已使用內建解析器：AttributeError: 'NoneType' object has no attribute 'get'

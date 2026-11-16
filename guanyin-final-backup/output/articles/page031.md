@@ -8,12 +8,11 @@
 - 狀態：success
 - 主題：歷史文化與信仰、觀光景點與活動
 - 關鍵字：桃園市、歷史文化、地方旅遊
-- 擷取時間：2026-11-04T12:43:10.594053+00:00
+- 擷取時間：2026-11-16T15:47:17.500712+00:00
 
 ## 清理後正文
 
 :::
-首頁
 /
 文獻電子期刊
 /
@@ -94,9 +93,7 @@ Women ＆ Power: A Manifesto
 回期刊列表
 
 ## 圖片
-- ![P75_0001](../images/page031_image_01.jpg) — [原始圖片來源](https://ihc.cip.gov.tw/ihcfile/EJournals/59/Content/P75_0001.jpg) 
-- ![P75_0002](../images/page031_image_02.jpg) — [原始圖片來源](https://ihc.cip.gov.tw/ihcfile/EJournals/59/Content/P75_0002.jpg) 
-- ![P75_0003](../images/page031_image_03.jpg) — [原始圖片來源](https://ihc.cip.gov.tw/ihcfile/EJournals/59/Content/P75_0003.jpg) 
+本次無成功保存的圖片。
 
 ## 頁面連結
 - [客服諮詢](https://ihc.cip.gov.tw/Service)

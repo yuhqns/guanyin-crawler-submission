@@ -9,7 +9,7 @@
 - 作者：HomeMesh, Morgan, Roy, Century
 - 主題：地方產業與農漁業
 - 關鍵字：觀音區、桃園市、地方旅遊
-- 擷取時間：2026-11-04T12:33:29.545150+00:00
+- 擷取時間：2026-11-16T15:47:14.796890+00:00
 
 ## 清理後正文
 
@@ -22,9 +22,7 @@
 平面圖標示
 
 ## 圖片
-- ![文章圖片](../images/page024_image_01.jpg) — [原始圖片來源](http://www.century.com.tw/uploads/images/20200806/1596708667425539.jpg) 
-- ![文章圖片](../images/page024_image_02.jpg) — [原始圖片來源](http://www.century.com.tw/uploads/images/20200806/1596708667313709.jpg) 
-- ![文章圖片](../images/page024_image_03.png) — [原始圖片來源](http://www.century.com.tw/uploads/images/20200806/1596708667581689.png) 
+本次無成功保存的圖片。
 
 ## 頁面連結
 - [系統管理員](https://www.century.com.tw/admincp.php)
@@ -83,5 +81,3 @@
 - [緬甸廠](https://www.century.com.tw/tw/about/6/)
 - [網站地圖](https://www.century.com.tw/tw/sitemap)
 - [328 桃園市觀音區金湖村中山路一段1119號](https://www.google.com/maps/place/25%C2%B001'40.2%22N+121%C2%B006'31.9%22E/@25.02784,121.1066803,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d25.02784!4d121.108869)
-
-> 備註：進階解析失敗，已使用內建解析器：AttributeError: 'NoneType' object has no attribute 'get'

@@ -8,7 +8,7 @@
 - 狀態：success
 - 主題：自然景觀與生態、歷史文化與信仰、地方產業與農漁業
 - 關鍵字：觀音區、桃園市、草漯沙丘、藻礁、白沙岬燈塔
-- 擷取時間：2026-11-04T12:33:06.948691+00:00
+- 擷取時間：2026-11-16T15:47:03.599488+00:00
 
 ## 清理後正文
 
@@ -208,5 +208,3 @@
 - [空氣品質監測網](https://airtw.moenv.gov.tw/)
 - [移至主要內容區](https://romantichakka.hakka.gov.tw/hakkatours/TourExpert?a=1202&fromlist=1&id=1624)
 - [立即觀看](https://romantichakka.hakka.gov.tw/attraction/Spot?a=928)
-
-> 備註：進階解析失敗，已使用內建解析器：AttributeError: 'NoneType' object has no attribute 'get'

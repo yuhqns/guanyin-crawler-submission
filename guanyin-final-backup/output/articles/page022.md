@@ -9,7 +9,7 @@
 - 作者：美食人生
 - 主題：自然景觀與生態、歷史文化與信仰、地方產業與農漁業
 - 關鍵字：觀音區、桃園市、草漯沙丘、白沙岬燈塔
-- 擷取時間：2026-11-04T12:33:28.658731+00:00
+- 擷取時間：2026-11-16T15:47:13.758419+00:00
 
 ## 清理後正文
 
@@ -90,7 +90,7 @@ Mon
 留言
 (1)
 人氣(
-13662
+13696
 )
 全站分類：
 國內旅遊
@@ -106,9 +106,7 @@ Mon
 已滿十八歲者，亦請勿將內容提供給未成年人士。
 
 ## 圖片
-- ![PhotoCap_114.jpg](../images/page022_image_01.jpg) — [原始圖片來源](https://pimg.1px.tw/wonderfood/1586103280-1012698860.jpg) 
-- ![PhotoCap_126.jpg](../images/page022_image_02.jpg) — [原始圖片來源](https://pimg.1px.tw/wonderfood/1586103277-1758770352.jpg) 
-- ![PhotoCap_127.jpg](../images/page022_image_03.jpg) — [原始圖片來源](https://pimg.1px.tw/wonderfood/1586103278-1560752952.jpg) 
+本次無成功保存的圖片。
 
 ## 頁面連結
 - [我的部落格後台](https://panel.pixnet.tw/)
@@ -128,5 +126,3 @@ Mon
 - [https://www.pixnet.net](https://www.pixnet.net)
 - [隱私權政策](https://account.pixnet.tw/privacy)
 - [服務聲明](https://account.pixnet.tw/regulation)
-
-> 備註：進階解析失敗，已使用內建解析器：AttributeError: 'NoneType' object has no attribute 'get'

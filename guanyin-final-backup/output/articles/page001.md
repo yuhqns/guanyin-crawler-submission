@@ -8,7 +8,7 @@
 - 狀態：success
 - 主題：自然景觀與生態、歷史文化與信仰、地方產業與農漁業
 - 關鍵字：觀音區、桃園市、草漯沙丘、藻礁、白沙岬燈塔
-- 擷取時間：2026-11-04T12:33:04.665359+00:00
+- 擷取時間：2026-11-16T15:47:00.406017+00:00
 
 ## 清理後正文
 
@@ -57,12 +57,12 @@ Guanyin District
 海拔
 44公尺（144英尺）
 人口
-（2026年7月）（32,515戶）
+（2026年10月）（32,797戶）
 • 總計
-78,137人（桃園市的第11位）
+78,458人（桃園市的第11位）
 •
 密度
-888人/平方公里（2,300人/平方英里）
+892人/平方公里（2,310人/平方英里）
 時區
 國家標準時間
 （
@@ -937,7 +937,7 @@ ISBN
 [
 編輯
 ]
-觀音區公所
+桃園市觀音區公所
 （
 頁面存檔備份
 ，存於
@@ -947,8 +947,9 @@ ISBN
 YouTube上的
 觀音小編
 頻道
+桃園市觀音區戶政事務所
 取自「
-https://zh.wikipedia.org/w/index.php?title=觀音區&oldid=95104651
+https://zh.wikipedia.org/w/index.php?title=觀音區&oldid=95421883
 」
 分類
 ：
@@ -971,9 +972,7 @@ https://zh.wikipedia.org/w/index.php?title=觀音區&oldid=95104651
 有地圖的頁面
 
 ## 圖片
-- ![維基百科](../images/page001_image_01.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-zh.svg) 
-- ![自由的百科全書](../images/page001_image_02.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-zh.svg) 
-- ![白沙岬燈塔](../images/page001_image_03.jpg) — [原始圖片來源](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/%E7%99%BD%E6%B2%99%E5%B2%AC%E7%87%88%E5%A1%94%E5%85%A5%E5%8F%A3.jpg/250px-%E7%99%BD%E6%B2%99%E5%B2%AC%E7%87%88%E5%A1%94%E5%85%A5%E5%8F%A3.jpg?utm_source=zh.wikipedia.org&utm_campaign=parser&utm_content=thumbnail) 
+本次無成功保存的圖片。
 
 ## 頁面連結
 - [分類索引](https://zh.wikipedia.org/wiki/Wikipedia:%E5%88%86%E7%B1%BB%E7%B4%A2%E5%BC%95)
@@ -1020,9 +1019,9 @@ https://zh.wikipedia.org/w/index.php?title=觀音區&oldid=95104651
 - [連結至此的頁面](https://zh.wikipedia.org/wiki/Special:WhatLinksHere/%E8%A7%80%E9%9F%B3%E5%8D%80)
 - [相關變更](https://zh.wikipedia.org/wiki/Special:RecentChangesLinked/%E8%A7%80%E9%9F%B3%E5%8D%80)
 - [上傳檔案](https://zh.wikipedia.org/wiki/Project:上传)
-- [固定連結](https://zh.wikipedia.org/w/index.php?title=%E8%A7%80%E9%9F%B3%E5%8D%80&oldid=95104651)
+- [固定連結](https://zh.wikipedia.org/w/index.php?title=%E8%A7%80%E9%9F%B3%E5%8D%80&oldid=95421883)
 - [頁面資訊](https://zh.wikipedia.org/w/index.php?title=%E8%A7%80%E9%9F%B3%E5%8D%80&action=info)
-- [引用此頁面](https://zh.wikipedia.org/w/index.php?title=Special:CiteThisPage&page=%E8%A7%80%E9%9F%B3%E5%8D%80&id=95104651&wpFormIdentifier=titleform)
+- [引用此頁面](https://zh.wikipedia.org/w/index.php?title=Special:CiteThisPage&page=%E8%A7%80%E9%9F%B3%E5%8D%80&id=95421883&wpFormIdentifier=titleform)
 - [取得短連結](https://zh.wikipedia.org/w/index.php?title=Special:UrlShortener&url=https%3A%2F%2Fzh.wikipedia.org%2Fzh-tw%2F%25E8%25A7%2580%25E9%259F%25B3%25E5%258D%2580)
 - [下載為PDF](https://zh.wikipedia.org/w/index.php?title=Special:DownloadAsPdf&page=%E8%A7%80%E9%9F%B3%E5%8D%80&action=show-download-screen)
 - [編輯連結](https://www.wikidata.org/wiki/Special:EntityPage/Q712931)
@@ -1040,7 +1039,6 @@ https://zh.wikipedia.org/w/index.php?title=觀音區&oldid=95104651
 - [UTC+08:00](https://zh.wikipedia.org/wiki/UTC%2B08:00)
 - [郵遞區號](https://zh.wikipedia.org/wiki/%E8%87%BA%E7%81%A3%E5%9C%B0%E5%8D%80%E9%83%B5%E9%81%9E%E5%8D%80%E8%99%9F%E4%B8%80%E8%A6%BD%E8%A1%A8)
 - [戶政資料代碼](https://zh.wikipedia.org/wiki/%E6%88%B6%E5%BD%B9%E6%94%BF%E8%B3%87%E8%A8%8A%E7%B3%BB%E7%B5%B1%E8%B3%87%E6%96%99%E4%BB%A3%E7%A2%BC)
-- [www .guanyin .tycg .gov .tw](https://www.guanyin.tycg.gov.tw/)
 - [台灣語言](https://zh.wikipedia.org/wiki/%E8%87%BA%E7%81%A3%E8%AA%9E%E8%A8%80%E5%88%97%E8%A1%A8)
 - [注音](https://zh.wikipedia.org/wiki/%E6%B3%A8%E9%9F%B3%E7%AC%A6%E8%99%9F)
 - [漢語拼音](https://zh.wikipedia.org/wiki/%E6%B1%89%E8%AF%AD%E6%8B%BC%E9%9F%B3)
@@ -1076,5 +1074,4 @@ https://zh.wikipedia.org/w/index.php?title=觀音區&oldid=95104651
 - [原始資料](https://commons.wikimedia.org/wiki/Data:Population_of_Guanyin_District,_Taoyuan.tab)
 - [編輯](https://zh.wikipedia.org/w/index.php?title=%E8%A7%80%E9%9F%B3%E5%8D%80&action=edit&section=6)
 - [編輯](https://zh.wikipedia.org/w/index.php?title=%E8%A7%80%E9%9F%B3%E5%8D%80&action=edit&section=7)
-
-> 備註：進階解析失敗，已使用內建解析器：AttributeError: 'NoneType' object has no attribute 'get'
+- [編輯](https://zh.wikipedia.org/w/index.php?title=%E8%A7%80%E9%9F%B3%E5%8D%80&action=edit&section=8)

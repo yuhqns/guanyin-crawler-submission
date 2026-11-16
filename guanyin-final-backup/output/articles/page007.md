@@ -8,7 +8,7 @@
 - 狀態：success
 - 主題：歷史文化與信仰、觀光景點與活動
 - 關鍵字：觀音區、桃園市、甘泉寺、石觀音
-- 擷取時間：2026-11-04T12:33:14.759400+00:00
+- 擷取時間：2026-11-16T15:47:05.017605+00:00
 
 ## 清理後正文
 
@@ -153,5 +153,3 @@
 - [觀音區戶政 粉絲頁](https://www.facebook.com/guaninhr3)
 - [交通資訊](https://www.guanyin-hro.tycg.gov.tw/cp.aspx?n=13826)
 - [跳到主要內容區塊](https://www.guanyin-hro.tycg.gov.tw/cp.aspx?n=13772)
-
-> 備註：進階解析失敗，已使用內建解析器：AttributeError: 'NoneType' object has no attribute 'get'

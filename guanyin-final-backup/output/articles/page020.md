@@ -8,7 +8,7 @@
 - 狀態：success
 - 主題：自然景觀與生態、地方產業與農漁業
 - 關鍵字：觀音區、桃園市、大潭發電廠
-- 擷取時間：2026-11-04T12:33:27.099621+00:00
+- 擷取時間：2026-11-16T15:47:12.916162+00:00
 
 ## 清理後正文
 
@@ -725,13 +725,7 @@ https://zh.wikipedia.org/w/index.php?title=大潭發電廠&oldid=94099281
 有地圖的頁面
 
 ## 圖片
-- ![維基百科](../images/page001_image_01.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-zh.svg) 
-- ![自由的百科全書](../images/page001_image_02.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-zh.svg) 
-- ![文章圖片](../images/page020_image_01.jpg) — [原始圖片來源](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Tatan_Power_Plant_20190606.jpg/330px-Tatan_Power_Plant_20190606.jpg?utm_source=zh.wikipedia.org&utm_campaign=parser&utm_content=thumbnail) 
-- ![文章圖片](../images/page020_image_02.png) — [原始圖片來源](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/%E5%A4%A7%E6%BD%AD%E7%99%BC%E9%9B%BB%E5%BB%A0.png/250px-%E5%A4%A7%E6%BD%AD%E7%99%BC%E9%9B%BB%E5%BB%A0.png?utm_source=zh.wikipedia.org&utm_campaign=parser&utm_content=thumbnail) 
-- ![文章圖片](../images/page020_image_03.jpg) — [原始圖片來源](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/2021.11.25_%E5%A4%A7%E6%BD%AD%E9%9B%BB%E5%BB%A002.jpg/250px-2021.11.25_%E5%A4%A7%E6%BD%AD%E9%9B%BB%E5%BB%A002.jpg?utm_source=zh.wikipedia.org&utm_campaign=parser&utm_content=thumbnail) 
-- ![Wikimedia Foundation](../images/page015_image_03.svg) — [原始圖片來源](https://zh.wikipedia.org/static/images/footer/wikimedia.svg) 
-- ![Powered by MediaWiki](../images/page016_image_01.svg) — [原始圖片來源](https://zh.wikipedia.org/w/resources/assets/mediawiki_compact.svg) 
+本次無成功保存的圖片。
 
 ## 頁面連結
 - [分類索引](https://zh.wikipedia.org/wiki/Wikipedia:%E5%88%86%E7%B1%BB%E7%B4%A2%E5%BC%95)
@@ -834,5 +828,3 @@ https://zh.wikipedia.org/w/index.php?title=大潭發電廠&oldid=94099281
 - [潭緊急發電機組　巨無霸級運輸機空運來台](http://www.appledaily.com.tw/realtimenews/article/new/20170608/1135950/)
 - [存檔](https://web.archive.org/web/20170816105018/http://www.appledaily.com.tw/realtimenews/article/new/20170608/1135950/)
 - [106 年長期電源開發方案(10605 案)](http://www.taipower.com.tw/content/new_info/images/c40/106%E5%B9%B4%E9%95%B7%E6%9C%9F%E9%9B%BB%E6%BA%90%E9%96%8B%E7%99%BC%E6%96%B9%E6%A1%8810605%E6%A1%88.pdf)
-
-> 備註：進階解析失敗，已使用內建解析器：AttributeError: 'NoneType' object has no attribute 'get'

@@ -9,7 +9,7 @@
 - 發表日期：2025-04-04T20:32:47+08:00
 - 主題：地方產業與農漁業、觀光景點與活動
 - 關鍵字：觀音區、桃園市、地方旅遊
-- 擷取時間：2026-11-04T12:33:22.591435+00:00
+- 擷取時間：2026-11-16T15:47:10.101555+00:00
 
 ## 清理後正文
 
@@ -104,9 +104,7 @@ next post
 《桃園中壢》47二次方咖啡花園 隱身中壢郊區的祕密花園咖啡廳、享受鄉村風情的午後時光
 
 ## 圖片
-- ![Treegarden 01](../images/page014_image_01.jpg) — [原始圖片來源](https://duringmyjourney.com/wp-content/uploads/2025/04/treegarden-01.jpg) 
-- ![Dsc 2119](../images/page014_image_02.jpg) — [原始圖片來源](https://duringmyjourney.com/wp-content/uploads/2025/04/DSC_2119.jpg) 
-- ![Dsc 2099](../images/page014_image_03.jpg) — [原始圖片來源](https://duringmyjourney.com/wp-content/uploads/2025/04/DSC_2099.jpg) 
+本次無成功保存的圖片。
 
 ## 頁面連結
 - [桃園 Taoyuan](https://duringmyjourney.com/category/227722/%e6%a1%83%e5%9c%92-taoyuan/)
@@ -122,12 +120,13 @@ next post
 - [https://duringmyjourney.com](https://duringmyjourney.com)
 - [《台中西區》冰火山 隱藏於老宅裡的奇幻秘境咖啡廳、有如在逛一場異世界的展覽](https://duringmyjourney.com/the-ice-palace/)
 - [《桃園中壢》47二次方咖啡花園 隱身中壢郊區的祕密花園咖啡廳、享受鄉村風情的午後時光](https://duringmyjourney.com/47cafe/)
-- [《新北汐止》金龍湖步道 隱藏於城市中最大的碧綠湖泊、繚繞湖光山色的私房景點](https://duringmyjourney.com/jinlong/)
-- [《新北石門》白日夢Tea & Café 在遙遠的國小裡發呆做白日夢、配著療癒大海和悠閒下午茶](https://duringmyjourney.com/tea-cafe/)
-- [《台北・新北》川端橋 雙北河畔近百年的復古老橋、永和與古亭的入夜約會新景點](https://duringmyjourney.com/kawabata-bridge/)
-- [《宜蘭員山》小院子咖啡畫廊 置身花園裡的歐式庭園咖啡廳、結合畫廊的藝術秘境空間](https://duringmyjourney.com/littlecofeyard/)
+- [《新北瑞芳》食不厭 融入九份山城氣息的海味美食、廢墟老屋裡品嘗超美味一夜干！](https://duringmyjourney.com/about-cafe/)
+- [《台北中正》尖蚪 城市邊境之地的老宅咖啡秘境、收藏寶藏巖的清幽風景](https://duringmyjourney.com/tadpole-point/)
+- [《宜蘭冬山》青菓邸舍甜品坊 一週只開兩天！在質感甜點店裡品嚐世界銀牌果醬、享受靜謐的手作下午茶時光](https://duringmyjourney.com/cingguodessert/)
+- [《基隆中正》Tide&Tale Coffee 新開幕！ 藏於老宅三樓的漁港景觀咖啡廳、收藏正濱漁港的悠閒午後](https://duringmyjourney.com/tidetale-coffee/)
+- [《桃園中壢》小舊閣樓Glow 時光停駐在老街溪畔的咖啡餐酒館、品味老宅迷人的舊日情懷](https://duringmyjourney.com/glow/)
 - [https://duringmyjourney.com/northern-taiwan/](https://duringmyjourney.com/northern-taiwan/)
-- [《台北30間以上景觀餐廳咖啡廳推薦》尋一個綠意森林、湛藍海邊、燦爛夜景的美食午茶時刻](https://duringmyjourney.com/taipei-restaurant/)
+- [https://duringmyjourney.com/taipei-restaurant/](https://duringmyjourney.com/taipei-restaurant/)
 - [https://duringmyjourney.com/cama-coffee-roasters/](https://duringmyjourney.com/cama-coffee-roasters/)
 - [PenciDesign](https://1.envato.market/YYJ4P)
 - [https://duringmyjourney.com/treegarden/](https://duringmyjourney.com/treegarden/)
@@ -171,5 +170,3 @@ next post
 - [攝影 Photography](https://duringmyjourney.com/category/282913/)
 - [攝影教學-Photography](https://duringmyjourney.com/category/282913/6952761/)
 - [金城事務所](https://iseeu.tw/migration/)
-
-> 備註：進階解析失敗，已使用內建解析器：AttributeError: 'NoneType' object has no attribute 'get'

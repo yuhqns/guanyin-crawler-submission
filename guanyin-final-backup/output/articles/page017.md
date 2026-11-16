@@ -8,14 +8,14 @@
 - 狀態：success
 - 主題：自然景觀與生態、歷史文化與信仰、地方產業與農漁業
 - 關鍵字：觀音區、桃園市、草漯沙丘、白沙岬燈塔、甘泉寺
-- 擷取時間：2026-11-04T12:33:24.779899+00:00
+- 擷取時間：2026-11-16T15:47:11.693168+00:00
 
 ## 清理後正文
 
 :::
 來來牛家莊
 4
-(2088)
+(2093)
 上一張
 下一張
 店家電話 :
@@ -67,28 +67,28 @@
 柏園餐廳
 桃園市 觀音區
 4.3 ★
-(813)
+(814)
 漯食Tashi brunch
 桃園市 觀音區
 4.5 ★
-(397)
+(399)
 向陽農場
 桃園市 觀音區
 4 ★
-(7832)
+(7838)
 西西里披薩店Sicilia Pizzeria
 桃園市 觀音區
 4.7 ★
-(1432)
+(1436)
 王哥脆皮肉圓
 桃園市 觀音區
 4.4 ★
-(274)
+(275)
 請左右移動看更多
 GFun機能紡織生活館
 桃園市 觀音區
 4.7 ★
-(212)
+(214)
 觀音白玉海岸
 桃園市 觀音區
 4.2 ★
@@ -96,19 +96,19 @@ GFun機能紡織生活館
 甘泉寺
 桃園市 觀音區
 4.6 ★
-(1729)
+(1740)
 白沙岬燈塔
 桃園市 觀音區
 4.2 ★
-(6401)
+(6411)
 觀音濱海遊憩區
 桃園市 觀音區
 4.4 ★
-(1153)
+(1168)
 草漯沙丘地景展示館
 桃園市 觀音區
 4.3 ★
-(181)
+(183)
 觀音區多功能場館
 桃園市 觀音區
 4.8 ★
@@ -120,7 +120,7 @@ GFun機能紡織生活館
 龍貓公車站
 桃園市 觀音區
 4 ★
-(1910)
+(1912)
 中台環境教育資源中心
 桃園市 觀音區
 2.6 ★
@@ -128,11 +128,11 @@ GFun機能紡織生活館
 水之丘主題公園
 桃園市 觀音區
 4.2 ★
-(906)
+(907)
 林家古厝休閒農場
 桃園市 觀音區
 4 ★
-(1783)
+(1784)
 請左右移動看更多
 mini嵐輕旅
 草漯居
@@ -231,41 +231,41 @@ GFun機能服飾紡織生活館
  桃園市 觀音區 
  4.3 ★
 
-(813)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=3203)
+(814)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=3203)
 - [漯食Tashi brunch
  
  
  桃園市 觀音區 
  4.5 ★
 
-(397)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=3218)
+(399)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=3218)
 - [向陽農場
  
  
  桃園市 觀音區 
  4 ★
 
-(7832)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=2996)
+(7838)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=2996)
 - [西西里披薩店Sicilia Pizzeria
  
  
  桃園市 觀音區 
  4.7 ★
 
-(1432)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=3219)
+(1436)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=3219)
 - [王哥脆皮肉圓
  
  
  桃園市 觀音區 
  4.4 ★
 
-(274)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=3211)
+(275)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=3211)
 - [GFun機能紡織生活館
  
  
  桃園市 觀音區 
  4.7 ★
-(212)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=832)
+(214)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=832)
 - [觀音白玉海岸
  
  
@@ -277,25 +277,25 @@ GFun機能服飾紡織生活館
  
  桃園市 觀音區 
  4.6 ★
-(1729)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=796)
+(1740)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=796)
 - [白沙岬燈塔
  
  
  桃園市 觀音區 
  4.2 ★
-(6401)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=794)
+(6411)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=794)
 - [觀音濱海遊憩區
  
  
  桃園市 觀音區 
  4.4 ★
-(1153)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=816)
+(1168)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=816)
 - [草漯沙丘地景展示館
  
  
  桃園市 觀音區 
  4.3 ★
-(181)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=883)
+(183)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=883)
 - [觀音區多功能場館
  
  
@@ -313,7 +313,7 @@ GFun機能服飾紡織生活館
  
  桃園市 觀音區 
  4 ★
-(1910)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=3748)
+(1912)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=3748)
 - [中台環境教育資源中心
  
  
@@ -325,13 +325,13 @@ GFun機能服飾紡織生活館
  
  桃園市 觀音區 
  4.2 ★
-(906)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=3751)
+(907)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=3751)
 - [林家古厝休閒農場
  
  
  桃園市 觀音區 
  4 ★
-(1783)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=810)
+(1784)](https://romantichakka.hakka.gov.tw/explore/HaFood?a=1955&id=810)
 - [mini嵐輕旅](https://www.taiwanstay.net.tw/TSA/web_page/TSA020200.jsp?hohi_id=39245)
 - [草漯居](https://www.taiwanstay.net.tw/TSA/web_page/TSA020200.jsp?hohi_id=31534)
 - [黃金海岸商務旅舘](https://www.taiwanstay.net.tw/TSA/web_page/TSA020200.jsp?hohi_id=10890)
@@ -412,5 +412,3 @@ GFun機能服飾紡織生活館
 - [自主制定遊程](https://romantichakka.hakka.gov.tw/HakkaTours/articles?a=3682)
 - [旅遊服務](https://romantichakka.hakka.gov.tw/service/articles?a=7)
 - [大眾運輸](https://romantichakka.hakka.gov.tw/service/articles?a=932)
-
-> 備註：進階解析失敗，已使用內建解析器：AttributeError: 'NoneType' object has no attribute 'get'

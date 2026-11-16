@@ -6,25 +6,33 @@
 - 網站：食尚玩家
 - 原始網址：https://supertaste.tvbs.com.tw/travel/348994
 - 狀態：success
-- 作者：食尚玩家
+- 作者：TVBS《食尚玩家》記者 陳怡璇
 - 發表日期：2024-05-02T11:00:00+08:00
 - 主題：觀光景點與活動
 - 關鍵字：觀音區、桃園市、地方旅遊
-- 擷取時間：2026-11-04T12:33:28.094474+00:00
+- 擷取時間：2026-11-16T15:47:13.427538+00:00
 
 ## 清理後正文
 
+搶優惠
+《丘森茶室》第２杯11元！茶飲賽冠軍手搖領券享優惠
+《京燒肉》560元燒肉免費吃！消費享日本A5和牛料理
+《紅茶老爹》買紅茶牛奶送免費紅茶！人氣連鎖手搖獨家優惠
+《必勝客》3個6吋鬆厚比薩特價 $198！超值組合限量搶券
+《肯德基》只要 $350！4塊咔啦脆雞＋原味蛋撻6入＋玉米濃
+《好初早餐》奶茶凍買一送一！文青早餐店甜點新吃法
+《涓豆腐》立省208元！2人同行用餐，送黃金酥炸嫩豆腐
 桃園賞花景點再＋１！小編發現這處「隱藏版百合花園」，最近開滿了多達２萬朵以上的鐵炮百合花，純白花海放眼望去壯觀又療癒，而且每人50元就可以入園參觀、仙氣美照拍到飽，花況更是一年比一年還要漂亮呢！看完花還能順遊附近的日系雜誌封面「綠意隧道」，再造訪有提供免費試吃麵包＋咖啡的「麵包工廠」來個下午茶，完美的１日遊行程這樣玩就對了！
 下載食尚APP，天天免費抽大獎！
 本週優惠券，領起來
 更多優惠
-AI童書85折
-愛童學會
+每房現折１萬元
+MSC榮耀號
 網路店家
 去領券
-住宿85折
-璦勒芬莊園民宿
-嘉義・番路鄉
+飲料吧喝到飽
+馥牛 PHONIU
+連鎖門市
 去領券
 本文目錄
 1
@@ -58,6 +66,8 @@ yijiun_lee
 yijiun_lee
 ，圖為4/29花況）
 白千層鐵砲百合花園
+Google 評分：
+4.3
 地址：
 桃園市觀音區廣青路672巷50號
 電話：
@@ -86,6 +96,8 @@ yijiun_lee
 蔣妮の冰斗人生
 ）
 全村的希望麵包工廠
+Google 評分：
+4.2
 地址：
 桃園市觀音區福新路646號
 電話：
@@ -106,9 +118,7 @@ yijiun_lee
 TVBS《食尚玩家》記者 陳怡璇
 
 ## 圖片
-- ![超過２萬朵「純白百合花海」50元拍爆！順遊日系樹林隧道、超低調麵包工廠](../images/page021_image_01.webp) — [原始圖片來源](https://supertaste-images.tvbs.com.tw/api/v1/legacy/img/program/upload/2024/05/02/20240502105051-13bbd4d4.jpg?w=1200&q=75) 
-- ![愛童學會](../images/page021_image_02.webp) — [原始圖片來源](https://supertaste-images.tvbs.com.tw/api/v1/images/01a18761226e704db8a05cd78dfc613b.png?w=1200&q=75) 
-- ![璦勒芬莊園民宿](../images/page021_image_03.webp) — [原始圖片來源](https://supertaste-images.tvbs.com.tw/api/v1/legacy/img/program/upload/2026/02/25/20260225185214-2a686613.png?w=1200&q=75) 
+本次無成功保存的圖片。
 
 ## 頁面連結
 - [基隆市](https://supertaste.tvbs.com.tw/taiwan/city/keelung-city)
@@ -162,10 +172,17 @@ TVBS《食尚玩家》記者 陳怡璇
 - [旅行](https://supertaste.tvbs.com.tw/travel)
 - [桃園市](https://supertaste.tvbs.com.tw/taiwan/city/taoyuan-city)
 - [在 Google 更常看到食尚玩家](https://www.google.com/preferences/source?q=supertaste.tvbs.com.tw)
+- [《丘森茶室》第２杯11元！茶飲賽冠軍手搖領券享優惠](https://supertaste.tvbs.com.tw/offers/14507/?from=MAsticker)
+- [《京燒肉》560元燒肉免費吃！消費享日本A5和牛料理](https://supertaste.tvbs.com.tw/offers/14509/?from=MAsticker)
+- [《紅茶老爹》買紅茶牛奶送免費紅茶！人氣連鎖手搖獨家優惠](https://supertaste.tvbs.com.tw/offers/14511/?from=MAsticker)
+- [《必勝客》3個6吋鬆厚比薩特價 $198！超值組合限量搶券](https://supertaste.tvbs.com.tw/offers/14531/?from=MAsticker)
+- [《肯德基》只要 $350！4塊咔啦脆雞＋原味蛋撻6入＋玉米濃](https://supertaste.tvbs.com.tw/offers/14532/?from=MAsticker)
+- [《好初早餐》奶茶凍買一送一！文青早餐店甜點新吃法](https://supertaste.tvbs.com.tw/offers/14498/?from=MAsticker)
+- [《涓豆腐》立省208元！2人同行用餐，送黃金酥炸嫩豆腐](https://supertaste.tvbs.com.tw/offers/14496/?from=MAsticker)
 - [下載食尚APP，天天免費抽大獎！](https://tvbs.to/9l873p)
 - [優惠券](https://supertaste.tvbs.com.tw/offers)
-- [AI童書85折 愛童學會 網路店家 去領券](https://supertaste.tvbs.com.tw/offers/14457)
-- [住宿85折 璦勒芬莊園民宿 嘉義・番路鄉 去領券](https://supertaste.tvbs.com.tw/offers/14456)
+- [每房現折１萬元 MSC榮耀號 網路店家 去領券](https://supertaste.tvbs.com.tw/offers/14533)
+- [飲料吧喝到飽 馥牛 PHONIU 連鎖門市 去領券](https://supertaste.tvbs.com.tw/offers/14534)
 - [1 白千層鐵砲百合花園｜景點位置、費用](https://supertaste.tvbs.com.tw/travel/348994)
 - [錯過等明年！全台唯一「康乃馨花田」破千坪100元拍爆，母親節快帶媽媽賞花](https://supertaste.tvbs.com.tw/travel/348915?from=readmore_article_348994)
 - [yijiun_lee](https://www.instagram.com/yijiun_lee/)
@@ -204,10 +221,3 @@ TVBS《食尚玩家》記者 陳怡璇
 - [https://www.facebook.com/supertastesupertaste/](https://www.facebook.com/supertastesupertaste/)
 - [https://www.youtube.com/channel/UC00wMIWR48SYidE6jmpL7Qg](https://www.youtube.com/channel/UC00wMIWR48SYidE6jmpL7Qg)
 - [https://line.me/R/ti/p/@supertaste](https://line.me/R/ti/p/@supertaste)
-- [https://www.instagram.com/supertastesupertaste/](https://www.instagram.com/supertastesupertaste/)
-- [TVBS 官網](https://www.tvbs.com.tw)
-- [TVBS 新聞網](https://news.tvbs.com.tw)
-- [＃ 台東飯店](https://supertaste.tvbs.com.tw/search?q=%E5%8F%B0%E6%9D%B1%E9%A3%AF%E5%BA%97)
-- [＃ 買一送一](https://supertaste.tvbs.com.tw/search?q=%E8%B2%B7%E4%B8%80%E9%80%81%E4%B8%80)
-- [＃ Hello Kitty](https://supertaste.tvbs.com.tw/search?q=Hello+Kitty)
-- [＃ 好市多](https://supertaste.tvbs.com.tw/search?q=%E5%A5%BD%E5%B8%82%E5%A4%9A)

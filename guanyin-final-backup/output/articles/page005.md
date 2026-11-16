@@ -10,7 +10,7 @@
 - 發表日期：2026-09-27T10:52:00+08:00
 - 主題：自然景觀與生態、歷史文化與信仰、觀光景點與活動
 - 關鍵字：觀音區、桃園市、白沙岬燈塔
-- 擷取時間：2026-11-04T12:33:07.525546+00:00
+- 擷取時間：2026-11-16T15:47:03.911593+00:00
 
 ## 清理後正文
 
@@ -163,9 +163,7 @@ Comment
 Save my name, email, and website in this browser for the next time I comment.
 
 ## 圖片
-- ![文章圖片](../images/page005_image_01.jpg) — [原始圖片來源](https://natsuphil.com/wp-content/uploads/2026/06/baisha-cape_wp.jpg) 
-- ![文章圖片](../images/page005_image_02.jpg) — [原始圖片來源](https://natsuphil.com/wp-content/uploads/2021/07/baisha-cape_001.jpg) 
-- ![文章圖片](../images/page005_image_03.jpg) — [原始圖片來源](https://natsuphil.com/wp-content/uploads/2026/09/DSC_4292.jpg) 
+本次無成功保存的圖片。
 
 ## 頁面連結
 - [玩樂基隆](https://natsuphil.com/keelung/)
@@ -209,14 +207,14 @@ Save my name, email, and website in this browser for the next time I comment.
 - [「鵝鑾鼻燈塔」](https://natsuphil.com/pingdong/eluanbi-cape/)
 - [台南七股｜國聖燈塔｜台灣 極西 燈塔](https://natsuphil.com/tainan/guosheng-cape/)
 - [Google即時導航](https://www.google.com/maps/dir//%E7%99%BD%E6%B2%99%E5%B2%AC%E7%87%88%E5%A1%94+%E6%A1%83%E5%9C%92%E5%B8%82%E8%A7%80%E9%9F%B3%E5%8D%80%E5%85%89%E6%98%8E%E8%B7%AF216)
+- [桃園平鎮景點〡平鎮運動公園〡冒險挑戰區勇闖十九關, 空中版百戰百勝, 滑草區同樂會, 暢玩地形遊戲場, 夏日戲水區, 毛寶貝運動場, 親子特色公園](https://natsuphil.com/taoyuan/pingzhen-sport-park/)
+- [桃園市區景點〡威天宮〡正氣凜然氣勢磅礡大殿, 最高室內武財神, 龍銀轉運環保參拜, 三國西遊藝術地景, 心誠則靈](https://natsuphil.com/taoyuan/wei-temple/)
+- [桃園觀音景點〡蓮荷園休閒農場〡體驗六師弟大王蓮輕功水上漂, 數十種花卉造景美拍加分, 特色美味南瓜蓮子冰](https://natsuphil.com/taoyuan/lotus-farm/)
 - [觀音濱海遊憩區](https://natsuphil.com/taoyuan/guanyin-sea/)
 - [桃園八德景點〡楓樹腳公園〡燦爛的童年時光遊戲場, 長頸鹿高塔滑梯, 桃園旗艦型公園, P@RK園宇宙系列, 親子特色公園](https://natsuphil.com/taoyuan/maple-tree-foot-park/)
 - [桃園大園景點〡華興池公園〡華興池生態埤塘公園, 多功能特色公園震撼登場, 遊戲區放電數飛機, 還有夏日戲水區, 喬寓咖啡The QiAO絕美視角, 假日開放水上活動](https://natsuphil.com/taoyuan/hauxingchi-park/)
 - [桃園新屋景點〡永安漁港〡永安觀海橋360度視角, 觀海亭木棧步道賞海景, 鄰近海螺文化館, 生鮮熟食乾貨通通有, 美食街也能代客料理](https://natsuphil.com/taoyuan/yongan-harbor/)
 - [桃園竹圍景點〡竹圍漁港〡竹圍海水浴場, 老饕最愛海鮮代客料理, 玩沙踏浪賞夕陽, 海洋生物特色沖沙區, 彩虹橋上美拍點](https://natsuphil.com/taoyuan/zhuwei-port/)
-- [桃園蘆竹景點〡羊稠森林步道〡絕佳視野三秒看高鐵, 森林系紓壓步道, 夏季甲蟲出沒產地, 精彩好玩的甲蟲季活動, 超搶手的免費生態導覽, 2025甲蟲季開跑囉](https://natsuphil.com/taoyuan/pouchworm-trail/)
-- [桃園中壢景點〡光明公園〡森林樹屋遊戲場, 探索冒險與挑戰, 暢玩四大主題樂園, 親子玩沙樂悠悠, 暑假超夯戲水區, 大朋友專屬跑酷場地](https://natsuphil.com/taoyuan/bright-park/)
-- [桃園復興景點∣小烏來風景特定區∣宇內溪戲水區, 夏日限定合法開放溪流戲水區, 救生員溪邊駐守看顧, 銅板價一票三玩, 順遊天空步道與天空繩橋](https://natsuphil.com/taoyuan/xiaowulai-water/)
 - [全公園懶人包](https://natsuphil.com/tag/%e5%85%a8%e5%85%ac%e5%9c%92%e6%87%b6%e4%ba%ba%e5%8c%85/)
 - [全台灣懶人包](https://natsuphil.com/tag/%e5%85%a8%e5%8f%b0%e7%81%a3%e6%87%b6%e4%ba%ba%e5%8c%85/)
 - [南投好拍好玩](https://natsuphil.com/tag/%e5%8d%97%e6%8a%95%e5%a5%bd%e6%8b%8d%e5%a5%bd%e7%8e%a9/)
@@ -268,5 +266,3 @@ Save my name, email, and website in this browser for the next time I comment.
 - [Instagram](https://www.instagram.com/natsuphilcom/)
 - [小菲兒童親子隨拍](https://www.facebook.com/natsuphil/)
 - [https://www.instagram.com/natsuphilblog/](https://www.instagram.com/natsuphilblog/)
-
-> 備註：進階解析失敗，已使用內建解析器：AttributeError: 'NoneType' object has no attribute 'get'

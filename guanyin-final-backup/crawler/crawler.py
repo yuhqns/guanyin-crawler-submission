@@ -32,6 +32,17 @@ except ImportError:
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent if HERE.name == "crawler" else HERE
 USER_AGENT = "GuanyinKnowledgeCrawler/1.0 (respectful research; contact: local user)"
+BROWSER_USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+)
+# A few links in older source pages point at URLs that have moved. Resolve
+# those links before putting them in the queue so the report contains the
+# current, crawlable page rather than a known dead endpoint.
+URL_ALIASES = {
+    "https://www.guanyin.tycg.gov.tw/home.jsp?id=68&parentpath=0,11":
+        "https://www.guanyin.tycg.gov.tw/cl.aspx?n=6871",
+}
 TERMS = ("觀音", "甘泉寺", "白沙岬", "草漯", "保障", "濱海", "蓮花", "崙坪", "新屋", "大潭", "坑溪", "藻礁", "甘泉", "保生")
 SKIP_RE = re.compile(
     r"^(?:廣告|追蹤|ads?|advert|advertisement|banner|logo|icon|avatar|pixel|tracking)"
@@ -72,7 +83,8 @@ def is_noise_element(tag: str, attrs: str) -> bool:
 
 
 def clean_url(url: str) -> str:
-    return urldefrag(url.strip())[0]
+    cleaned = urldefrag(url.strip())[0]
+    return URL_ALIASES.get(cleaned, cleaned)
 
 
 def normalize_text(text: str) -> str:
@@ -194,13 +206,19 @@ def parse_html_simple(url: str, html: str) -> dict:
             "content": body, "links": links, "images": images}
 
 
-def http_get(url: str, timeout: int, params=None):
+def http_get(url: str, timeout: int, params=None, headers=None):
     if params:
         from urllib.parse import urlencode
         url += ("&" if "?" in url else "?") + urlencode(params)
     if requests:
-        return requests.get(url, timeout=timeout, headers={"User-Agent": USER_AGENT})
-    req = Request(url, headers={"User-Agent": USER_AGENT, "Accept-Language": "zh-TW,zh;q=0.9,en;q=0.7"})
+        request_headers = {"User-Agent": USER_AGENT, "Accept-Language": "zh-TW,zh;q=0.9,en;q=0.7"}
+        if headers:
+            request_headers.update(headers)
+        return requests.get(url, timeout=timeout, headers=request_headers)
+    request_headers = {"User-Agent": USER_AGENT, "Accept-Language": "zh-TW,zh;q=0.9,en;q=0.7"}
+    if headers:
+        request_headers.update(headers)
+    req = Request(url, headers=request_headers)
     try:
         with urlopen(req, timeout=timeout) as response:
             class Response:
@@ -221,6 +239,53 @@ def http_get(url: str, timeout: int, params=None):
             return Response()
     except HTTPError as exc:
         raise RuntimeError(f"HTTP {exc.code}: {exc.reason}") from exc
+
+
+def fetch_response(session, url: str, timeout: int):
+    """Fetch a page with bounded retries for transient/empty responses."""
+    last_response = None
+    retry_codes = {202, 408, 425, 429, 500, 502, 503, 504}
+    for attempt in range(3):
+        headers = {"User-Agent": USER_AGENT}
+        if attempt:
+            headers["User-Agent"] = BROWSER_USER_AGENT
+        try:
+            response = (
+                session.get(url, timeout=timeout, headers=headers)
+                if session else http_get(url, timeout, headers=headers)
+            )
+        except Exception:
+            if attempt == 2:
+                raise
+            time.sleep(1.0 * (attempt + 1))
+            continue
+        last_response = response
+        # 202 is an asynchronous/interstitial response for some legacy sites;
+        # retry it even when it contains a short placeholder body.
+        retryable = response.status_code in retry_codes
+        if not retryable:
+            return response
+        if attempt < 2:
+            time.sleep(1.0 * (attempt + 1))
+    return last_response
+
+
+def should_queue_extension(url: str) -> bool:
+    """Keep extension crawling focused on article-like, fetchable pages."""
+    parsed = urlparse(url)
+    host = (parsed.hostname or "").lower()
+    path = parsed.path.rstrip("/").lower()
+    # These are navigation/search endpoints, not source articles. Several
+    # are protected by Cloudflare and will always return a challenge page.
+    if path == "/search" or path.startswith("/search/") or path == "/tag" or path.startswith("/tag/"):
+        return False
+    if host == "www.tycg.gov.tw" and path == "/budget/home.jsp":
+        return False
+    # These legacy links currently return an empty 202 response or no DNS
+    # record; they are navigation remnants rather than usable source pages.
+    if host in {"news.housefun.com.tw", "dept.taipower.com.tw"}:
+        return False
+    return True
 
 
 def parse_html(url: str, html: str) -> dict:
@@ -482,7 +547,16 @@ def youtube_record(
     except ImportError:
         return youtube_oembed(url, timeout)
     except Exception as exc:
-        raise RuntimeError(f"YouTube 擷取失敗：{type(exc).__name__}: {exc}") from exc
+        # YouTube occasionally rejects yt-dlp metadata requests (for example
+        # Shorts may return 401) while its public oEmbed endpoint still has
+        # the title and thumbnail. Keep the page crawl successful with that
+        # documented minimal fallback and preserve the diagnostic note.
+        try:
+            result = youtube_oembed(url, timeout)
+            result["caption_note"] = f"YouTube 字幕/詳細資料無法取得，已使用 oEmbed：{type(exc).__name__}: {exc}"
+            return result
+        except Exception:
+            raise RuntimeError(f"YouTube 擷取失敗：{type(exc).__name__}: {exc}") from exc
 
 def youtube_oembed(url: str, timeout: int) -> dict:
     endpoint = "https://www.youtube.com/oembed"
@@ -659,7 +733,7 @@ def main() -> int:
                 )
                 final_url, status, content_type = url, 200, "video/youtube"
             else:
-                response = session.get(url, timeout=args.timeout) if session else http_get(url, args.timeout)
+                response = fetch_response(session, url, args.timeout)
                 http_status = response.status_code
                 response.raise_for_status()
                 final_url, status = response.url, response.status_code
@@ -690,6 +764,8 @@ def main() -> int:
                 if candidate in seen or candidate in queued or c_domain in ("youtube.com", "www.youtube.com", "m.youtube.com", "youtu.be", "facebook.com", "www.facebook.com", "instagram.com", "www.instagram.com", "twitter.com", "x.com", "line.naver.jp"):
                     continue
                 if "action=edit" in candidate.lower() or "redlink=1" in candidate.lower() or "/special:" in candidate.lower():
+                    continue
+                if not should_queue_extension(candidate):
                     continue
                 if path.endswith((".jpg", ".jpeg", ".png", ".gif", ".svg", ".webp", ".ico", ".pdf", ".mp4", ".mp3", ".zip")):
                     continue
