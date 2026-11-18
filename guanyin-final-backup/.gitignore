@@ -56,3 +56,6 @@ dist/
 local_videos/
 # Cached audio downloads and Whisper working files
 data/audio_work/
+
+# Review pages embed screenshots cut from videos; keep them local
+*_review.html
