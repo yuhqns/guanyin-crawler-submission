@@ -1,0 +1,798 @@
+{
+ "video_id": "AWP_v5I0zYA",
+ "note": "AI（Claude）在對話中逐點用語意判斷，依「有畫面字幕就優先畫面字幕，畫面明顯讀錯時改用語意判斷」寫成。沒有證據的地方標 none。未經人確認。",
+ "suggestions": {
+  "d1-2": {
+   "pick": "para",
+   "text": "",
+   "why": "畫面「那以前人 你不搬出去」只是少了「的」（OCR 常漏），語音「的人」正確",
+   "check": false
+  },
+  "a1-0": {
+   "pick": "ocr",
+   "text": "",
+   "why": "「你你搬出去」是口吃，畫面「你不搬出去」語意通順",
+   "check": false
+  },
+  "a2-1": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面寫「四代」，依畫面優先；但語意上「世代」比較通順，可能是電視台打錯字",
+   "check": true
+  },
+  "o36-153": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面與兩個模型一致",
+   "check": false
+  },
+  "d7-3": {
+   "pick": "custom",
+   "text": "遷村",
+   "why": "兩個模型都聽錯；畫面「…嬤 遷村當時她只有10歲」",
+   "check": false
+  },
+  "d7-4": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面是「她」",
+   "check": false
+  },
+  "a8-2": {
+   "pick": "custom",
+   "text": "家當",
+   "why": "畫面讀成「家賞」，語意應為「家當」（那時候家當都放在外面）",
+   "check": true
+  },
+  "a8-3": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「來這裡 東西搬來這裡」通順",
+   "check": false
+  },
+  "d9-0": {
+   "pick": "para",
+   "text": "",
+   "why": "語音有說「然後再」，畫面只是省略「然後」",
+   "check": false
+  },
+  "a9-4": {
+   "pick": "para",
+   "text": "",
+   "why": "畫面「隹」不成字，是 OCR 讀錯，「邊住邊蓋」才對",
+   "check": false
+  },
+  "d10-0": {
+   "pick": "ocr",
+   "text": "",
+   "why": "「沿用」，畫面與 SenseVoice 一致",
+   "check": false
+  },
+  "a10-5": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「這個老了你看」清楚",
+   "check": false
+  },
+  "a11-6": {
+   "pick": "ocr",
+   "text": "",
+   "why": "「這個老家那邊拆過來的」語意通順，畫面有「老家」，語音漏聽",
+   "check": true
+  },
+  "a13-7": {
+   "pick": "ocr",
+   "text": "",
+   "why": "大溪（詞庫已有「大紀→大溪」）",
+   "check": false
+  },
+  "d13-0": {
+   "pick": "para",
+   "text": "",
+   "why": "桃園，畫面一致",
+   "check": false
+  },
+  "a14-8": {
+   "pick": "ocr",
+   "text": "",
+   "why": "大灣坪，畫面「坪」",
+   "check": false
+  },
+  "a14-9": {
+   "pick": "ocr",
+   "text": "",
+   "why": "「第4鄰」，里鄰的「鄰」",
+   "check": false
+  },
+  "d14-0": {
+   "pick": "para",
+   "text": "",
+   "why": "畫面「是算大灣」",
+   "check": false
+  },
+  "d14-1": {
+   "pick": "para",
+   "text": "",
+   "why": "畫面「坪第4鄰」",
+   "check": false
+  },
+  "a14-10": {
+   "pick": "ocr",
+   "text": "",
+   "why": "「他有載我們來這裡看」，載才通順",
+   "check": false
+  },
+  "d15-0": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「你還是要來」",
+   "check": false
+  },
+  "d15-1": {
+   "pick": "para",
+   "text": "",
+   "why": "「五個人八分地」，畫面一致",
+   "check": false
+  },
+  "d15-2": {
+   "pick": "para",
+   "text": "",
+   "why": "畫面「抽籤 你抽」",
+   "check": false
+  },
+  "a15-11": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「它就一號二號房子」，「他的一號」不通",
+   "check": false
+  },
+  "d16-1": {
+   "pick": "custom",
+   "text": "抽籤",
+   "why": "畫面「也是抽籤」，兩個模型都聽成「出生」（注意前一處 d16-0 的「出生」也需整句人工改）",
+   "check": true
+  },
+  "a16-12": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「都自己種的」",
+   "check": false
+  },
+  "d17-0": {
+   "pick": "custom",
+   "text": "蔭",
+   "why": "「遮蔭」（我看過截圖：還偶能遮蔭的稀疏樹林）",
+   "check": false
+  },
+  "d17-1": {
+   "pick": "para",
+   "text": "",
+   "why": "稀疏",
+   "check": false
+  },
+  "d18-1": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「是有蓋這個給他看」",
+   "check": false
+  },
+  "d18-2": {
+   "pick": "sense",
+   "text": "",
+   "why": "SenseVoice「看。哎，一定」與畫面「給他看 一定最起碼」一致（選了這個就不要再選 a18-13，會重複）",
+   "check": false
+  },
+  "a18-13": {
+   "pick": "none",
+   "text": "",
+   "why": "已被 d18-2 涵蓋，兩個一起選會重複",
+   "check": false
+  },
+  "d18-3": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「這個兩間」",
+   "check": false
+  },
+  "d19-0": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「九千塊蓋那個房子」",
+   "check": false
+  },
+  "d22-0": {
+   "pick": "sense",
+   "text": "",
+   "why": "「種不出高經濟價值的作物」",
+   "check": false
+  },
+  "a23-15": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「阿嬤年紀還很小」，詞庫已有阿嬤",
+   "check": false
+  },
+  "a23-16": {
+   "pick": "ocr",
+   "text": "",
+   "why": "遷村歷史",
+   "check": false
+  },
+  "d24-1": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「搬家那時候」",
+   "check": false
+  },
+  "a25-17": {
+   "pick": "para",
+   "text": "",
+   "why": "畫面「岡」是 OCR 讀錯，「田地」才通順",
+   "check": false
+  },
+  "d27-0": {
+   "pick": "para",
+   "text": "",
+   "why": "草漯移民新村",
+   "check": false
+  },
+  "a27-19": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「他就說」",
+   "check": false
+  },
+  "d27-1": {
+   "pick": "para",
+   "text": "",
+   "why": "與 a27-19 搭配成「他就說民國…」，畫面「他就說」",
+   "check": false
+  },
+  "a28-20": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「6月30日」",
+   "check": false
+  },
+  "a28-21": {
+   "pick": "para",
+   "text": "",
+   "why": "我看過截圖是「7月1日」，畫面讀成「月」是 OCR 把日和月看錯",
+   "check": false
+  },
+  "d28-0": {
+   "pick": "custom",
+   "text": "工國曆",
+   "why": "「開工，國曆六月三十號」，兩個模型都聽錯「開工」",
+   "check": false
+  },
+  "a28-22": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「國曆6月30日」",
+   "check": false
+  },
+  "d29-1": {
+   "pick": "sense",
+   "text": "",
+   "why": "畫面「配土地 在湯家」，沒有「對」",
+   "check": false
+  },
+  "a29-23": {
+   "pick": "ocr",
+   "text": "",
+   "why": "詞庫：湯松霖",
+   "check": false
+  },
+  "d29-2": {
+   "pick": "ocr",
+   "text": "",
+   "why": "詞庫：湯松霖",
+   "check": false
+  },
+  "a31-24": {
+   "pick": "ocr",
+   "text": "",
+   "why": "湯松霖",
+   "check": false
+  },
+  "a31-25": {
+   "pick": "ocr",
+   "text": "",
+   "why": "湯松霖",
+   "check": false
+  },
+  "d31-0": {
+   "pick": "custom",
+   "text": "坪",
+   "why": "地名「新柑坪」（詞庫），兩個模型都聽錯（杏甘平）",
+   "check": false
+  },
+  "d32-1": {
+   "pick": "para",
+   "text": "",
+   "why": "畫面「水庫水位241米」",
+   "check": false
+  },
+  "d33-0": {
+   "pick": "para",
+   "text": "",
+   "why": "畫面「左半部 它左邊」",
+   "check": false
+  },
+  "d34-0": {
+   "pick": "para",
+   "text": "",
+   "why": "「新柑坪」的「新」",
+   "check": false
+  },
+  "d34-2": {
+   "pick": "para",
+   "text": "",
+   "why": "畫面「都蓋在」",
+   "check": false
+  },
+  "o340-155": {
+   "pick": "sense",
+   "text": "",
+   "why": "我看過截圖：「所有標高250公尺以下的區域」，與 SenseVoice 一致",
+   "check": false
+  },
+  "d37-0": {
+   "pick": "custom",
+   "text": "坪",
+   "why": "新舊柑坪（詞庫），畫面「柑坪」",
+   "check": false
+  },
+  "d37-1": {
+   "pick": "custom",
+   "text": "坪",
+   "why": "大溪坪（詞庫），畫面「溪坪」",
+   "check": false
+  },
+  "d37-2": {
+   "pick": "para",
+   "text": "",
+   "why": "阿姆坪",
+   "check": false
+  },
+  "a38-26": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「紀錄」",
+   "check": false
+  },
+  "d38-0": {
+   "pick": "para",
+   "text": "",
+   "why": "石門水庫建設誌（詞庫）",
+   "check": false
+  },
+  "a38-27": {
+   "pick": "para",
+   "text": "",
+   "why": "畫面「困」是 OCR 讀錯，「因素」才對",
+   "check": false
+  },
+  "o365-156": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面與語音一致",
+   "check": false
+  },
+  "d40-0": {
+   "pick": "custom",
+   "text": "園圳股頭、許厝港",
+   "why": "畫面「大園圳股頭 許厝港」，詞庫有圳股頭、許厝港；「噸位」應是「崙尾」，在這個範圍外要另外改",
+   "check": true
+  },
+  "a40-28": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「移往最靠近大溪中庄」",
+   "check": false
+  },
+  "d40-2": {
+   "pick": "sense",
+   "text": "",
+   "why": "中庄（詞庫：大溪中庄）",
+   "check": false
+  },
+  "a41-29": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「房屋型態」",
+   "check": false
+  },
+  "d41-0": {
+   "pick": "sense",
+   "text": "",
+   "why": "畫面「房屋」",
+   "check": false
+  },
+  "d41-3": {
+   "pick": "para",
+   "text": "",
+   "why": "畫面有「警」",
+   "check": false
+  },
+  "d43-0": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「離鄉」",
+   "check": false
+  },
+  "a44-31": {
+   "pick": "ocr",
+   "text": "",
+   "why": "「台地」才通順（所謂台地農民）",
+   "check": false
+  },
+  "a45-32": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「發生了一個大旱」",
+   "check": false
+  },
+  "d45-0": {
+   "pick": "sense",
+   "text": "",
+   "why": "畫面「石門水庫的」",
+   "check": false
+  },
+  "d47-0": {
+   "pick": "custom",
+   "text": "強颱葛樂禮",
+   "why": "畫面「強颱葛樂禮來襲」，詞庫：葛樂禮",
+   "check": false
+  },
+  "d47-1": {
+   "pick": "custom",
+   "text": "升",
+   "why": "畫面「水位激升」，兩個模型都聽錯；前面的「機」也要改成「激」，在這個範圍外",
+   "check": true
+  },
+  "a48-33": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「9月11日」",
+   "check": false
+  },
+  "d48-1": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「911事件」",
+   "check": false
+  },
+  "d48-2": {
+   "pick": "para",
+   "text": "",
+   "why": "畫面「其實它很快」",
+   "check": false
+  },
+  "d49-1": {
+   "pick": "para",
+   "text": "",
+   "why": "畫面「逼近到壩頂」",
+   "check": false
+  },
+  "o463-157": {
+   "pick": "para",
+   "text": "",
+   "why": "我看過截圖：「因為它的水是持續在往上升的」，與兩個模型一致",
+   "check": false
+  },
+  "d50-0": {
+   "pick": "para",
+   "text": "",
+   "why": "畫面「土石壩就是不能讓它溢頂」",
+   "check": false
+  },
+  "a50-34": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「溢頂」",
+   "check": false
+  },
+  "a50-35": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「潰堤危機」",
+   "check": false
+  },
+  "d50-2": {
+   "pick": "para",
+   "text": "",
+   "why": "畫面「危機」",
+   "check": false
+  },
+  "d52-2": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「溪邊」",
+   "check": false
+  },
+  "a52-37": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「都一個一個石頭」",
+   "check": false
+  },
+  "d53-1": {
+   "pick": "sense",
+   "text": "",
+   "why": "畫面「記得我爸爸把我拉」，沒有「有」",
+   "check": false
+  },
+  "d53-2": {
+   "pick": "para",
+   "text": "",
+   "why": "畫面「爸爸把我拉」",
+   "check": false
+  },
+  "o513-158": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面與語音一致",
+   "check": false
+  },
+  "d54-0": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「他們躲在那邊」",
+   "check": false
+  },
+  "d55-1": {
+   "pick": "para",
+   "text": "",
+   "why": "畫面「經歷」",
+   "check": false
+  },
+  "a55-39": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「就很像政府」",
+   "check": false
+  },
+  "a55-40": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「怎麼會安排」，「是為」是聽錯",
+   "check": false
+  },
+  "d55-2": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「安排又選到觀音」",
+   "check": false
+  },
+  "d56-2": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「興建」",
+   "check": false
+  },
+  "a57-41": {
+   "pick": "ocr",
+   "text": "",
+   "why": "大潭新村（詞庫）",
+   "check": false
+  },
+  "d57-1": {
+   "pick": "para",
+   "text": "",
+   "why": "畫面「大潭新村」",
+   "check": false
+  },
+  "a58-42": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「什麼都沒有辦法種植」",
+   "check": false
+  },
+  "d58-0": {
+   "pick": "sense",
+   "text": "",
+   "why": "畫面「我讀書時候就這樣」",
+   "check": false
+  },
+  "d58-1": {
+   "pick": "para",
+   "text": "",
+   "why": "畫面「這邊畢業」",
+   "check": false
+  },
+  "d59-0": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「三接站」（天然氣接收站）",
+   "check": false
+  },
+  "a60-43": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「故鄉早已改變了它原有的樣貌」",
+   "check": false
+  },
+  "a60-44": {
+   "pick": "ocr",
+   "text": "",
+   "why": "桃園",
+   "check": false
+  },
+  "d62-0": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「罹患痛痛病」",
+   "check": false
+  },
+  "d62-1": {
+   "pick": "custom",
+   "text": "銀",
+   "why": "我看過截圖：「高銀爆炸」；兩個模型聽成「高雨／高雲」",
+   "check": true
+  },
+  "d62-2": {
+   "pick": "para",
+   "text": "",
+   "why": "畫面「它鍋爐爆炸」",
+   "check": false
+  },
+  "a65-45": {
+   "pick": "ocr",
+   "text": "",
+   "why": "大溪（詞庫）",
+   "check": false
+  },
+  "d65-0": {
+   "pick": "para",
+   "text": "",
+   "why": "畫面「立工廠和」",
+   "check": false
+  },
+  "a66-46": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「一夕改變」",
+   "check": false
+  },
+  "d68-1": {
+   "pick": "para",
+   "text": "",
+   "why": "畫面「我當然是」",
+   "check": false
+  },
+  "a69-47": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「可是大家都會互相幫忙」",
+   "check": false
+  },
+  "a71-48": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「牌樓」",
+   "check": false
+  },
+  "d74-1": {
+   "pick": "para",
+   "text": "",
+   "why": "畫面「總不能」",
+   "check": false
+  },
+  "d74-2": {
+   "pick": "sense",
+   "text": "",
+   "why": "樹林國小（詞庫）",
+   "check": false
+  },
+  "a75-49": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「一條龍」",
+   "check": false
+  },
+  "a75-50": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「一條龍式」",
+   "check": false
+  },
+  "d75-1": {
+   "pick": "custom",
+   "text": "方式，我就",
+   "why": "畫面「方式 我就」",
+   "check": false
+  },
+  "d75-2": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「很明確的那個」",
+   "check": false
+  },
+  "d75-3": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「景觀地帶」",
+   "check": false
+  },
+  "a76-51": {
+   "pick": "ocr",
+   "text": "",
+   "why": "畫面「打拚」",
+   "check": false
+  },
+  "d76-0": {
+   "pick": "custom",
+   "text": "先民胼手胝足",
+   "why": "畫面「先民胼手胝足的歷史」，兩個模型都聽錯",
+   "check": false
+  },
+  "d83-0": {
+   "pick": "para",
+   "text": "",
+   "why": "華視新聞雜誌（詞庫）",
+   "check": false
+  },
+  "d83-1": {
+   "pick": "custom",
+   "text": "土地",
+   "why": "片尾「關注台灣土地上最動人的故事」，兩個模型都聽錯",
+   "check": true
+  },
+  "d84-0": {
+   "pick": "sense",
+   "text": "",
+   "why": "與上一處改成「土地」搭配，這裡的「地」要刪掉，否則重複",
+   "check": true
+  },
+  "d84-1": {
+   "pick": "para",
+   "text": "",
+   "why": "「分享或留言和我們一起討論」",
+   "check": false
+  },
+  "a52-36": {
+   "pick": "none",
+   "text": "",
+   "why": "畫面「耶」位置對不上語音，無法對應",
+   "check": false
+  },
+  "a55-38": {
+   "pick": "none",
+   "text": "",
+   "why": "畫面與語音位置對不上",
+   "check": false
+  },
+  "a43-30": {
+   "pick": "none",
+   "text": "",
+   "why": "畫面是編輯過的字幕，語音原句不同，硬插會重複",
+   "check": false
+  },
+  "a19-14": {
+   "pick": "none",
+   "text": "",
+   "why": "畫面「以前都是這個」與語音「全都是這個」是不同說法，無法判定",
+   "check": false
+  },
+  "a27-18": {
+   "pick": "none",
+   "text": "",
+   "why": "數字寫法不同（十六七歲／16歲17歲），不算錯",
+   "check": false
+  },
+  "o261-154": {
+   "pick": "none",
+   "text": "",
+   "why": "畫面「時用」是雜訊，沒有對應的語音，建議略過",
+   "check": false
+  },
+  "d16-0": {
+   "pick": "none",
+   "text": "",
+   "why": "需整句人工改：「房子也是抽籤的，地也是抽籤」，兩個模型都聽成「出生」",
+   "check": true
+  }
+ }
+}

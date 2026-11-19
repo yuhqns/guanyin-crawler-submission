@@ -29,6 +29,14 @@ OCR 需要另外安裝 Python 套件 `pytesseract`、Tesseract OCR Windows 程�
 
 代表畫面只從使用者提供、且有權處理的本機影片檔擷取；僅有音訊檔不能產生影片畫格。沒有可用本機影片時，程式會記錄未能擷取畫面的原因，不以 YouTube 縮圖冒充代表畫面。
 
+### 影片分流與兩條處理路線
+除了上面主爬蟲內建的流程，影片另有一組獨立工具，先分流再依字幕狀況處理（完整說明見 [`README_video.md`](README_video.md)）：
+- **影片分流器**：`python -m crawler.video_triage`，只讀影片資訊、不下載，輸出 `output/video_triage.csv`（上傳者字幕／只有自動字幕／沒有字幕／無法判斷／網頁）。
+- **有字幕**：取上傳者字幕 → 挑重點 → 在重點時間點截圖，輸出 `<編號>_highlights.md`。
+- **沒有字幕**：FunASR 兩個模型（Paraformer-zh、SenseVoice-Small）語音辨識，用 Apple Vision 畫面字幕 OCR 驗證兩者不同之處，不確定的地方產生網頁讓人工確認。
+- **只有自動字幕**：抓下自動字幕，並照沒有字幕的做法處理，最後兩邊比較。
+- `python -m crawler.video_pipeline status` 可以看每支影片走到哪一步、下一步該執行什麼。
+
 ## 2. 環境需求
 
 - Windows 10／11
@@ -160,6 +168,16 @@ python postprocess.py --media-dir local_videos --frame-count 5
 
 注意：`--image-limit` 是 `postprocess.py` 的參數，不是 `crawler.py` 的參數。若透過 `crawler.py` 自動後處理，該入口目前只傳入 `--frame-count`，圖片上限使用 `postprocess.py` 預設值 3。要自行調整圖片上限，請先使用 `--no-postprocess` 完成爬取，再手動執行上述 `postprocess.py --image-limit N`。
 
+### 4.4 影片工具與測試
+
+影片分流、有字幕／沒字幕路線的指令與說明見 [`README_video.md`](README_video.md)。需要的額外環境：`yt-dlp`、FFmpeg；沒字幕路線另需 FunASR 環境（`pip install -r requirements-funasr.txt`，建議另開虛擬環境）與 macOS（畫面字幕 OCR）。
+
+影片工具的單元測試（不連網）：
+
+```bash
+python -m unittest discover -s tests
+```
+
 ## 5. 命令列參數
 
 ### `crawler/crawler.py`
@@ -225,7 +243,13 @@ python postprocess.py --help
 - 轉換後 WAV：`data/audio_work/audio/`
 
 ### 6.3 其他獨立工具
-- `crawler/subtitle_ocr.py`：使用 Apple Vision 對影片畫面中的字幕進行 OCR；需在支援 Apple Vision 的 macOS 環境執行，並非 Windows 主要爬取流程的必要步驟。
+- `crawler/subtitle_ocr.py`：使用 Apple Vision 對影片畫面中的字幕進行 OCR，不依賴語音辨識（作為語音辨識的驗證來源）；能辨識多種字幕樣式（例如左下小字與底部大字），讀不準的句子會標「待確認」。需在支援 Apple Vision 的 macOS 環境執行，並非 Windows 主要爬取流程的必要步驟。
+- `crawler/transcribe_funasr.py`：沒有字幕的影片用 FunASR 兩個模型各辨識一次，兩邊不同處以畫面字幕 OCR 驗證，並套用 `data/glossary.md` 的專有名詞。套件見 `requirements-funasr.txt`。
+- `crawler/review_page.py`：把需要人工確認的地方做成單一網頁（附影片截圖、兩個模型與畫面字幕的讀法），選完後產生確認版逐字稿。`*_review.html` 內含影片截圖，已被 `.gitignore` 排除。
+- `crawler/video_triage.py`：影片分流器，判斷每個網址的類型與字幕狀況，輸出 `output/video_triage.csv`。
+- `crawler/subtitle_highlights.py`：有字幕影片取字幕、切段、依重點截圖；也可用 `--auto` 抓自動字幕。
+- `crawler/caption_compare.py`：只有自動字幕的影片，比較自動字幕與 FunASR 的差異。
+- `crawler/video_pipeline.py`：影片總入口，`status` 盤點各影片進度與下一步指令。
 - `crawler/transcribe_api.py`：使用 MercuryAPI 的 Whisper large-v3-turbo 進行獨立音訊轉錄。需要設定 `MERCURY_API_KEY`，不屬於主要爬蟲預設流程。
 - `.env.example` 提供環境變數格式範例。請複製為 `.env` 並自行填入金鑰；不要將 `.env` 或金鑰提交到版本控制。
 
@@ -241,11 +265,19 @@ guanyin-final-backup/
 │  ├─ subtitle_ocr.swift          # Apple Vision Swift 輔助程式
 │  ├─ transcribe.py               # faster-whisper 本機語音辨識
 │  ├─ transcribe_api.py           # MercuryAPI 獨立語音辨識工具
-│  └─ transcribe_extra.py         # 獨立語音辨識輔助腳本
+│  ├─ transcribe_extra.py         # 獨立語音辨識輔助腳本
+│  ├─ transcribe_funasr.py        # 沒字幕影片：FunASR 兩模型辨識＋畫面字幕驗證
+│  ├─ review_page.py              # 人工確認網頁與確認版逐字稿
+│  ├─ video_triage.py             # 影片分流器
+│  ├─ subtitle_highlights.py      # 有字幕影片：取字幕、重點、截圖
+│  ├─ caption_compare.py          # 自動字幕與 FunASR 比較
+│  └─ video_pipeline.py           # 影片總入口（進度與下一步）
+├─ tests/                         # 影片工具的單元測試
 ├─ data/
 │  ├─ records.jsonl               # 爬蟲原始紀錄
 │  ├─ crawl_status.csv            # 網址處理狀態
 │  ├─ fact_checks.csv              # 地方知識查核資料
+│  ├─ glossary.md                  # 專有名詞詞庫（FunASR 辨識用）
 │  └─ audio_work/                  # YouTube 音訊快取
 ├─ output/
 │  ├─ articles/                    # 一般網頁 Markdown
@@ -260,6 +292,9 @@ guanyin-final-backup/
 ├─ capture_comparisons.py          # 網頁清理前後對照素材
 ├─ requirements.txt
 ├─ requirements-transcription.txt
+├─ requirements-funasr.txt         # 沒字幕影片的 FunASR 套件（建議另開虛擬環境）
+├─ README_video.md                 # 影片處理流程說明
+├─ local_videos/                   # 本機影片（已被 .gitignore 排除，不會上傳）
 ├─ .env.example
 ├─ RESULTS.md
 ├─ PROJECT_CLEANUP.md

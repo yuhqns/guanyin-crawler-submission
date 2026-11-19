@@ -12,10 +12,15 @@
     python -m crawler.review_page build --video-id AWP_v5I0zYA \\
         --raw output/videos/page030/page030_funasr_glossary_raw.json \\
         --ocr output/videos/page030/page030_ocr.md \\
-        --video local_videos/AWP_v5I0zYA.mp4
+        --video local_videos/AWP_v5I0zYA.mp4 \\
+        --suggestions output/videos/page030/page030_ai_suggestions.json
     python -m crawler.review_page apply --video-id AWP_v5I0zYA \\
         --raw output/videos/page030/page030_funasr_glossary_raw.json \\
-        --decisions ~/Downloads/AWP_v5I0zYA_decisions.json
+        --ocr output/videos/page030/page030_ocr.md \\
+        --decisions ~/Downloads/AWP_v5I0zYA_decisions.json \\
+        --suggestions output/videos/page030/page030_ai_suggestions.json
+採用順序：人工選的 > AI 建議（*_ai_suggestions.json，AI 在對話中逐點用語意判斷後寫的）> 原本的判定。
+--decisions 和 --suggestions 都可以省略。
 
 網頁是單一檔案（截圖直接嵌在裡面），在瀏覽器雙擊開啟即可，不用網路。
 截圖來自影片，請不要把網頁檔提交到 git（.gitignore 已排除 *_review.html）。
@@ -236,6 +241,23 @@ def collect_items(raw: dict[str, Any], weak: list[dict[str, Any]],
     return items
 
 
+def load_suggestions(path: Path | None) -> dict[str, dict[str, Any]]:
+    """AI 逐點判斷後寫的建議檔：{編號: {pick: para|sense|ocr|custom|none, text, why, check}}。"""
+    if not path or not path.is_file():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8")).get("suggestions", {})
+
+
+def item_meta(item: dict[str, Any]) -> dict[str, Any]:
+    """套用選擇時需要的資料（網頁下載選擇檔時也會帶同樣的內容）。"""
+    if item["kind"] == "diff":
+        return {"kind": "diff", "t": item["t"], "a": item["a"], "b": item["b"], "ocr": item["ocr"]}
+    if item["kind"] == "agree":
+        return {"kind": "agree", "t": item["t"], "chunk": item["chunk"], "a_span": item["a_span"],
+                "a": item["a"], "ocr": item["ocr"]}
+    return {"kind": "ocr", "t": item["t"], "text": item["text"], "para": item["para_text"], "sense": item["sense_text"]}
+
+
 # ---------------------------------------------------------------- 截圖
 
 def grab_frame(video: Path, seconds: float, band_top: float) -> str:
@@ -313,6 +335,8 @@ mark { background:var(--mark); color:var(--markink); padding:0 2px; border-radiu
 .choices label:has(input:checked) { border-color:var(--accent); background:color-mix(in srgb, var(--accent) 12%, transparent); }
 .choices input[type=text] { flex:1; font:inherit; padding:4px 8px; border:1px solid var(--line); border-radius:6px;
                             background:var(--bg); color:var(--ink); min-width:0; }
+.ai { font-size:14px; margin:8px 0 0; padding:8px 10px; border-radius:8px; border:1px dashed var(--accent); }
+.ai.check { border-color:var(--warn); }
 .hidden { display:none; }
 </style>
 </head>
@@ -322,6 +346,7 @@ mark { background:var(--mark); color:var(--markink); padding:0 2px; border-radiu
   <div class="bar">
     <span id="progress"></span><div class="meter"><i id="meter"></i></div>
     <button id="only">只看還沒選的</button>
+    <button id="useai">套用 AI 建議到還沒選的</button>
     <button id="save" class="primary">下載我的選擇</button>
   </div>
 </div></header>
@@ -362,6 +387,12 @@ function options(item) {
     out.push(["sense", "SenseVoice 聽到：「" + esc(item.sense_text) + "」"]);
   return out;
 }
+function aiLabel(item) {
+  const pick = item.ai.pick;
+  if (pick === "custom") return "改成「" + item.ai.text + "」";
+  const found = options(item).find(o => o[0] === pick);
+  return found ? found[1].replace(/<[^>]+>/g, "") : pick;
+}
 function render() {
   const list = document.getElementById("list");
   list.innerHTML = "";
@@ -388,6 +419,12 @@ function render() {
         html += '<div class="note">畫面字幕在 ' + stamp(n.t) + ' 讀得沒把握，讀到：' + esc(n.variants.join(" ／ ")) + "</div>"; });
     } else if (item.variants.length > 1) {
       html += '<div class="note">各張畫面讀到的版本：' + esc(item.variants.join(" ／ ")) + "</div>";
+    }
+    if (item.ai && item.ai.pick !== "none") {
+      html += '<div class="ai' + (item.ai.check ? " check" : "") + '">AI 建議：' + esc(aiLabel(item)) + "｜" + esc(item.ai.why)
+        + (item.ai.check ? "（建議你再看一眼截圖）" : "") + "</div>";
+    } else if (item.ai) {
+      html += '<div class="ai">AI 沒有建議：' + esc(item.ai.why) + "</div>";
     }
     html += '<div class="choices">';
     options(item).forEach(([value, label]) => {
@@ -419,6 +456,14 @@ function setProgress(done) {
   document.getElementById("meter").style.width = (total ? 100 * done / total : 0) + "%";
 }
 function refresh() { const y = window.scrollY; render(); window.scrollTo(0, y); }
+document.getElementById("useai").addEventListener("click", () => {
+  let n = 0;
+  DATA.items.forEach(item => {
+    if (!answers[item.id] && item.ai && item.ai.pick !== "none") {
+      answers[item.id] = { choice: item.ai.pick, text: item.ai.pick === "custom" ? item.ai.text : "", ai: true }; n++; }
+  });
+  save(); refresh(); alert("已把 AI 建議套到 " + n + " 個還沒選的地方；你可以逐個改。");
+});
 document.getElementById("title").textContent = "字幕人工確認：" + DATA.title;
 document.getElementById("only").addEventListener("click", e => {
   onlyOpen = !onlyOpen; e.target.textContent = onlyOpen ? "顯示全部" : "只看還沒選的"; render(); });
@@ -453,6 +498,9 @@ def build(args: argparse.Namespace) -> int:
     raw = json.loads(args.raw.read_text(encoding="utf-8"))
     weak, row = read_weak_lines(args.ocr)
     items = collect_items(raw, weak, read_ocr(args.ocr))
+    suggestions = load_suggestions(args.suggestions)
+    for item in items:
+        item["ai"] = suggestions.get(item["id"])
     if not items:
         print("沒有需要人確認的地方。")
         return 0
@@ -472,19 +520,35 @@ def build(args: argparse.Namespace) -> int:
 
 # ---------------------------------------------------------------- 套用選擇
 
-def _replacement(diff: dict[str, Any], answer: dict[str, Any] | None, ocr: str | None) -> tuple[str, bool]:
-    """這個差異處最後用什麼字，以及是不是人確認過的。"""
-    if answer:
-        choice = answer.get("choice")
-        if choice == "para":
-            return diff["a"], True
-        if choice == "sense":
-            return diff["b"], True
-        if choice == "ocr" and ocr is not None:
-            return ocr, True
-        if choice == "custom" and answer.get("text", "").strip():
-            return answer["text"].strip(), True
-    return (diff["b"] if diff.get("verdict") == "sense" else diff["a"]), False
+def _effective_answers(asked: dict[str, Any], answers: dict[str, Any],
+                       suggestions: dict[str, dict[str, Any]]) -> dict[str, tuple[dict[str, Any], str]]:
+    """每個地方最後採用誰的答案：人 > AI 建議。回傳 {編號: (答案, "人" 或 "AI")}。"""
+    out: dict[str, tuple[dict[str, Any], str]] = {}
+    for key in asked:
+        mine = answers.get(key)
+        if mine and not mine.get("ai"):
+            out[key] = (mine, "人")
+        elif mine and mine.get("ai"):
+            out[key] = (mine, "AI")
+        elif key in suggestions and suggestions[key].get("pick") not in (None, "none"):
+            out[key] = ({"choice": suggestions[key]["pick"], "text": suggestions[key].get("text", "")}, "AI")
+    return out
+
+
+def _word_for(meta: dict[str, Any], answer: dict[str, Any]) -> str | None:
+    """依答案決定這個地方的文字；None 代表沒有可用的答案（跳過、或選項不存在）。"""
+    choice = answer.get("choice")
+    if choice == "custom":
+        text = answer.get("text", "").strip()
+        # 整格只寫「（沒有這個字）」「(沒有字)」這類備註，意思是這個地方不該有字：刪掉
+        if re.fullmatch(r"[（(]\s*(沒有|無|不要)[^）)]*[）)]", text):
+            return ""
+        return text or None
+    if meta["kind"] == "diff":
+        return {"para": meta["a"], "sense": meta["b"], "ocr": meta.get("ocr")}.get(choice)
+    if meta["kind"] == "agree":
+        return {"para": meta["a"], "ocr": meta.get("ocr")}.get(choice)
+    return {"ocr": meta.get("text"), "para": meta.get("para"), "sense": meta.get("sense")}.get(choice) or None
 
 
 def apply(args: argparse.Namespace) -> int:
@@ -492,44 +556,51 @@ def apply(args: argparse.Namespace) -> int:
     title, url = _read_meta(record_id)
     out_path = args.out or ROOT / "output" / "videos" / record_id / f"{record_id}_confirmed.md"
     raw = json.loads(args.raw.read_text(encoding="utf-8"))
-    decisions = json.loads(args.decisions.expanduser().read_text(encoding="utf-8"))
-    answers = decisions.get("answers", {})
-    asked_items = decisions.get("items", {})
+    weak, _ = read_weak_lines(args.ocr)
+    items = collect_items(raw, weak, read_ocr(args.ocr))
+    asked = {item["id"]: item_meta(item) for item in items}
+    answers = {}
+    if args.decisions:
+        answers = json.loads(args.decisions.expanduser().read_text(encoding="utf-8")).get("answers", {})
+    chosen = _effective_answers(asked, answers, load_suggestions(args.suggestions))
     offset = float(raw.get("offset_seconds", 0.0))
     lines, changed = [], []
-    confirmed = skipped = 0
+    counts = {"人": 0, "AI": 0, "未決定": 0}
+    decided: dict[str, str | None] = {}
+    for key, meta in asked.items():
+        word, who = (None, "")
+        if key in chosen:
+            word, who = _word_for(meta, chosen[key][0]), chosen[key][1]
+        decided[key] = word
+        counts[who if word is not None else "未決定"] += 1
     for ci, chunk in enumerate(raw["chunks"]):
-        text, open_item = chunk["para"], False
+        text, open_item, ai_item = chunk["para"], False, False
         edits: list[tuple[int, int, str]] = []
         for di, diff in enumerate(chunk["differences"]):
             key = f"d{ci}-{di}"
-            answer = answers.get(key)
-            meta = asked_items.get(key)
-            word, by_person = _replacement(diff, answer, meta.get("ocr") if meta else None)
-            edits.append((diff["a_span"][0], diff["a_span"][1], word))
-            if meta:
-                if by_person:
-                    confirmed += 1
-                    if answer.get("choice") == "custom":
-                        changed.append((chunk["start"] + offset, diff["a"], diff["b"], word))
-                else:
-                    skipped += 1
+            word = decided.get(key)
+            if key in asked:
+                if word is None:
                     open_item = True
-        for key, meta in asked_items.items():
-            if meta.get("kind") != "agree" or meta.get("chunk") != ci:
+                    word = diff["b"] if diff.get("verdict") == "sense" else diff["a"]
+                else:
+                    ai_item = ai_item or chosen[key][1] == "AI"
+                    if word != diff["a"]:
+                        changed.append((chunk["start"] + offset, diff["a"], diff["b"], word, chosen[key][1]))
+            else:
+                word = diff["b"] if diff.get("verdict") == "sense" else diff["a"]
+            edits.append((diff["a_span"][0], diff["a_span"][1], word))
+        for key, meta in asked.items():
+            if meta["kind"] != "agree" or meta["chunk"] != ci:
                 continue
-            answer = answers.get(key) or {}
-            choice = answer.get("choice")
-            span = meta["a_span"]
-            word = {"ocr": meta.get("ocr"), "para": meta["a"], "custom": answer.get("text", "").strip() or None}.get(choice)
+            word = decided.get(key)
             if word is None:
-                skipped += 1
                 open_item = True
                 continue
-            confirmed += 1
-            edits.append((span[0], span[1], word))
-            if choice in ("ocr", "custom") and word != meta["a"]:
-                changed.append((chunk["start"] + offset, meta["a"], None, word))
+            ai_item = ai_item or chosen[key][1] == "AI"
+            edits.append((meta["a_span"][0], meta["a_span"][1], word))
+            if word != meta["a"]:
+                changed.append((chunk["start"] + offset, meta["a"], None, word, chosen[key][1]))
         last = len(text) + 1
         for begin, end, word in sorted(edits, key=lambda e: (e[0], e[1]), reverse=True):
             if end > last:
@@ -537,38 +608,36 @@ def apply(args: argparse.Namespace) -> int:
             text = text[:begin] + word + text[end:]
             last = begin
         if text.strip():
-            lines.append(f"- **[{_timestamp(chunk['start'] + offset)}]** {text}{'（待確認）' if open_item else ''}")
+            mark = "（待確認）" if open_item else ("（含 AI 建議，未經人確認）" if ai_item else "")
+            lines.append(f"- **[{_timestamp(chunk['start'] + offset)}]** {text}{mark}")
     ocr_lines = []
-    for key, meta in asked_items.items():
-        if meta.get("kind") != "ocr":
+    for key, meta in asked.items():
+        if meta["kind"] != "ocr":
             continue
-        answer = answers.get(key) or {}
-        choice = answer.get("choice")
-        picked = {"ocr": meta.get("text", ""), "para": meta.get("para", ""), "sense": meta.get("sense", ""),
-                  "custom": answer.get("text", "").strip()}.get(choice, "")
-        if picked:
-            confirmed += 1
-            if choice == "custom":
-                changed.append((meta["t"], "畫面字幕：" + meta.get("text", ""), None, picked))
-        else:
-            skipped += 1
-        ocr_lines.append(f"- **[{_timestamp(meta['t'])}]** {picked or meta.get('text', '')}"
-                         f"{'' if picked else '（待確認，沿用畫面字幕原讀）'}")
-    kinds = [meta.get("kind") for meta in asked_items.values()]
-    out = [f"# {title}（人工確認後）", "", f"- YouTube Video ID：{args.video_id}", f"- 原始網址：{url or ''}",
-           f"- 人工確認：已選 {confirmed} 個地方；跳過或沒選 {skipped} 個（沒確認的地方保留原本的判定，並標「待確認」）",
+        word = decided.get(key)
+        who = chosen[key][1] if key in chosen and word is not None else ""
+        shown = word if word is not None else meta["text"]
+        tag = "" if who == "人" else ("（AI 建議，未經人確認）" if who == "AI" else "（待確認，沿用畫面字幕原讀）")
+        ocr_lines.append(f"- **[{_timestamp(meta['t'])}]** {shown}{tag}")
+        if word is not None and word != meta["text"]:
+            changed.append((meta["t"], "畫面字幕：" + meta["text"], None, word, who))
+    kinds = [meta["kind"] for meta in asked.values()]
+    out = [f"# {title}（確認後）", "", f"- YouTube Video ID：{args.video_id}", f"- 原始網址：{url or ''}",
+           f"- 採用順序：人工選的 > AI 建議 > 原本的判定。人工 {counts['人']} 個、AI 建議 {counts['AI']} 個、"
+           f"沒有答案 {counts['未決定']} 個（保留原本的判定，並標「待確認」）",
            f"- 需要確認的地方共 {len(kinds)} 個（語音差異處 {kinds.count('diff')}、語音一致但畫面不同 {kinds.count('agree')}、"
            f"畫面字幕沒把握 {kinds.count('ocr')}）",
            "", "## 逐字稿", ""] + lines
     if ocr_lines:
         out += ["", "## 畫面字幕裡原本沒把握的句子（確認結果）", ""] + sorted(ocr_lines)
     if changed:
-        out += ["", "## 你親手改過或改用畫面字幕的字（建議加進詞庫 data/glossary.md）", ""]
-        out += [(f"- **[{_timestamp(t)}]** 語音「{a}」／SenseVoice「{b}」→ 最後採用「{word}」" if b is not None
-                 else f"- **[{_timestamp(t)}]** {a} → 最後採用「{word}」") for t, a, b, word in sorted(changed, key=lambda c: c[0])]
+        out += ["", "## 和語音原本寫法不同的地方（建議把常見的加進詞庫 data/glossary.md）", ""]
+        out += [(f"- **[{_timestamp(t)}]** 語音「{a}」／SenseVoice「{b}」→「{word}」（{who or '—'}）" if b is not None
+                 else f"- **[{_timestamp(t)}]** {a} → 「{word}」（{who or '—'}）")
+                for t, a, b, word, who in sorted(changed, key=lambda c: c[0])]
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text("\n".join(out) + "\n", encoding="utf-8")
-    print(f"完成：已選 {confirmed} 個，跳過或沒選 {skipped} 個 → {out_path}")
+    print(f"完成：人工 {counts['人']} 個、AI 建議 {counts['AI']} 個、沒有答案 {counts['未決定']} 個 → {out_path}")
     return 0
 
 
@@ -580,11 +649,14 @@ def main() -> int:
     one.add_argument("--raw", required=True, type=Path, help="transcribe_funasr 產生的 *_raw.json")
     one.add_argument("--ocr", required=True, type=Path, help="subtitle_ocr 產生的畫面字幕檔")
     one.add_argument("--video", required=True, type=Path, help="影片檔（只用來截圖）")
+    one.add_argument("--suggestions", type=Path, help="AI 建議檔（*_ai_suggestions.json）；有的話卡片會顯示 AI 建議")
     one.add_argument("--out", type=Path, help="網頁輸出路徑（預設 output/videos/<id>/<id>_review.html）")
     two = sub.add_parser("apply", help="把網頁下載的選擇套回逐字稿")
     two.add_argument("--video-id", required=True)
     two.add_argument("--raw", required=True, type=Path)
-    two.add_argument("--decisions", required=True, type=Path, help="網頁「下載我的選擇」得到的 *_decisions.json")
+    two.add_argument("--ocr", required=True, type=Path, help="subtitle_ocr 產生的畫面字幕檔（用來重建每個地方的資料）")
+    two.add_argument("--decisions", type=Path, help="網頁「下載我的選擇」得到的 *_decisions.json（沒有就只用 AI 建議）")
+    two.add_argument("--suggestions", type=Path, help="AI 建議檔（*_ai_suggestions.json）")
     two.add_argument("--out", type=Path, help="輸出 markdown 路徑（預設 output/videos/<id>/<id>_confirmed.md）")
     args = parser.parse_args()
     return build(args) if args.command == "build" else apply(args)

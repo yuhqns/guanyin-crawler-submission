@@ -1,0 +1,14 @@
+# 沒有 YouTube 字幕的影片：FunASR 兩個模型（Paraformer-zh + SenseVoice-Small）語音辨識用的套件。
+# 在 2026-11-19 的 macOS 環境（Python 虛擬環境 ~/.venvs/funasr）實測可用的版本。
+# 建議另開一個虛擬環境安裝，不要跟 requirements.txt 混在同一個環境（torch 很大）。
+# 其餘需求：FFmpeg（轉音訊、擷取畫面）；Apple Vision 字幕 OCR（crawler/subtitle_ocr.py）只能在 macOS 執行。
+funasr==1.4.27
+torch==2.15.0
+torchaudio==2.11.1
+modelscope==1.40.3
+huggingface_hub==2.4.0
+opencc-python-reimplemented==0.1.7
+numpy==2.5.5
+soundfile==0.14.0
+librosa==1.0.1
+scipy==1.18.1
